@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.AspNet.FriendlyUrls</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.FriendlyUrl"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Href(System.String,System.Object[])"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Resolve(System.String)">
+      <summary> 使用注册的解析程序解析友好的 URL 的文件处理程序虚拟路径。</summary>
+      <returns>友好的 URL。</returns>
+      <param name="virtualPath">处理程序虚拟路径。</param>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Segments">
+      <summary> 在友好的 URL 将此请求映射到文件后剩余的 URL 段。</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings">
+      <summary>表示启用友好的 URL 时使用的设置。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.#ctor">
+      <summary>使用默认值创建 FriendlyUrlSettings 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.AutoRedirectMode">
+      <summary>要对非友好 URL 执行的到友好 URL 的重定向类型。默认为 Off。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.ResolverCachingMode"></member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.SwitchViewRouteName">
+      <summary>路由名称，用于处理切换视图的用户请求。默认为“AspNet.FriendlyUrls.SwitchView”。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.SwitchViewUrl">
+      <summary>视图切换请求发送到的 URL。默认为“__FriendlyUrls_SwitchView/{view}”。</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions">
+      <summary>为使用友好的 URL 提供扩展方法。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileExtension(System.Web.HttpRequest)">
+      <summary> 返回友好的 URL 将此请求映射到的文件的扩展名。</summary>
+      <returns>文件扩展名，例如 .aspx。</returns>
+      <param name="httpRequest">HttpRequest 对象。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileExtension(System.Web.HttpRequestBase)">
+      <summary> 返回友好的 URL 将此请求映射到的文件的扩展名。</summary>
+      <returns>文件扩展名，例如 .aspx。</returns>
+      <param name="httpRequest">HttpRequestBase 对象。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileVirtualPath(System.Web.HttpRequest)">
+      <summary> 返回友好的 URL 将此请求映射到的文件的虚拟路径。</summary>
+      <returns>文件虚拟路径。</returns>
+      <param name="httpRequest">HttpRequest 对象。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileVirtualPath(System.Web.HttpRequestBase)">
+      <summary> 返回友好的 URL 将此请求映射到的文件的虚拟路径。</summary>
+      <returns>文件虚拟路径。</returns>
+      <param name="httpRequest">HttpRequestBase 对象。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlSegments(System.Web.HttpRequest)">
+      <summary> 返回在友好的 URL 将此请求映射到文件后剩余的 URL 段。</summary>
+      <returns>URL 段。</returns>
+      <param name="httpRequest">HttpRequest 对象。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlSegments(System.Web.HttpRequestBase)">
+      <summary> 返回在友好的 URL 将此请求映射到文件后剩余的 URL 段。</summary>
+      <returns>URL 段。</returns>
+      <param name="httpRequest">HttpRequestBase 对象。</param>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.PreApplicationStartCode"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.PreApplicationStartCode.Start"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.RedirectMode">
+      <summary>表示自动重定向到友好的 URL 时要使用的重定向模式。</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Permanent">
+      <summary>执行永久重定向（301 响应代码）。</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Temporary">
+      <summary>执行临时重定向（302 响应代码）。</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Off">
+      <summary>不执行自动重定向（已禁用）。</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode"></member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Static">
+      <summary />
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Dynamic">
+      <summary />
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Disabled">
+      <summary />
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection)">
+      <summary> 为 Web 窗体页启用友好的 URL。</summary>
+      <param name="routes">路由集合。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings)">
+      <summary>为 Web 窗体页启用友好的 URL。</summary>
+      <param name="routes">路由集合。</param>
+      <param name="settings">启用友好的 URL 时要使用的设置。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings,Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver[])">
+      <summary> 使用传递的解析程序启用友好的 URL。</summary>
+      <param name="routes">路由集合。</param>
+      <param name="settings">启用友好的 URL 时要使用的设置。</param>
+      <param name="resolvers">要使用的友好的 URL 解析程序。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver[])">
+      <summary> 使用指定的解析程序启用友好的 URL。</summary>
+      <param name="routes">路由集合。</param>
+      <param name="resolvers">要使用的友好的 URL 解析程序。</param>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver">
+      <summary>解析 HTTP 处理程序的友好的 URL。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.#ctor(System.String)">
+      <summary>为提供的扩展名创建 FriendlyUrlResolver。</summary>
+      <param name="fileExtension">此解析程序识别的物理文件扩展名。必须包含前导句点，例如“.aspx”。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.ConvertToFriendlyUrl(System.String)">
+      <summary>将典型的有扩展名 URL 转换为友好的无扩展名 URL。</summary>
+      <returns>如果此解析程序可以自动将无扩展名的 URL 映射到具有提供的扩展名的物理文件，则为友好的 URL（去除扩展名）。否则为 null。</returns>
+      <param name="path">原始路径，包括文件扩展名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)">
+      <summary>获取尝试从友好的 URL 解析 HTTP 处理程序时要使用的扩展名，例如 .aspx、.ashx、.mobile.aspx</summary>
+      <returns>扩展名列表。</returns>
+      <param name="httpContext">当前 HttpContext。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.GenericHandlerFriendlyUrlResolver">
+      <summary>解析泛型处理程序（即 *.ashx）的友好的 URL。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.GenericHandlerFriendlyUrlResolver.#ctor"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.ConvertToFriendlyUrl(System.String)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver">
+      <summary>解析 Web 窗体页的友好的 URL。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.#ctor"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)">
+      <returns>返回 <see cref="T:System.Collections.Generic.IList`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.IsMobileExtension(System.Web.HttpContextBase,System.String)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.IsMobileView(System.Web.HttpContextBase)">
+      <summary>基于客户端浏览器和/或重写，确定当前友好的 URL 是否已解析为移动视图。</summary>
+      <returns>当前视图是否为移动视图。</returns>
+      <param name="httpContext">页。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.TrySetMasterPageFile(System.Web.UI.Page,System.String)">
+      <summary>基于母版页是否存在，尝试设置给定页的 MasterPageFile 属性。</summary>
+      <returns>一个布尔值，该值指示是否已设置母版页。</returns>
+      <param name="page">页。</param>
+      <param name="masterPageFile">母版页文件虚拟路径。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.TrySetMobileMasterPage(System.Web.HttpContextBase,System.Web.UI.Page,System.String)">
+      <summary>尝试将给定页的 MasterPageFile 属性设置为特定于移动设备的母版页。</summary>
+      <returns>一个布尔值，该值指示是否已设置母版页。</returns>
+      <param name="httpContext">HTTP 上下文。</param>
+      <param name="page">页。</param>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.ViewSwitcherCookieName"></member>
+  </members>
+</doc>

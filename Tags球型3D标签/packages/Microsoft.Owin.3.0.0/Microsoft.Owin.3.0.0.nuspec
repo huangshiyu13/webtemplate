@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Owin</id>
+    <version>3.0.0</version>
+    <title>Microsoft.Owin</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+    <projectUrl>http://katanaproject.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Provides a set of helper types and abstractions for simplifying the creation of OWIN components.</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>Microsoft OWIN Katana</tags>
+    <dependencies>
+      <dependency id="Owin" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Identity.Core.zh-Hans</id>
+    <version>2.1.0</version>
+    <title>Microsoft ASP.NET Identity Core 简体中文资源</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_rtw_CHS.htm</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>此程序包包含 ASP.NET Identity Core 的简体中文附属程序集。</description>
+    <summary>Microsoft.AspNet.Identity.Core 程序包的简体中文资源</summary>
+    <releaseNotes />
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <language>zh-Hans</language>
+    <tags>Identity Membership</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Identity.Core" version="[2.1.0]" />
+    </dependencies>
+  </metadata>
+</package>

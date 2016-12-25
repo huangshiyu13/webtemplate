@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Owin.zh-Hans</id>
+    <version>3.0.0</version>
+    <title>Microsoft Owin 简体中文资源</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_CHS.htm</licenseUrl>
+    <projectUrl>http://katanaproject.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>此程序包包含 Microsoft Owin 的简体中文附属程序集</description>
+    <summary>Microsoft.Owin 程序包的简体中文资源。</summary>
+    <releaseNotes />
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <language>zh-Hans</language>
+    <tags>Microsoft OWIN Katana</tags>
+    <dependencies>
+      <dependency id="Microsoft.Owin" version="[3.0.0]" />
+    </dependencies>
+  </metadata>
+</package>

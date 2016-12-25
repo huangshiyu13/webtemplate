@@ -1,0 +1,1755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.CookieOptions">
+      <summary>表示 Cookie 选项。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.CookieOptions.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.CookieOptions" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.CookieOptions.Domain">
+      <summary>获取或设置要与 Cookie 关联的域。</summary>
+      <returns>要与 Cookie 关联的域。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.CookieOptions.Expires">
+      <summary>获取或设置 Cookie 的到期日期和时间。</summary>
+      <returns>Cookie 的到期日期和时间。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.CookieOptions.HttpOnly">
+      <summary>获取或设置一个值，该值指示是否可通过客户端脚本访问 Cookie。</summary>
+      <returns>如果可通过客户端脚本访问 Cookie，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.CookieOptions.Path">
+      <summary>获取或设置要使用当前 Cookie 传输的虚拟路径。</summary>
+      <returns>要使用当前 Cookie 传输的虚拟路径。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.CookieOptions.Secure">
+      <summary>获取或设置一个值，该值指示是否要使用安全套接字层 (SSL)（即仅通过 HTTPS）传输 Cookie。</summary>
+      <returns>若要通过 SSL 连接 (HTTPS) 传输 Cookie，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.FormCollection">
+      <summary>Contains the form value providers for the application.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.FormCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String[]})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.FormCollection" /> class.</summary>
+      <param name="store">The store for the form.</param>
+    </member>
+    <member name="T:Microsoft.Owin.HeaderDictionary">
+      <summary>Represents a wrapper for owin.RequestHeaders and owin.ResponseHeaders.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.#ctor(System.Collections.Generic.IDictionary{System.String,System.String[]})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.HeaderDictionary" /> class.</summary>
+      <param name="store">The store value.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Add(System.Collections.Generic.KeyValuePair{System.String,System.String[]})">
+      <summary>Adds a new list of items in the collection.</summary>
+      <param name="item">The item to add.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Add(System.String,System.String[])">
+      <summary>Adds a new list of items in the collection.</summary>
+      <param name="key">The key.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Append(System.String,System.String)">
+      <summary>Adds a new value. Appends to the header if already present.</summary>
+      <param name="key">The key.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.AppendCommaSeparatedValues(System.String,System.String[])">
+      <summary>Quotes any values containing comas, and then coma joins all of the values with any existing values.</summary>
+      <param name="key">The key.</param>
+      <param name="values">The value.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.AppendValues(System.String,System.String[])">
+      <summary>Adds new values. Each item remains a separate array entry.</summary>
+      <param name="key">The key.</param>
+      <param name="values">The values.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Clear">
+      <summary>Clears the entire list of objects.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Contains(System.Collections.Generic.KeyValuePair{System.String,System.String[]})">
+      <summary>Returns a value indicating whether the specified object occurs within this collection.</summary>
+      <returns>true if the specified object occurs within this collection; otherwise, false.</returns>
+      <param name="item">The item.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.ContainsKey(System.String)">
+      <summary>Determines whether the <see cref="T:Microsoft.Owin.HeaderDictionary" /> contains a specific key.</summary>
+      <returns>true if the <see cref="T:Microsoft.Owin.HeaderDictionary" /> contains a specific key; otherwise, false.</returns>
+      <param name="key">The key.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.CopyTo(System.Collections.Generic.KeyValuePair{System.String,System.String[]}[],System.Int32)">
+      <summary>Copies the <see cref="T:Microsoft.Owin.HeaderDictionary" /> elements to a one-dimensional Array instance at the specified index.</summary>
+      <param name="array">The one-dimensional Array that is the destination of the specified objects copied from the <see cref="T:Microsoft.Owin.HeaderDictionary" />.</param>
+      <param name="arrayIndex">The zero-based index in <paramref name="array" /> at which copying begins.</param>
+    </member>
+    <member name="P:Microsoft.Owin.HeaderDictionary.Count">
+      <summary>Gets the number of elements contained in the <see cref="T:Microsoft.Owin.HeaderDictionary" />.</summary>
+      <returns>The number of elements contained in the <see cref="T:Microsoft.Owin.HeaderDictionary" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Get(System.String)">
+      <summary>Gets the associated value from the collection.</summary>
+      <returns>The associated value from the collection.</returns>
+      <param name="key">The key.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.GetCommaSeparatedValues(System.String)">
+      <summary>Parses out comma separated headers into individual values.</summary>
+      <returns>The comma separated headers to parse.</returns>
+      <param name="key">The key.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.GetEnumerator">
+      <summary>Returns an enumerator that iterates through a collection.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.GetValues(System.String)">
+      <summary>Gets the associated values from the collection in their original format. Returns null if the key is not present.</summary>
+      <returns>The associated values from the collection.</returns>
+      <param name="key">The key.</param>
+    </member>
+    <member name="P:Microsoft.Owin.HeaderDictionary.IsReadOnly">
+      <summary>Gets a value that indicates whether the <see cref="T:Microsoft.Owin.HeaderDictionary" /> is in read-only mode.</summary>
+      <returns>true if the <see cref="T:Microsoft.Owin.HeaderDictionary" /> is in read-only mode; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.HeaderDictionary.Item(System.String)">
+      <summary>Get or set the associated header value in the collection. Multiple values will be merged. Returns null if the key is not present.</summary>
+      <returns>The associated header value in the collection.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.HeaderDictionary.Keys">
+      <summary>Gets an <see cref="T:System.Collections.ICollection" /> that contains the keys in the <see cref="T:Microsoft.Owin.HeaderDictionary" />.</summary>
+      <returns>An <see cref="T:System.Collections.ICollection" /> that contains the keys in the <see cref="T:Microsoft.Owin.HeaderDictionary" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Remove(System.Collections.Generic.KeyValuePair{System.String,System.String[]})">
+      <summary>Indicates whether the specified object can be removed in the collection.</summary>
+      <returns>true if the specified object can be removed in the collection; otherwise, false.</returns>
+      <param name="item">The item.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Remove(System.String)">
+      <summary>Indicates whether the specified object can be removed in the collection.</summary>
+      <returns>true if the specified object can be removed in the collection; otherwise, false.</returns>
+      <param name="key">The key.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.Set(System.String,System.String)">
+      <summary>Sets a specific header value.</summary>
+      <param name="key">The key.</param>
+      <param name="value">The value of the header.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.SetCommaSeparatedValues(System.String,System.String[])">
+      <summary>Quotes any values containing comas, and then coma joins all of the values.</summary>
+      <param name="key">The key.</param>
+      <param name="values">The values.</param>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.SetValues(System.String,System.String[])">
+      <summary>Sets the specified header values without modification.</summary>
+      <param name="key">The key.</param>
+      <param name="values">The values.</param>
+    </member>
+    <member name="P:Microsoft.Owin.HeaderDictionary.System#Collections#Generic#IDictionary{TKey@TValue}#Item(System.String)">
+      <summary>Gets or sets an <see cref="T:System.Collections.ICollection" /> that contains the keys in the <see cref="T:Microsoft.Owin.HeaderDictionary" />.</summary>
+      <returns>An <see cref="T:System.Collections.ICollection" /> that contains the keys in the <see cref="T:Microsoft.Owin.HeaderDictionary" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.System#Collections#IEnumerable#GetEnumerator">
+      <summary>Returns an enumerator that iterates through a collection.</summary>
+      <returns>An IEnumerator object that can be used to iterate through the collection.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HeaderDictionary.TryGetValue(System.String,System.String[]@)">
+      <summary>Indicates whether the <see cref="T:Microsoft.Owin.HeaderDictionary" /> tries to get the value.</summary>
+      <returns>true if the <see cref="T:Microsoft.Owin.HeaderDictionary" /> tries to get the value; otherwise, false.</returns>
+      <param name="key">The key.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="P:Microsoft.Owin.HeaderDictionary.Values">
+      <summary>Gets the attribute value.</summary>
+      <returns>The attribute value.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.HostString"></member>
+    <member name="M:Microsoft.Owin.HostString.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Owin.HostString.Equals(Microsoft.Owin.HostString)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HostString.Equals(System.Object)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HostString.FromUriComponent(System.String)">
+      <returns>Returns <see cref="T:Microsoft.Owin.HostString" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HostString.FromUriComponent(System.Uri)">
+      <returns>Returns <see cref="T:Microsoft.Owin.HostString" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HostString.GetHashCode">
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HostString.op_Equality(Microsoft.Owin.HostString,Microsoft.Owin.HostString)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HostString.op_Inequality(Microsoft.Owin.HostString,Microsoft.Owin.HostString)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HostString.ToString">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.HostString.ToUriComponent">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.HostString.Value">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.IFormCollection">
+      <summary>Represents an interface of collection of forms.</summary>
+    </member>
+    <member name="T:Microsoft.Owin.IHeaderDictionary">
+      <summary>A wrapper for <see cref="P:Microsoft.Owin.OwinRequest.Headers" /> and <see cref="P:Microsoft.Owin.OwinResponse.Headers" />.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.IHeaderDictionary.Append(System.String,System.String)">
+      <summary>Adds the specified header to the dictionary.</summary>
+      <param name="key">The key of the header to add.</param>
+      <param name="value">The header value to add.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IHeaderDictionary.AppendCommaSeparatedValues(System.String,System.String[])">
+      <summary>Adds the header values to the dictionary as a comma-separated value.</summary>
+      <param name="key">The key of the header to add.</param>
+      <param name="values">The header values to add.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IHeaderDictionary.AppendValues(System.String,System.String[])">
+      <summary>Adds the header values to the dictionary unmodified.</summary>
+      <param name="key">The key of the header to add.</param>
+      <param name="values">The header values to add.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IHeaderDictionary.GetCommaSeparatedValues(System.String)">
+      <summary>Parses out comma separated headers into individual values.  Quoted values will not be coma split, and the quotes will be removed.</summary>
+      <returns>The collection of header values.</returns>
+      <param name="key">The key of the header to get.</param>
+    </member>
+    <member name="P:Microsoft.Owin.IHeaderDictionary.Item(System.String)">
+      <summary>Gets or sets the header with the specified key.</summary>
+      <returns>The header with the specified key.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IHeaderDictionary.Set(System.String,System.String)">
+      <summary>Assigns a new header value for the specified key.</summary>
+      <param name="key">The key of the header to set.</param>
+      <param name="value">The new header value to set.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IHeaderDictionary.SetCommaSeparatedValues(System.String,System.String[])">
+      <summary>Assigns the header values to the dictionary as a comma-separated value.</summary>
+      <param name="key">The key of the header to set.</param>
+      <param name="values">The header values to set.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IHeaderDictionary.SetValues(System.String,System.String[])">
+      <summary>Assigns the header values to the dictionary unmodified.</summary>
+      <param name="key">The key of the header to set.</param>
+      <param name="values">The header values to set.</param>
+    </member>
+    <member name="T:Microsoft.Owin.IOwinContext">
+      <summary>This wraps OWIN environment dictionary and provides strongly typed accessors.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinContext.Authentication">
+      <summary>Gets the authentication middleware functionality available on the current request.</summary>
+      <returns>The authentication middleware functionality available on the current request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinContext.Environment">
+      <summary>Gets the wrapped OWIN environment.</summary>
+      <returns>The wrapped OWIN environment.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinContext.Get``1(System.String)">
+      <summary>Gets a value from the OWIN environment, or returns default(T) if not present.</summary>
+      <returns>The value with the specified key or the default(T) if not present..</returns>
+      <param name="key">The key of the value to get.</param>
+      <typeparam name="T">The type of the value.</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinContext.Request">
+      <summary>Gets a wrapper exposing request specific properties.</summary>
+      <returns>A wrapper exposing request specific properties.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinContext.Response">
+      <summary>Gets a wrapper exposing response specific properties.</summary>
+      <returns>A wrapper exposing response specific properties.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinContext.Set``1(System.String,``0)">
+      <summary>Sets the given key and value in the OWIN environment.</summary>
+      <returns>This instance.</returns>
+      <param name="key">The key of the value to set.</param>
+      <param name="value">The value to set.</param>
+      <typeparam name="T">The type of the value.</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinContext.TraceOutput"></member>
+    <member name="T:Microsoft.Owin.IOwinRequest">
+      <summary>Represents the request for the open web interface.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Accept">
+      <summary>Gets or sets the accepted request.</summary>
+      <returns>The accepted request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Body">
+      <summary>Gets or sets the request body.</summary>
+      <returns>The request body.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.CacheControl">
+      <summary>Gets or sets the request cache control.</summary>
+      <returns>The request cache control.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.CallCancelled">
+      <summary>Gets or sets the call cancellation token for the request.</summary>
+      <returns>The call cancellation token for the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.ContentType">
+      <summary>Gets or sets the type of the context associated with the request.</summary>
+      <returns>The type of the context associated with the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Context">
+      <summary>Gets the request context.</summary>
+      <returns>The request context.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Cookies">
+      <summary>Gets the collection of cookies for the request.</summary>
+      <returns>The collection of cookies for the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Environment">
+      <summary>Gets the request environment.</summary>
+      <returns>The request environment.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinRequest.Get``1(System.String)">
+      <summary>Gets the type of the request.</summary>
+      <returns>The returned request.</returns>
+      <param name="key">The key.</param>
+      <typeparam name="T">The type of the request.</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Headers">
+      <summary>Gets the request headers.</summary>
+      <returns>The request headers.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Host">
+      <summary>Gets or sets the request host.</summary>
+      <returns>The request host.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.IsSecure">
+      <summary>Gets or sets whether this request is secure.</summary>
+      <returns>true if this request is secure; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.LocalIpAddress">
+      <summary>Gets or sets the local IP address of the object that made the request.</summary>
+      <returns>The local IP address of the object that made the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.LocalPort">
+      <summary>Gets or sets the port used in making the request.</summary>
+      <returns>The port used in making the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.MediaType">
+      <summary>Gets or sets the type of the media in making the request.</summary>
+      <returns>The type of the media in making the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Method">
+      <summary>Gets or sets the method used in making the request.</summary>
+      <returns>The method used in making the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Path">
+      <summary>Gets or sets the request path.</summary>
+      <returns>The request path.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.PathBase">
+      <summary>Gets or sets the request path base.</summary>
+      <returns>The request path base.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Protocol">
+      <summary>Gets or sets the protocol used in the request.</summary>
+      <returns>The protocol used in the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Query">
+      <summary>Gets the query composed of readable string collection for the request.</summary>
+      <returns>The query composed of readable string collection for the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.QueryString">
+      <summary>Gets or sets the query string used in the query.</summary>
+      <returns>The query string used in the query.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinRequest.ReadFormAsync">
+      <summary>Asynchronously reads the form associated with the request.</summary>
+      <returns>The read form associated with the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.RemoteIpAddress">
+      <summary>Gets or sets the remote IP address associated with the request.</summary>
+      <returns>The remote IP address associated with the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.RemotePort">
+      <summary>Gets or sets the remote port associated with the request.</summary>
+      <returns>The remote port associated with the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Scheme">
+      <summary>Gets or sets the request scheme.</summary>
+      <returns>The request scheme.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinRequest.Set``1(System.String,``0)">
+      <summary>Sets the type of the request.</summary>
+      <returns>The retrieved request.</returns>
+      <param name="key">The key.</param>
+      <param name="value">The request value.</param>
+      <typeparam name="T">The type of the request.</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.Uri">
+      <summary>Gets the uniform resource identifier (URI) associated with the request.</summary>
+      <returns>The uniform resource identifier (URI) associated with the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinRequest.User">
+      <summary>Gets or sets the user that made the request.</summary>
+      <returns>The user that made the request.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.IOwinResponse">
+      <summary>Represents an OWIN response.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.Body">
+      <summary>Gets or sets the body of the <see cref="T:System.IO.Stream" />.</summary>
+      <returns>The body of the <see cref="T:System.IO.Stream" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.ContentLength">
+      <summary>Gets or sets the content returned by the request.</summary>
+      <returns>The number of bytes returned by the request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.ContentType">
+      <summary>Gets or sets the content type of the output stream.</summary>
+      <returns>The content type of the output stream.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.Context">
+      <summary>Gets the context for the <see cref="T:Microsoft.Owin.IOwinContext" />.</summary>
+      <returns>The context for the <see cref="T:Microsoft.Owin.IOwinContext" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.Cookies">
+      <summary>Gets the <see cref="T:Microsoft.Owin.ResponseCookieCollection" />.</summary>
+      <returns>The <see cref="T:Microsoft.Owin.ResponseCookieCollection" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.Environment">
+      <summary>Gets the fully qualified path of the current working directory.</summary>
+      <returns>The fully qualified path of the current working directory.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.ETag">
+      <summary>Gets or sets an ETag that identifies a version of the file.</summary>
+      <returns>An ETag that identifies a version of the file.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.Expires">
+      <summary>Gets or sets the duration before the response expires.</summary>
+      <returns>The duration before the response expires.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.Get``1(System.String)">
+      <summary>Gets the list of the OWIN response.</summary>
+      <returns>The list of the OWIN response.</returns>
+      <param name="key">The key.</param>
+      <typeparam name="T">The type generic.</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.Headers">
+      <summary>Gets a collection of headers.</summary>
+      <returns>A collection of headers.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.OnSendingHeaders(System.Action{System.Object},System.Object)">
+      <summary>Adds the response headers.</summary>
+      <param name="callback">The callback method.</param>
+      <param name="state">The current state.</param>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.Protocol">
+      <summary>Gets or sets the information about a protocol.</summary>
+      <returns>The information about a protocol.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.ReasonPhrase">
+      <summary>Gets or sets the reason phrase, which typically is sent by servers.</summary>
+      <returns>The reason phrase.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.Redirect(System.String)">
+      <summary>Redirects a response from the specified location.</summary>
+      <param name="location">The location where to redirect the response.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.Set``1(System.String,``0)">
+      <summary>Returns a new set with the elements of the second set removed from the first.</summary>
+      <returns>A set containing elements of the first set that are not contained in the second set.</returns>
+      <param name="key">The key.</param>
+      <param name="value">The value.</param>
+      <typeparam name="T">The type generic.</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.IOwinResponse.StatusCode">
+      <summary>Gets or sets the OWIN status code of the output returned to the client.</summary>
+      <returns>The OWIN status code of the output returned to the client.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.Write(System.Byte[])">
+      <summary>Writes the date contained in the given array to the file.</summary>
+      <param name="data">The data contained.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.Write(System.Byte[],System.Int32,System.Int32)">
+      <summary>Writes the date contained in the given array to the file.</summary>
+      <param name="data">The data contained.</param>
+      <param name="offset">The zero-based byte offset in the <paramref name="data" /> parameter at which to begin copying bytes to the port.</param>
+      <param name="count">The number of bytes to write.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.Write(System.String)">
+      <summary>Writes the date contained in the given array to the file.</summary>
+      <param name="text">The contained text.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.WriteAsync(System.Byte[])">
+      <summary>Writes information to a response asynchronously.</summary>
+      <returns>The information to write.</returns>
+      <param name="data">The data to contain.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
+      <summary>Writes information to a response asynchronously.</summary>
+      <returns>The information to write.</returns>
+      <param name="data">The data to contain.</param>
+      <param name="offset">The zero-based byte offset in the <paramref name="data" /> parameter at which to begin copying bytes to the port.</param>
+      <param name="count">The number of bytes to write.</param>
+      <param name="token">The token.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.WriteAsync(System.Byte[],System.Threading.CancellationToken)">
+      <summary>Writes information to a response asynchronously.</summary>
+      <returns>The information to write.</returns>
+      <param name="data">The data to contain.</param>
+      <param name="token">The token.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.WriteAsync(System.String)">
+      <summary>Writes information to a response asynchronously.</summary>
+      <returns>The information to write.</returns>
+      <param name="text">The text value.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IOwinResponse.WriteAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Writes information to a response asynchronously.</summary>
+      <returns>The information to write.</returns>
+      <param name="text">The text value.</param>
+      <param name="token">The token.</param>
+    </member>
+    <member name="T:Microsoft.Owin.IReadableStringCollection">
+      <summary>Accessors for headers, query, forms, etc.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.IReadableStringCollection.Get(System.String)">
+      <summary>Get the associated value from the collection. Multiple values will be merged. Returns null if the key is not present.</summary>
+      <returns>The associated value from the collection.</returns>
+      <param name="key">The key.</param>
+    </member>
+    <member name="M:Microsoft.Owin.IReadableStringCollection.GetValues(System.String)">
+      <summary>Get the associated values from the collection in their original format. Returns null if the key is not present.</summary>
+      <returns>The associated values from the collection in their original format.</returns>
+      <param name="key">The key.</param>
+    </member>
+    <member name="P:Microsoft.Owin.IReadableStringCollection.Item(System.String)">
+      <summary>Get the associated value from the collection. Multiple values will be merged. Returns null if the key is not present.</summary>
+      <returns>The associated value from the collection.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.OwinContext">
+      <summary>Provides strongly typed accessors and wraps OWIN environment dictionary.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.OwinContext.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.OwinContext" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.OwinContext.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.OwinContext" /> class.</summary>
+      <param name="environment">The environment.</param>
+    </member>
+    <member name="P:Microsoft.Owin.OwinContext.Authentication">
+      <summary>Gets the <see cref="P:Microsoft.Owin.OwinContext.Authentication" /> middleware functionality available on the current request.</summary>
+      <returns>The <see cref="P:Microsoft.Owin.OwinContext.Authentication" /> middleware functionality available on the current request.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinContext.Environment">
+      <summary>Gets the wrapped OWIN environment.</summary>
+      <returns>The wrapped OWIN environment.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.OwinContext.Get``1(System.String)">
+      <summary>Gets a value from the OWIN environment, or returns default(T) if not present.</summary>
+      <returns>A value from the OWIN environment.</returns>
+      <param name="key">The key.</param>
+      <typeparam name="T">The generic type.</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.OwinContext.Request">
+      <summary>Gets a wrapper exposing request specific properties.</summary>
+      <returns>A wrapper exposing request specific properties.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinContext.Response">
+      <summary>Gets a wrapper exposing response specific properties.</summary>
+      <returns>A wrapper exposing response specific properties.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.OwinContext.Set``1(System.String,``0)">
+      <summary>Sets the given key and value in the OWIN environment.</summary>
+      <returns>The given key and value in the OWIN environment.</returns>
+      <param name="key">The key.</param>
+      <param name="value">The value.</param>
+      <typeparam name="T">The generic Type.</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.OwinContext.TraceOutput"></member>
+    <member name="T:Microsoft.Owin.OwinMiddleware">
+      <summary>表示 OWIN 中间件。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.OwinMiddleware.#ctor(Microsoft.Owin.OwinMiddleware)">
+      <summary>初始化 <see cref="T:Microsoft.Owin.OwinMiddleware" /> 类的新实例。</summary>
+      <param name="next">下一个 <see cref="T:Microsoft.Owin.OwinMiddleware" /> 实例。</param>
+    </member>
+    <member name="M:Microsoft.Owin.OwinMiddleware.Invoke(Microsoft.Owin.IOwinContext)"></member>
+    <member name="P:Microsoft.Owin.OwinMiddleware.Next">
+      <summary>转到下一个 <see cref="T:Microsoft.Owin.OwinMiddleware" /> 实例。</summary>
+      <returns>
+        <see cref="T:Microsoft.Owin.OwinMiddleware" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.OwinRequest"></member>
+    <member name="M:Microsoft.Owin.OwinRequest.#ctor"></member>
+    <member name="M:Microsoft.Owin.OwinRequest.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>初始化 <see cref="T:Microsoft.Owin.OwinRequest" /> 类的新实例。</summary>
+      <param name="environment">环境。</param>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.Accept"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.Body">
+      <summary>获取或设置此请求的正文。</summary>
+      <returns>此请求的正文。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.CacheControl"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.CallCancelled"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.ContentType"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.Context"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.Cookies"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.Environment">
+      <summary>获取与请求关联的环境。</summary>
+      <returns>与请求关联的环境。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.OwinRequest.Get``1(System.String)">
+      <summary>获取指定的 OWIN 请求。</summary>
+      <returns>如果成功，则为 true；否则为 false。</returns>
+      <param name="key">键。</param>
+      <typeparam name="T">请求的类型。</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.Headers"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.Host">
+      <summary>获取或设置要在 OWIN 请求中使用的主机标头值。</summary>
+      <returns>OWIN 请求中的主机标头值。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.IsSecure">
+      <summary>获取一个值，该值指示 OWIN 连接是否使用安全套接字。</summary>
+      <returns>如果连接是 SSL 连接，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.LocalIpAddress"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.LocalPort"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.MediaType"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.Method">
+      <summary>获取或设置请求的方法。</summary>
+      <returns>请求的方法。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.Path">
+      <summary>获取或设置当前请求的虚拟路径。</summary>
+      <returns>当前请求的虚拟路径。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.PathBase">
+      <summary>获取或设置 OWIN 请求的路由路径。</summary>
+      <returns>OWIN 请求的路由路径。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.Protocol"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.Query"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.QueryString">
+      <summary>获取 HTTP 查询字符串变量的集合。</summary>
+      <returns>HTTP 查询字符串变量的集合。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.OwinRequest.ReadFormAsync"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.RemoteIpAddress"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.RemotePort"></member>
+    <member name="P:Microsoft.Owin.OwinRequest.Scheme">
+      <summary>获取或设置此请求的方案名称。</summary>
+      <returns>此请求的方案名称。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.OwinRequest.Set``1(System.String,``0)">
+      <summary>设置指定的请求。</summary>
+      <param name="key">键。</param>
+      <param name="value">请求的值。</param>
+      <typeparam name="T">OWIN 请求的类型。</typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.Uri">
+      <summary>获取当前请求的 URI 的信息。</summary>
+      <returns>当前请求的 URI 的信息。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinRequest.User">
+      <summary>获取或设置此请求的用户名。</summary>
+      <returns>此请求的用户名。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.OwinResponse">
+      <summary>表示 OWIN 响应。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.OwinResponse.#ctor"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>初始化 <see cref="T:Microsoft.Owin.OwinResponse" /> 类的新实例。</summary>
+      <param name="environment">环境。</param>
+    </member>
+    <member name="P:Microsoft.Owin.OwinResponse.Body">
+      <summary>获取或设置响应的正文流。</summary>
+      <returns>响应的正文流。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinResponse.ContentLength"></member>
+    <member name="P:Microsoft.Owin.OwinResponse.ContentType">
+      <summary>获取或设置输出流的内容类型。</summary>
+      <returns>输出流的内容类型。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinResponse.Context"></member>
+    <member name="P:Microsoft.Owin.OwinResponse.Cookies"></member>
+    <member name="P:Microsoft.Owin.OwinResponse.Environment">
+      <summary>获取与响应关联的环境。</summary>
+      <returns>与响应关联的环境。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinResponse.ETag"></member>
+    <member name="P:Microsoft.Owin.OwinResponse.Expires"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.Get``1(System.String)">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.OwinResponse.Headers"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.OnSendingHeaders(System.Action{System.Object},System.Object)"></member>
+    <member name="P:Microsoft.Owin.OwinResponse.Protocol"></member>
+    <member name="P:Microsoft.Owin.OwinResponse.ReasonPhrase"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.Redirect(System.String)">
+      <summary>从指定的位置重定向响应。</summary>
+      <param name="location">要将响应重定向到的位置。</param>
+    </member>
+    <member name="M:Microsoft.Owin.OwinResponse.Set``1(System.String,``0)">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="P:Microsoft.Owin.OwinResponse.StatusCode">
+      <summary>获取或设置返回到客户端的输出的 OWIN 状态代码。</summary>
+      <returns>返回到客户端的输出的 OWIN 状态代码。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.OwinResponse.Write(System.Byte[])"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.Write(System.Byte[],System.Int32,System.Int32)"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.Write(System.String)"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.WriteAsync(System.Byte[])"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.WriteAsync(System.Byte[],System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.WriteAsync(System.String)"></member>
+    <member name="M:Microsoft.Owin.OwinResponse.WriteAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.Owin.OwinStartupAttribute">
+      <summary>Represents the startup attributes for the Owin.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.OwinStartupAttribute.#ctor(System.String,System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.OwinStartupAttribute" /> class.</summary>
+      <param name="friendlyName">The friendly name.</param>
+      <param name="startupType">The type of startup.</param>
+    </member>
+    <member name="M:Microsoft.Owin.OwinStartupAttribute.#ctor(System.String,System.Type,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.OwinStartupAttribute" /> class.</summary>
+      <param name="friendlyName">The friendly name.</param>
+      <param name="startupType">The type of startup.</param>
+      <param name="methodName">The method name.</param>
+    </member>
+    <member name="M:Microsoft.Owin.OwinStartupAttribute.#ctor(System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.OwinStartupAttribute" /> class.</summary>
+      <param name="startupType">The type of startup.</param>
+    </member>
+    <member name="M:Microsoft.Owin.OwinStartupAttribute.#ctor(System.Type,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.OwinStartupAttribute" /> class.</summary>
+      <param name="startupType">The type of startup.</param>
+      <param name="methodName">The method name.</param>
+    </member>
+    <member name="P:Microsoft.Owin.OwinStartupAttribute.FriendlyName">
+      <summary>Gets the friendly name for the attribute.</summary>
+      <returns>The friendly name for the attribute.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinStartupAttribute.MethodName">
+      <summary>Gets the method name for the attribute.</summary>
+      <returns>The method name for the attribute.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.OwinStartupAttribute.StartupType">
+      <summary>Gets the type of startup.</summary>
+      <returns>The type of startup.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.PathString">
+      <summary>Provides correct escaping for Path and PathBase values when needed to reconstruct a request or redirect URI string.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.#ctor(System.String)">
+      <summary>Initialize the path string with a given value. This value must be in unescaped format. Use PathString.FromUriComponent(value) if you have a path value which is in an escaped format.</summary>
+      <param name="value">The unescaped path to be assigned to the Value property.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.Add(Microsoft.Owin.PathString)">
+      <summary>Adds two PathString instances into a combined PathString value.</summary>
+      <returns>Returns the combined PathString.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.Add(Microsoft.Owin.QueryString)">
+      <summary>Combines a PathString and QueryString into the joined URI formatted string value.</summary>
+      <returns>Returns the joined URI formatted string.</returns>
+    </member>
+    <member name="F:Microsoft.Owin.PathString.Empty">
+      <summary>Represents the empty path. This field is read-only.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.Equals(Microsoft.Owin.PathString)">
+      <summary>Compares this PathString value to another value. The default comparison is StringComparison.OrdinalIgnoreCase.</summary>
+      <returns>True if both PathString values are equal.</returns>
+      <param name="other">The second PathString for comparison.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.Equals(Microsoft.Owin.PathString,System.StringComparison)">
+      <summary>Compares this PathString value to another value using a specific StringComparison type.</summary>
+      <returns>True if both PathString values are equal.</returns>
+      <param name="other">The second PathString for comparison.</param>
+      <param name="comparisonType">The StringComparison type to us.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.Equals(System.Object)">
+      <summary>Compares this PathString value to another value. The default comparison is StringComparison.OrdinalIgnoreCase.</summary>
+      <returns>True if both PathString values are equal.</returns>
+      <param name="obj">The second PathString for comparison.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.FromUriComponent(System.String)">
+      <summary>Returns an PathString given the path as it is escaped in the URI format. The string MUST NOT contain any value that is not a path.</summary>
+      <returns>The resulting PathString.</returns>
+      <param name="uriComponent">The escaped path as it appears in the URI format.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.FromUriComponent(System.Uri)">
+      <summary>Returns a PathString given the path as from a Uri object. Relative Uri objects are not supported.</summary>
+      <returns>The resulting PathString.</returns>
+      <param name="uri">The Uri object.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.GetHashCode">
+      <summary>Returns the hash code for the PathString value. The hash code is provided by the OrdinalIgnoreCase implementation.</summary>
+      <returns>The hash code.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.PathString.HasValue">
+      <summary>True if the path is not empty.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.op_Addition(Microsoft.Owin.PathString,Microsoft.Owin.PathString)">
+      <summary>Operator call through to Add.</summary>
+      <returns>The PathString combination of both values.</returns>
+      <param name="left">The left parameter.</param>
+      <param name="right">The right parameter.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.op_Addition(Microsoft.Owin.PathString,Microsoft.Owin.QueryString)">
+      <summary>Operator call through to Add.</summary>
+      <returns>The PathString combination of both values.</returns>
+      <param name="left">The left parameter.</param>
+      <param name="right">The right parameter.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.op_Equality(Microsoft.Owin.PathString,Microsoft.Owin.PathString)">
+      <summary>Operator call through to Equals.</summary>
+      <returns>True if both PathString values are equal.</returns>
+      <param name="left">The left parameter.</param>
+      <param name="right">The right parameter</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.op_Inequality(Microsoft.Owin.PathString,Microsoft.Owin.PathString)">
+      <summary>Operator call through to Equals.</summary>
+      <returns>True if both PathString values are not equal.</returns>
+      <param name="left">The left parameter.</param>
+      <param name="right">The right parameter.</param>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.StartsWithSegments(Microsoft.Owin.PathString)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.StartsWithSegments(Microsoft.Owin.PathString,Microsoft.Owin.PathString@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.ToString">
+      <summary>Provides the path string escaped in a way which is correct for combining into the URI representation.</summary>
+      <returns>Returns the escaped path value.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.PathString.ToUriComponent">
+      <summary>Provides the path string escaped in a way which is correct for combining into the URI representation.</summary>
+      <returns>Returns the escaped path value.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.PathString.Value">
+      <summary>The unescaped path value.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.QueryString">
+      <summary>Provides correct handling for QueryString value when needed to reconstruct a request or redirect URI string.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.#ctor(System.String)">
+      <summary>Initialize the query string with a given value. This value must be in escaped and delimited format without a leading '?' character.</summary>
+      <param name="value">The query string to be assigned to the Value property.</param>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.#ctor(System.String,System.String)">
+      <summary>Initialize a query string with a single given parameter name and value. The value is.</summary>
+      <param name="name">The unencoded parameter name.</param>
+      <param name="value">The unencoded parameter value.</param>
+    </member>
+    <member name="F:Microsoft.Owin.QueryString.Empty">
+      <summary>Represents the empty query string. This field is read-only.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.Equals(Microsoft.Owin.QueryString)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.Equals(System.Object)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.FromUriComponent(System.String)">
+      <summary>Returns a PathString given the path as it is escaped in the URI format. The string MUST NOT contain any value that is not a path.</summary>
+      <returns>The resulting PathString.</returns>
+      <param name="uriComponent">The escaped path as it appears in the URI format.</param>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.FromUriComponent(System.Uri)">
+      <summary>Returns a PathString given the path as from a Uri object. Relative Uri objects are not supported.</summary>
+      <returns>The resulting PathString.</returns>
+      <param name="uri">The Uri object.</param>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.GetHashCode">
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.QueryString.HasValue">
+      <summary>True if the query string is not empty.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.op_Equality(Microsoft.Owin.QueryString,Microsoft.Owin.QueryString)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.op_Inequality(Microsoft.Owin.QueryString,Microsoft.Owin.QueryString)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.ToString">
+      <summary>Provides the query string escaped in a way which is correct for combining into the URI representation. A leading '?' character will be prepended unless the Value is null or empty. Characters which are potentially dangerous are escaped.</summary>
+      <returns>The query string value.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.QueryString.ToUriComponent">
+      <summary>Provides the query string escaped in a way which is correct for combining into the URI representation. A leading '?' character will be prepended unless the Value is null or empty. Characters which are potentially dangerous are escaped.</summary>
+      <returns>The query string value.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.QueryString.Value">
+      <summary>The unescaped query string without the leading '?' character.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.ReadableStringCollection">
+      <summary>Accessors for query, forms, etc.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.ReadableStringCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String[]})">
+      <summary>Create a new wrapper</summary>
+    </member>
+    <member name="M:Microsoft.Owin.ReadableStringCollection.Get(System.String)">
+      <summary>Get the associated value from the collection. Multiple values will be merged. Returns null if the key is not present.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.ReadableStringCollection.GetEnumerator"></member>
+    <member name="M:Microsoft.Owin.ReadableStringCollection.GetValues(System.String)">
+      <summary>Get the associated values from the collection in their original format. Returns null if the key is not present.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.ReadableStringCollection.Item(System.String)">
+      <summary>Get the associated value from the collection. Multiple values will be merged. Returns null if the key is not present.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.ReadableStringCollection.System#Collections#IEnumerable#GetEnumerator"></member>
+    <member name="T:Microsoft.Owin.RequestCookieCollection">
+      <summary>A wrapper for the request Cookie header</summary>
+    </member>
+    <member name="M:Microsoft.Owin.RequestCookieCollection.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Create a new wrapper</summary>
+    </member>
+    <member name="M:Microsoft.Owin.RequestCookieCollection.GetEnumerator"></member>
+    <member name="P:Microsoft.Owin.RequestCookieCollection.Item(System.String)">
+      <summary>Returns null rather than throwing KeyNotFoundException</summary>
+    </member>
+    <member name="M:Microsoft.Owin.RequestCookieCollection.System#Collections#IEnumerable#GetEnumerator"></member>
+    <member name="T:Microsoft.Owin.ResponseCookieCollection">
+      <summary>A wrapper for the response Set-Cookie header.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.ResponseCookieCollection.#ctor(Microsoft.Owin.IHeaderDictionary)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.ResponseCookieCollection" /> class.</summary>
+      <param name="headers">The collection of response Set-Cookie header.</param>
+    </member>
+    <member name="M:Microsoft.Owin.ResponseCookieCollection.Append(System.String,System.String)">
+      <summary>Adds a new cookie and value.</summary>
+      <param name="key">The key of the cookie to add.</param>
+      <param name="value">The value of the cookie to add.</param>
+    </member>
+    <member name="M:Microsoft.Owin.ResponseCookieCollection.Append(System.String,System.String,Microsoft.Owin.CookieOptions)">
+      <summary>Adds a new cookie and value.</summary>
+      <param name="key">The key of the cookie to add.</param>
+      <param name="value">The value of the cookie to add.</param>
+      <param name="options">The options for cookie.</param>
+    </member>
+    <member name="M:Microsoft.Owin.ResponseCookieCollection.Delete(System.String)">
+      <summary>Sets the cookie expired.</summary>
+      <param name="key">The key of the cookie to set.</param>
+    </member>
+    <member name="M:Microsoft.Owin.ResponseCookieCollection.Delete(System.String,Microsoft.Owin.CookieOptions)">
+      <summary>Sets the cookie expired.</summary>
+      <param name="key">The key of the cookie to set.</param>
+      <param name="options">The options for cookie.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Builder.AppBuilder">
+      <summary>A standard implementation of IAppBuilder</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Builder.AppBuilder.#ctor"></member>
+    <member name="M:Microsoft.Owin.Builder.AppBuilder.Build(System.Type)">
+      <summary>The Build is called at the point when all of the middleware should be chained together. This is typically done by the hosting component which created the app builder, and does not need to be called by the startup method if the IAppBuilder is passed in.</summary>
+      <returns>Returns an instance of the pipeline's entry point. This object may be safely cast to the type which was provided</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Builder.AppBuilder.New">
+      <summary>The New method creates a new instance of an IAppBuilder. This is needed to create a tree structure in your processing, rather than a linear pipeline. The new instance share the same Properties, but will be created with a new, empty middleware list. To create a tangent pipeline you would first call New, followed by several calls to Use on the new builder, ending with a call to Build on the new builder. The return value from Build will be the entry-point to your tangent pipeline. This entry-point may now be added to the main pipeline as an argument to a switching middleware, which will either call the tangent pipeline or the "next app", based on something in the request. That said - all of that work is typically hidden by a middleware like Map, which will do that for you.</summary>
+      <returns>The new instance of the IAppBuilder implementation</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Builder.AppBuilder.Properties">
+      <summary>Contains arbitrary properties which may added, examined, and modified by components during the startup sequence.</summary>
+      <returns>Returns <see cref="T:System.Collections.Generic.IDictionary`2" />.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Builder.AppBuilder.Use(System.Object,System.Object[])">
+      <summary>Adds a middleware node to the OWIN function pipeline. The middleware are invoked in the order they are added: the first middleware passed to Use will be the outermost function, and the last middleware passed to Use will be the innermost.</summary>
+      <returns>The IAppBuilder itself is returned. This enables you to chain your use statements together.</returns>
+      <param name="middleware">The middleware parameter determines which behavior is being chained into the pipeline. If the middleware given to Use is a Delegate, then it will be invoked with the "next app" in the chain as the first parameter. If the delegate takes more than the single argument, then the additional values must be provided to Use in the args array. If the middleware given to Use is a Type, then the public constructor will be invoked with the "next app" in the chain as the first parameter. The resulting object must have a public Invoke method. If the object has constructors which take more than the single "next app" argument, then additional values may be provided in the args array.</param>
+      <param name="args">Any additional args passed to Use will be passed as additional values, following the "next app" parameter, when the OWIN call pipeline is build. They are passed as additional parameters if the middleware parameter is a Delegate, or as additional constructor arguments if the middle parameter is a Type.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Builder.AppBuilderExtensions">
+      <summary>Extension methods for IAppBuilder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Builder.AppBuilderExtensions.AddSignatureConversion(Owin.IAppBuilder,System.Delegate)">
+      <summary>Adds converters for adapting between disparate application signatures.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Builder.AppBuilderExtensions.AddSignatureConversion``2(Owin.IAppBuilder,System.Func{``0,``1})">
+      <summary>Adds converters for adapting between disparate application signatures.</summary>
+      <typeparam name="T1"></typeparam>
+      <typeparam name="T2"></typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Builder.AppBuilderExtensions.Build(Owin.IAppBuilder)">
+      <summary>The Build is called at the point when all of the middleware should be chained together. May be called to build pipeline branches.</summary>
+      <returns>The request processing entry point for this section of the pipeline.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Builder.AppBuilderExtensions.Build``1(Owin.IAppBuilder)">
+      <summary>The Build is called at the point when all of the middleware should be chained together. May be called to build pipeline branches.</summary>
+      <returns>The request processing entry point for this section of the pipeline.</returns>
+      <typeparam name="TApp">The application signature.</typeparam>
+    </member>
+    <member name="T:Microsoft.Owin.BuilderProperties.Address">
+      <summary>Contains parts of an address and the complete address.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.BuilderProperties.Address" /> class.</summary>
+      <param name="dictionary">The dictionary.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.#ctor(System.String,System.String,System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.BuilderProperties.Address" /> class.</summary>
+      <param name="scheme">The scheme.</param>
+      <param name="host">The host.</param>
+      <param name="port">The port.</param>
+      <param name="path">The path.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.Create">
+      <summary>Creates a new <see cref="T:Microsoft.Owin.BuilderProperties.Address" />.</summary>
+      <returns>A new <see cref="T:Microsoft.Owin.BuilderProperties.Address" /> to create.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.Address.Dictionary">
+      <summary>Gets the internal dictionary for this collection.</summary>
+      <returns>The internal dictionary for this collection.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.Equals(Microsoft.Owin.BuilderProperties.Address)">
+      <summary>Determines whether the specified object is equal to the current object.</summary>
+      <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
+      <param name="other">The other object.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.Equals(System.Object)">
+      <summary>Determines whether the specified object is equal to the current object.</summary>
+      <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
+      <param name="obj">The other object.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.Get``1(System.String)">
+      <summary>Gets the list of keys in the <see cref="T:Microsoft.Owin.BuilderProperties.Address" />.</summary>
+      <returns>The list of keys in the <see cref="T:Microsoft.Owin.BuilderProperties.Address" />.</returns>
+      <param name="key">The key value.</param>
+      <typeparam name="T">The type generic.</typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.GetHashCode">
+      <summary>Returns the hash code for this instance.</summary>
+      <returns>The hash code for this instance.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.Address.Host">
+      <summary>Gets or sets the host for the builder.</summary>
+      <returns>The host for the builder.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.op_Equality(Microsoft.Owin.BuilderProperties.Address,Microsoft.Owin.BuilderProperties.Address)">
+      <summary>Determines whether two specified instances of <see cref="T:Microsoft.Owin.BuilderProperties.Address" /> are equal.</summary>
+      <returns>true if left and right represent the same address; otherwise, false.</returns>
+      <param name="left">The first object to compare.</param>
+      <param name="right">The second objet to compare.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.op_Inequality(Microsoft.Owin.BuilderProperties.Address,Microsoft.Owin.BuilderProperties.Address)">
+      <summary>Determines whether two specified instance of <see cref="T:Microsoft.Owin.BuilderProperties.Address" /> are not equal.</summary>
+      <returns>true if left and right do not represent the same address; otherwise, false.</returns>
+      <param name="left">The first object to compare.</param>
+      <param name="right">The second object to compare.</param>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.Address.Path">
+      <summary>Gets or sets the string that describes the path.</summary>
+      <returns>The string that describes the path.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.Address.Port">
+      <summary>Gets or sets the port number of the address.</summary>
+      <returns>The port number of the address.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.Address.Scheme">
+      <summary>Gets or sets the scheme name for this address.</summary>
+      <returns>The scheme name.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Address.Set(System.String,System.Object)">
+      <summary>Sets the <see cref="T:Microsoft.Owin.BuilderProperties.Address" /> with the specified key and value.</summary>
+      <returns>The <see cref="T:Microsoft.Owin.BuilderProperties.Address" /> with the specified key and value.</returns>
+      <param name="key">The key.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="T:Microsoft.Owin.BuilderProperties.AddressCollection">
+      <summary>Wraps the host.Addresses list.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.#ctor(System.Collections.Generic.IList{System.Collections.Generic.IDictionary{System.String,System.Object}})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.BuilderProperties.AddressCollection" /> class.</summary>
+      <param name="list">The address list to set to the collection.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.Add(Microsoft.Owin.BuilderProperties.Address)">
+      <summary>Adds the specified address to the collection.</summary>
+      <param name="address">The address to add to the collection.</param>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AddressCollection.Count">
+      <summary>Gets the number of elements in the collection.</summary>
+      <returns>The number of elements in the collection.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.Create">
+      <summary>Creates a new instance of <see cref="T:Microsoft.Owin.BuilderProperties.AddressCollection" /> with empty list.</summary>
+      <returns>A new instance of <see cref="T:Microsoft.Owin.BuilderProperties.AddressCollection" /> with empty list.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.Equals(Microsoft.Owin.BuilderProperties.AddressCollection)">
+      <summary>Determines whether the current collection is equal to the specified collection.</summary>
+      <returns>true if current collection is equal to the specified collection; otherwise, false.</returns>
+      <param name="other">The other collection to compare to the current collection.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.Equals(System.Object)">
+      <summary>Determines whether the current collection is equal to the specified object.</summary>
+      <returns>true if current collection is equal to the specified object; otherwise, false.</returns>
+      <param name="obj">The object to compare to the current collection.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.GetEnumerator">
+      <summary>Gets the enumerator that iterates through the collection.</summary>
+      <returns>The enumerator that can be used to iterate through the collection.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.GetHashCode">
+      <summary>Gets the hash code for this instance.</summary>
+      <returns>The hash code for this instance.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AddressCollection.Item(System.Int32)">
+      <summary>Gets the item with the specified index from the collection.</summary>
+      <returns>The item with the specified index.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AddressCollection.List">
+      <summary>Gets the underlying address list.</summary>
+      <returns>The underlying address list.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.op_Equality(Microsoft.Owin.BuilderProperties.AddressCollection,Microsoft.Owin.BuilderProperties.AddressCollection)">
+      <summary>Determines whether the first collection is equal to the second collection.</summary>
+      <returns>true if both collections are equal; otherwise, false.</returns>
+      <param name="left">The first collection to compare.</param>
+      <param name="right">The second collection to compare.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.op_Inequality(Microsoft.Owin.BuilderProperties.AddressCollection,Microsoft.Owin.BuilderProperties.AddressCollection)">
+      <summary>Determines whether the first collection is not equal to the second collection.</summary>
+      <returns>true if both collections are not equal; otherwise, false.</returns>
+      <param name="left">The first collection to compare.</param>
+      <param name="right">The second collection to compare.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AddressCollection.System#Collections#IEnumerable#GetEnumerator">
+      <summary>Gets the enumerator that iterates through the collection.</summary>
+      <returns>The enumerator that can be used to iterate through the collection.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.BuilderProperties.AppProperties">
+      <summary>A wrapper for the <see cref="P:Microsoft.Owin.Builder.AppBuilder.Properties" /> IDictionary.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AppProperties.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.BuilderProperties.AppProperties" /> class.</summary>
+      <param name="dictionary">The dictionary to set for this instance.</param>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.Addresses">
+      <summary>Gets or sets the address collection for “host.Addresses”.</summary>
+      <returns>The address collection for “host.Addresses”.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.AddSignatureConversionDelegate">
+      <summary>Gets or sets the action delegate for “builder.AddSignatureConversion”.</summary>
+      <returns>The action delegate for “builder.AddSignatureConversion”.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.AppName">
+      <summary>Gets or sets the string value for “host.AppName”.</summary>
+      <returns>The string value for “host.AppName”.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.Capabilities">
+      <summary>Gets or sets the list of “server.Capabilities”.</summary>
+      <returns>The list of “server.Capabilities”.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.DefaultApp">
+      <summary>Gets or sets the function delegate for “builder.DefaultApp”.</summary>
+      <returns>The function delegate for “builder.DefaultApp”.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.Dictionary">
+      <summary>Gets the underlying dictionary for this <see cref="T:Microsoft.Owin.BuilderProperties.AppProperties" /> instance.</summary>
+      <returns>The underlying dictionary for this <see cref="T:Microsoft.Owin.BuilderProperties.AppProperties" /> instance.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AppProperties.Equals(Microsoft.Owin.BuilderProperties.AppProperties)">
+      <summary>Determines whether the current AppProperties is equal to the specified AppProperties.</summary>
+      <returns>true if the current AppProperties is equal to the specified AppProperties; otherwise, false.</returns>
+      <param name="other">The other AppProperties to compare with the current instance.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AppProperties.Equals(System.Object)">
+      <summary>Determines whether the current AppProperties is equal to the specified object.</summary>
+      <returns>true if the current AppProperties is equal to the specified object; otherwise, false.</returns>
+      <param name="obj">The object to compare with the current instance.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AppProperties.Get``1(System.String)">
+      <summary>Gets the value from the dictionary with the specified key.</summary>
+      <returns>The value with the specified key.</returns>
+      <param name="key">The key of the value to get.</param>
+      <typeparam name="T">The type of the value.</typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AppProperties.GetHashCode">
+      <summary>Returns the hash code for this instance.</summary>
+      <returns>The hash code for this instance.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.OnAppDisposing">
+      <summary>Gets or sets the cancellation token for “host.OnAppDisposing”.</summary>
+      <returns>The cancellation token for “host.OnAppDisposing”.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AppProperties.op_Equality(Microsoft.Owin.BuilderProperties.AppProperties,Microsoft.Owin.BuilderProperties.AppProperties)">
+      <summary>Determines whether the first AppPProperties is equal to the second AppProperties.</summary>
+      <returns>true if both AppProperties are equal; otherwise, false.</returns>
+      <param name="left">The first AppPropeties to compare.</param>
+      <param name="right">The second AppPropeties to compare.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AppProperties.op_Inequality(Microsoft.Owin.BuilderProperties.AppProperties,Microsoft.Owin.BuilderProperties.AppProperties)">
+      <summary>Determines whether the first AppPProperties is not equal to the second AppProperties.</summary>
+      <returns>true if both AppProperties are not equal; otherwise, false.</returns>
+      <param name="left">The first AppPropeties to compare.</param>
+      <param name="right">The second AppPropeties to compare.</param>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.OwinVersion">
+      <summary>Gets or sets the string value for “owin.Version”.</summary>
+      <returns>The string value for “owin.Version”.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.AppProperties.Set(System.String,System.Object)">
+      <summary>Sets the value with the specified key.</summary>
+      <returns>This instance.</returns>
+      <param name="key">The key of the value to set.</param>
+      <param name="value">The value to set.</param>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.AppProperties.TraceOutput">
+      <summary>Gets or sets the text writer for “host.TraceOutput”.</summary>
+      <returns>The text writer for “host.TraceOutput”.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.BuilderProperties.Capabilities">
+      <summary>Represents the capabilities for the builder properties.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" /> class.</summary>
+      <param name="dictionary">A collection of object.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.Create">
+      <summary>Creates the builder <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" />.</summary>
+      <returns>The builder <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.Capabilities.Dictionary">
+      <summary>Gets a collection of objects.</summary>
+      <returns>A collection of objects.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.Equals(Microsoft.Owin.BuilderProperties.Capabilities)">
+      <summary>Indicates a value whether the specified object is equal to the current object.</summary>
+      <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
+      <param name="other">The object.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.Equals(System.Object)">
+      <summary>Indicates a value whether the specified object is equal to the current object.</summary>
+      <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
+      <param name="obj">The specified object.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.Get``1(System.String)">
+      <summary>Gets the value of the capabilities using the specified key.</summary>
+      <returns>The value of the capabilities.</returns>
+      <param name="key">The key value.</param>
+      <typeparam name="T">The generic Type.</typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.GetHashCode">
+      <summary>Serves as a hash function for a particular type.</summary>
+      <returns>A hash code for the current object.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.op_Equality(Microsoft.Owin.BuilderProperties.Capabilities,Microsoft.Owin.BuilderProperties.Capabilities)">
+      <summary>Determines whether two specified instances of <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" /> are equal.</summary>
+      <returns>true if the two specified instances of <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" /> are equal; otherwise, false.</returns>
+      <param name="left">The first object to compare.</param>
+      <param name="right">The second object to compare.</param>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.op_Inequality(Microsoft.Owin.BuilderProperties.Capabilities,Microsoft.Owin.BuilderProperties.Capabilities)">
+      <summary>Determines whether two specified instances of <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" /> are equal.</summary>
+      <returns>true if the two specified instances of <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" /> are equal; otherwise, false.</returns>
+      <param name="left">The first object to compare.</param>
+      <param name="right">The second object to compare.</param>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.Capabilities.SendFileVersion">
+      <summary>Gets or sets the file version to send.</summary>
+      <returns>The file version to send.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.BuilderProperties.Capabilities.Set(System.String,System.Object)">
+      <summary>Sets the builder for the <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" /> with the specified key and value.</summary>
+      <returns>The builder for the <see cref="T:Microsoft.Owin.BuilderProperties.Capabilities" />.</returns>
+      <param name="key">The key.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="P:Microsoft.Owin.BuilderProperties.Capabilities.WebSocketVersion">
+      <summary>Gets or sets the web socket version.</summary>
+      <returns>The version of the web socket.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Extensions.IntegratedPipelineExtensions">
+      <summary>Represents the integrated pipeline extensions.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Extensions.IntegratedPipelineExtensions.UseStageMarker(Owin.IAppBuilder,Owin.PipelineStage)">
+      <summary>Uses a stage marker for the <see cref="T:Microsoft.Owin.Extensions.IntegratedPipelineExtensions" />.</summary>
+      <returns>A stage marker for the <see cref="T:Microsoft.Owin.Extensions.IntegratedPipelineExtensions" />.</returns>
+      <param name="app">The IAppBuilder.</param>
+      <param name="stage">The pipeline stage.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Extensions.IntegratedPipelineExtensions.UseStageMarker(Owin.IAppBuilder,System.String)">
+      <summary>Uses a stage marker for the <see cref="T:Microsoft.Owin.Extensions.IntegratedPipelineExtensions" />.</summary>
+      <returns>A stage marker for the <see cref="T:Microsoft.Owin.Extensions.IntegratedPipelineExtensions" />.</returns>
+      <param name="app">The IAppBuilder.</param>
+      <param name="stageName">The stage of name.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Extensions.UseHandlerMiddleware">
+      <summary>Represents a middleware for executing in-line function middleware.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Extensions.UseHandlerMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,System.Func{Microsoft.Owin.IOwinContext,System.Threading.Tasks.Task})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.Extensions.UseHandlerMiddleware" /> class.</summary>
+      <param name="next">The pointer to next middleware.</param>
+      <param name="handler">The in-line function request handler.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Extensions.UseHandlerMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,System.Func{Microsoft.Owin.IOwinContext,System.Func{System.Threading.Tasks.Task},System.Threading.Tasks.Task})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.Extensions.UseHandlerMiddleware" /> class.</summary>
+      <param name="next">The pointer to next middleware.</param>
+      <param name="handler">The in-line function request handler.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Extensions.UseHandlerMiddleware.Invoke(Microsoft.Owin.IOwinContext)">
+      <summary>Invokes the handler for processing the request.</summary>
+      <returns>The <see cref="T:System.Threading.Tasks.Task" /> object that represents the request operation.</returns>
+      <param name="context">The OWIN context.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Helpers.WebHelpers">
+      <summary>表示 Web 帮助器。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Helpers.WebHelpers.ParseForm(System.String)"></member>
+    <member name="T:Microsoft.Owin.Infrastructure.ISystemClock">
+      <summary>提供系统的日期和时间。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Infrastructure.ISystemClock.UtcNow">
+      <summary>获取已基于本地系统的时钟时间设置为当前通用协调时间 (UTC) 的日期和时间。</summary>
+      <returns>已设置为当前通用协调时间 (UTC) 的日期和时间。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Infrastructure.SignatureConversions">
+      <summary>提供 OWIN 签名的转换。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Infrastructure.SignatureConversions.AddConversions(Owin.IAppBuilder)">
+      <summary>向应用程序添加转换。</summary>
+      <param name="app">应用程序。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Infrastructure.SystemClock">
+      <summary>提供系统的日期和时间。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Infrastructure.SystemClock.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Infrastructure.SystemClock" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Infrastructure.SystemClock.UtcNow">
+      <summary>获取已基于本地系统的时钟时间设置为当前通用协调时间 (UTC) 的日期和时间。</summary>
+      <returns>已设置为当前通用协调时间 (UTC) 的日期和时间。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Infrastructure.WebUtilities">
+      <summary>表示 OWIN 基础结构的 Web 实用工具。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Infrastructure.WebUtilities.AddQueryString(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>添加具有给定标识符的查询字符串。</summary>
+      <returns>添加的查询字符串。</returns>
+      <param name="uri">此查询字符串的 URI。</param>
+      <param name="queryString">要添加的查询字符串。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Infrastructure.WebUtilities.AddQueryString(System.String,System.String)">
+      <summary>添加具有给定标识符的查询字符串。</summary>
+      <returns>添加的查询字符串。</returns>
+      <param name="uri">此查询字符串的 URI。</param>
+      <param name="queryString">要添加的查询字符串。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Infrastructure.WebUtilities.AddQueryString(System.String,System.String,System.String)">
+      <summary>添加查询字符串。</summary>
+      <returns>添加的查询字符串。</returns>
+      <param name="uri">此查询的 URI。</param>
+      <param name="name">指定的查询的名称。</param>
+      <param name="value">要添加的查询的值。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Logging.AppBuilderLoggerExtensions">
+      <summary>Logging extension methods for IAppBuilder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.AppBuilderLoggerExtensions.CreateLogger``1(Owin.IAppBuilder)">
+      <summary>Creates a new ILogger instance from the server.LoggerFactory in the Properties collection.</summary>
+      <returns>The created <see cref="T:Microsoft.Owin.Logging.ILogger" />.</returns>
+      <param name="app">The application builder.</param>
+      <typeparam name="TType">The type of the logger.</typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.AppBuilderLoggerExtensions.CreateLogger(Owin.IAppBuilder,System.String)">
+      <summary>Creates a new ILogger instance from the server.LoggerFactory in the Properties collection.</summary>
+      <returns>The created <see cref="T:Microsoft.Owin.Logging.ILogger" />.</returns>
+      <param name="app">The application builder.</param>
+      <param name="name">The name of the logger.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.AppBuilderLoggerExtensions.CreateLogger(Owin.IAppBuilder,System.Type)">
+      <summary>Creates a new ILogger instance from the server.LoggerFactory in the Properties collection.</summary>
+      <returns>The created <see cref="T:Microsoft.Owin.Logging.ILogger" />.</returns>
+      <param name="app">The application builder.</param>
+      <param name="component">The component of the logger.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.AppBuilderLoggerExtensions.GetLoggerFactory(Owin.IAppBuilder)">
+      <summary>Retrieves the server.LoggerFactory from the Properties collection.</summary>
+      <returns>The <see cref="T:Microsoft.Owin.Logging.ILoggerFactory" /> object.</returns>
+      <param name="app">The application builder.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.AppBuilderLoggerExtensions.SetLoggerFactory(Owin.IAppBuilder,Microsoft.Owin.Logging.ILoggerFactory)">
+      <summary>Sets the server.LoggerFactory in the Properties collection.</summary>
+      <param name="app">The application builder.</param>
+      <param name="loggerFactory">The logger factory.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Logging.DiagnosticsLoggerFactory">
+      <summary>表示诊断记录器工厂。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.DiagnosticsLoggerFactory.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Logging.DiagnosticsLoggerFactory" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.DiagnosticsLoggerFactory.#ctor(System.Diagnostics.SourceSwitch,System.Diagnostics.TraceListener)">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Logging.DiagnosticsLoggerFactory" /> 类的新实例。</summary>
+      <param name="rootSourceSwitch">根源开关。</param>
+      <param name="rootTraceListener">根跟踪侦听器。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.DiagnosticsLoggerFactory.Create(System.String)">
+      <summary>创建此记录器的实例。</summary>
+      <returns>创建的 <see cref="T:Microsoft.Owin.Logging.ILogger" />。</returns>
+      <param name="name">记录器的名称。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Logging.ILogger">
+      <summary>提供记录器的接口。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.ILogger.WriteCore(System.Diagnostics.TraceEventType,System.Int32,System.Object,System.Exception,System.Func{System.Object,System.Exception,System.String})">
+      <summary>将大多数日志记录模式聚合成一个方法。这必须与 OWIN 环境中的 Func 表示方法兼容。若要检查 IsEnabled，请只使用 TraceEventType 调用 WriteCore 并检查返回值，将不写入任何事件。</summary>
+      <returns>如果事件包含日志记录模式，则为 true；否则为 false。</returns>
+      <param name="eventType">事件类型。</param>
+      <param name="eventId">事件标识符。</param>
+      <param name="state">事件的状态。</param>
+      <param name="exception">异常。</param>
+      <param name="formatter">格式化程序。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Logging.ILoggerFactory">
+      <summary>表示记录器工厂的接口。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.ILoggerFactory.Create(System.String)">
+      <summary>创建此记录器的实例。</summary>
+      <returns>创建的 <see cref="T:Microsoft.Owin.Logging.ILogger" />。</returns>
+      <param name="name">记录器的名称。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Logging.LoggerExtensions">
+      <summary>表示记录器扩展。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.IsEnabled(Microsoft.Owin.Logging.ILogger,System.Diagnostics.TraceEventType)">
+      <summary>确定是否已启用记录器。</summary>
+      <returns>如果启用了记录器，则为 true；否则为 false。</returns>
+      <param name="logger">记录器。</param>
+      <param name="eventType">跟踪事件类型。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.WriteCritical(Microsoft.Owin.Logging.ILogger,System.String)">
+      <summary>写入指定记录器的严重消息。</summary>
+      <param name="logger">记录器。</param>
+      <param name="message">严重消息。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.WriteCritical(Microsoft.Owin.Logging.ILogger,System.String,System.Exception)">
+      <summary>写入指定记录器的严重消息。</summary>
+      <param name="logger">记录器。</param>
+      <param name="message">严重消息。</param>
+      <param name="error">错误。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.WriteError(Microsoft.Owin.Logging.ILogger,System.String)">
+      <summary>写入指定记录器的错误消息。</summary>
+      <param name="logger">记录器。</param>
+      <param name="message">错误消息。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.WriteError(Microsoft.Owin.Logging.ILogger,System.String,System.Exception)">
+      <summary>写入指定记录器的错误消息。</summary>
+      <param name="logger">记录器。</param>
+      <param name="message">要写入的错误消息。</param>
+      <param name="error">错误。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.WriteInformation(Microsoft.Owin.Logging.ILogger,System.String)">
+      <summary>写入指定记录器的信息消息。</summary>
+      <param name="logger">记录器。</param>
+      <param name="message">信息消息。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.WriteVerbose(Microsoft.Owin.Logging.ILogger,System.String)">
+      <summary>写入指定记录器的详细消息。</summary>
+      <param name="logger">记录器。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.WriteWarning(Microsoft.Owin.Logging.ILogger,System.String,System.Exception)">
+      <summary>写入指定记录器的警告消息。</summary>
+      <param name="logger">记录器。</param>
+      <param name="message">要写入的警告消息。</param>
+      <param name="error">错误。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Logging.LoggerExtensions.WriteWarning(Microsoft.Owin.Logging.ILogger,System.String,System.String[])"></member>
+    <member name="T:Microsoft.Owin.Logging.LoggerFactory">
+      <summary>提供 OWIN 记录器工厂。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Logging.LoggerFactory.Default">
+      <summary>获取默认的记录器工厂。</summary>
+      <returns>默认的记录器工厂。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Mapping.MapMiddleware">
+      <summary>Used to create path based branches in your application pipeline.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Mapping.MapMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Microsoft.Owin.Mapping.MapOptions)"></member>
+    <member name="M:Microsoft.Owin.Mapping.MapMiddleware.Invoke(Microsoft.Owin.IOwinContext)">
+      <summary>Process individual request.</summary>
+      <returns>The task that completes the process.</returns>
+      <param name="context">The context.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Mapping.MapOptions">
+      <summary>Options for the Map middleware.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Mapping.MapOptions.#ctor"></member>
+    <member name="P:Microsoft.Owin.Mapping.MapOptions.Branch">
+      <summary>The branch taken for a positive match.</summary>
+      <returns>Returns <see cref="T:Microsoft.Owin.OwinMiddleware" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Mapping.MapOptions.PathMatch">
+      <summary>The path to match.</summary>
+      <returns>Returns <see cref="T:Microsoft.Owin.PathString" />.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Mapping.MapWhenMiddleware">
+      <summary>Represents the map when middleware.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Mapping.MapWhenMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Microsoft.Owin.Mapping.MapWhenOptions)"></member>
+    <member name="M:Microsoft.Owin.Mapping.MapWhenMiddleware.Invoke(Microsoft.Owin.IOwinContext)">
+      <summary>Executes the specified context.</summary>
+      <returns>The specified context.</returns>
+      <param name="context">The context.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Mapping.MapWhenOptions">
+      <summary>Options for the MapWhen middleware.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Mapping.MapWhenOptions.#ctor"></member>
+    <member name="P:Microsoft.Owin.Mapping.MapWhenOptions.Branch">
+      <summary>The branch taken for a positive match.</summary>
+      <returns>Returns <see cref="T:Microsoft.Owin.OwinMiddleware" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Mapping.MapWhenOptions.Predicate">
+      <summary>The user callback that determines if the branch should be taken.</summary>
+      <returns>Returns <see cref="T:System.Func`2" />.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Mapping.MapWhenOptions.PredicateAsync">
+      <summary>The async user callback that determines if the branch should be taken.</summary>
+      <returns>Returns <see cref="T:System.Func`2" />.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.AuthenticateResult">
+      <summary>Acts as the return value from calls to the IAuthenticationManager's AuthenticeAsync methods.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticateResult.#ctor(System.Security.Principal.IIdentity,Microsoft.Owin.Security.AuthenticationProperties,Microsoft.Owin.Security.AuthenticationDescription)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.Security.AuthenticateResult" /> class with the specified data.</summary>
+      <param name="identity">The claims that were authenticated by the given AuthenticationType.</param>
+      <param name="properties">The extra values that were provided with the original SignIn call.</param>
+      <param name="description">The description properties for the middleware authentication type.</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticateResult.Description">
+      <summary>Gets or sets the description properties for the middleware authentication type in general. Does not vary per request.</summary>
+      <returns>The description properties for the middleware authentication type.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticateResult.Identity">
+      <summary>Gets or sets the claims that were authenticated by the given AuthenticationType. If the authentication type was not successful the Identity property will be null.</summary>
+      <returns>The claims that were authenticated by the given AuthenticationType.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticateResult.Properties">
+      <summary>Gets or sets the extra values that were provided with the original SignIn call.</summary>
+      <returns>The extra values that were provided with the original SignIn call.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationDescription">
+      <summary>表示安全身份验证的描述。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationDescription.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.AuthenticationDescription" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationDescription.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.AuthenticationDescription" /> 类的新实例。</summary>
+      <param name="properties">此身份验证的属性。</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationDescription.AuthenticationType">
+      <summary>获取或设置身份验证类型。</summary>
+      <returns>此身份验证的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationDescription.Caption">
+      <summary>获取或设置此身份验证的文本标题。</summary>
+      <returns>此身份验证的文本标题。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationDescription.Properties">
+      <summary>获取或设置此身份验证的属性。</summary>
+      <returns>此身份验证的属性。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationProperties">
+      <summary>Contains the authentication properties.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationProperties.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.Security.AuthenticationProperties" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationProperties.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.Security.AuthenticationProperties" /> class.</summary>
+      <param name="dictionary">The underlying dictionary used to store these properties.</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationProperties.Dictionary">
+      <summary>Gets the underlying dictionary used to store these properties.</summary>
+      <returns>The underlying dictionary used to store these properties.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationProperties.ExpiresUtc">
+      <summary>Gets or sets the expiration date and time of authentication.</summary>
+      <returns>The expiration date and time of authentication.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationProperties.IsPersistent">
+      <summary>Gets or sets a value that indicates whether authentication is persistent.</summary>
+      <returns>true if authentication is persistent; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationProperties.IssuedUtc">
+      <summary>Gets or sets the issuance date and time of authentication.</summary>
+      <returns>The issuance date and time of authentication.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationProperties.RedirectUri"></member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationResponseChallenge">
+      <summary>表示身份验证响应质询。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationResponseChallenge.#ctor(System.String[],Microsoft.Owin.Security.AuthenticationProperties)"></member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationResponseChallenge.AuthenticationTypes">
+      <summary>获取或设置身份验证的类型。</summary>
+      <returns>身份验证的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationResponseChallenge.Properties"></member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationResponseGrant">
+      <summary>表示授予身份验证响应的类。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationResponseGrant.#ctor(System.Security.Claims.ClaimsIdentity,Microsoft.Owin.Security.AuthenticationProperties)"></member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationResponseGrant.#ctor(System.Security.Claims.ClaimsPrincipal,Microsoft.Owin.Security.AuthenticationProperties)"></member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationResponseGrant.Identity">
+      <summary>获取或设置身份验证的标识。</summary>
+      <returns>身份验证的标识。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationResponseGrant.Principal">
+      <summary>获取或设置身份验证的主体。</summary>
+      <returns>身份验证的主体。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationResponseGrant.Properties"></member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationResponseRevoke">
+      <summary>表示吊销身份验证响应的类。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationResponseRevoke.#ctor(System.String[])">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.AuthenticationResponseRevoke" /> 类的新实例。</summary>
+      <param name="authenticationTypes">身份验证类型。</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationResponseRevoke.AuthenticationTypes">
+      <summary>获取或设置身份验证类型。</summary>
+      <returns>身份验证类型。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.IAuthenticationManager">
+      <summary>Represents a list of objects to validate in the authentication manager.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.AuthenticateAsync(System.String)">
+      <summary>Authenticates the result asynchronously.</summary>
+      <returns>The result to authenticate asynchronously.</returns>
+      <param name="authenticationType">The type of authentication.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.AuthenticateAsync(System.String[])">
+      <summary>Authenticates the result asynchronously.</summary>
+      <returns>The result to authenticate asynchronously.</returns>
+      <param name="authenticationTypes">The types of authentication.</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.IAuthenticationManager.AuthenticationResponseChallenge">
+      <summary>Gets or sets the authentication response challenge.</summary>
+      <returns>The authentication response challenge.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.IAuthenticationManager.AuthenticationResponseGrant">
+      <summary>Gets or sets the authentication response to grant.</summary>
+      <returns>The authentication response to grant.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.IAuthenticationManager.AuthenticationResponseRevoke">
+      <summary>Gets or sets the authentication response to revoke.</summary>
+      <returns>The authentication response to revoke.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.Challenge(Microsoft.Owin.Security.AuthenticationProperties,System.String[])">
+      <summary>Creates a challenge for the authentication manager.</summary>
+      <param name="properties">The <see cref="T:Microsoft.Owin.Security.AuthenticationProperties" />.</param>
+      <param name="authenticationTypes">The types of authentication.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.Challenge(System.String[])">
+      <summary>Creates a challenge for the authentication manager.</summary>
+      <param name="authenticationTypes">The types of authentication.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.GetAuthenticationTypes">
+      <summary>Gets the authentication types in the authentication manager.</summary>
+      <returns>The authentication types in the authentication manager.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.GetAuthenticationTypes(System.Func{Microsoft.Owin.Security.AuthenticationDescription,System.Boolean})">
+      <summary>Gets the authentication types in the authentication manager.</summary>
+      <returns>The authentication types in the authentication manager.</returns>
+      <param name="predicate">The predicate.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.SignIn(Microsoft.Owin.Security.AuthenticationProperties,System.Security.Claims.ClaimsIdentity[])">
+      <summary>Handles the sign-in process during authentication.</summary>
+      <param name="properties">The properties.</param>
+      <param name="identities">The identities.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.SignIn(System.Security.Claims.ClaimsIdentity[])">
+      <summary>Handles the sign-in process during authentication.</summary>
+      <param name="identities">The identities.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.IAuthenticationManager.SignOut(System.String[])">
+      <summary>Handles the sign-out process after authentication.</summary>
+      <param name="authenticationTypes">The types of authentication.</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.IAuthenticationManager.User">
+      <summary>Gets or sets the ClaimsPrincipal user.</summary>
+      <returns>The ClaimsPrincipal user.</returns>
+    </member>
+    <member name="T:Owin.AppBuilderUseExtensions">
+      <summary>Extension methods for IAppBuilder.</summary>
+    </member>
+    <member name="M:Owin.AppBuilderUseExtensions.Run(Owin.IAppBuilder,System.Func{Microsoft.Owin.IOwinContext,System.Threading.Tasks.Task})">
+      <param name="handler">An app that handles all requests</param>
+    </member>
+    <member name="M:Owin.AppBuilderUseExtensions.Use(Owin.IAppBuilder,System.Func{Microsoft.Owin.IOwinContext,System.Func{System.Threading.Tasks.Task},System.Threading.Tasks.Task})">
+      <param name="handler">An app that handles the request or calls the given next Func</param>
+    </member>
+    <member name="M:Owin.AppBuilderUseExtensions.Use``1(Owin.IAppBuilder,System.Object[])">
+      <param name="args">Any additional arguments for the middleware constructor</param>
+      <typeparam name="T">The middleware type</typeparam>
+    </member>
+    <member name="T:Owin.MapExtensions">
+      <summary>Extension methods for the MapMiddleware</summary>
+    </member>
+    <member name="M:Owin.MapExtensions.Map(Owin.IAppBuilder,Microsoft.Owin.PathString,System.Action{Owin.IAppBuilder})"></member>
+    <member name="M:Owin.MapExtensions.Map(Owin.IAppBuilder,System.String,System.Action{Owin.IAppBuilder})">
+      <summary>If the request path starts with the given pathMatch, execute the app configured via configuration parameter instead of continuing to the next component in the pipeline.</summary>
+      <param name="pathMatch">The path to match</param>
+      <param name="configuration">The branch to take for positive path matches</param>
+    </member>
+    <member name="T:Owin.MapWhenExtensions">
+      <summary>Extension methods for the MapWhenMiddleware</summary>
+    </member>
+    <member name="M:Owin.MapWhenExtensions.MapWhen(Owin.IAppBuilder,System.Func{Microsoft.Owin.IOwinContext,System.Boolean},System.Action{Owin.IAppBuilder})">
+      <summary>Branches the request pipeline based on the result of the given predicate.</summary>
+      <param name="predicate">Invoked with the request environment to determine if the branch should be taken</param>
+      <param name="configuration">Configures a branch to take</param>
+    </member>
+    <member name="M:Owin.MapWhenExtensions.MapWhenAsync(Owin.IAppBuilder,System.Func{Microsoft.Owin.IOwinContext,System.Threading.Tasks.Task{System.Boolean}},System.Action{Owin.IAppBuilder})"></member>
+    <member name="T:Owin.PipelineStage">
+      <summary>Specifies an enumeration of pipeline state.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.AcquireState">
+      <summary>The state is AcquireState.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.Authenticate">
+      <summary>The state is Authenticate.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.Authorize">
+      <summary>The state is Authorize.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.MapHandler">
+      <summary>The state is MapHandler.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.PostAcquireState">
+      <summary>The state is PostAcquireState.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.PostAuthenticate">
+      <summary>The state is PostAuthenticate.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.PostAuthorize">
+      <summary>The state is PostAuthorize.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.PostMapHandler">
+      <summary>The state is PostMapHandler.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.PostResolveCache">
+      <summary>The state is PostResolveCache.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.PreHandlerExecute">
+      <summary>The state is PreHandlerExecute.</summary>
+    </member>
+    <member name="F:Owin.PipelineStage.ResolveCache">
+      <summary>The state is ResolveCache.</summary>
+    </member>
+  </members>
+</doc>

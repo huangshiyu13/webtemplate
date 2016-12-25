@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.AspNet.Identity.Core</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNet.Identity.IdentityConfig">
+      <summary>Static class to hold configuration settings for the Identity system</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityConfig.Settings">
+      <summary>Settings class which holds the various options for the system</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IdentityManager">
+      <summary>Helper class which contains methods that encapsulate common unit of work functionality on an IdentityStoreContext, i.e. ChangePasswordAsync or CreateLocalUserAsync and takes care of calling SaveChangesAsync</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityManager.#ctor(Microsoft.AspNet.Identity.IdentitySettings,Microsoft.AspNet.Identity.IIdentityStore)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityManager.#ctor(Microsoft.AspNet.Identity.IIdentityStore)">
+      <summary>Constructor that uses the default settings</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityManager.Dispose">
+      <summary>Dispose the store context</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityManager.Dispose(System.Boolean)">
+      <summary>When disposing, actually dipose the store context</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityManager.Logins">
+      <summary>User Login related APIs</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityManager.Passwords">
+      <summary>Password API</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityManager.Roles">
+      <summary>Roles API</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityManager.SaveChangesAsync(System.Threading.CancellationToken)">
+      <summary>SaveChanges to the various identity stores</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityManager.Settings">
+      <summary>Settings object used for configuration, if null, uses the global settings (IdentityConfig.Settings)</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityManager.Store">
+      <summary>IdentityStoreContext which the helper methods work against</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityManager.Tokens">
+      <summary>Token API</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityManager.Users">
+      <summary>APIs around User management</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IdentityOptions">
+      <summary>Settings used to configure an IdentityManager</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityOptions.#ctor">
+      <summary>Constructor</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityOptions.AllowOnlyAlphaNumericUserNames">
+      <summary>Only allow String.IsLetterOrDigits in UserNames</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityOptions.LocalLoginProvider">
+      <summary>Identifier for user logins created by the local application, i.e. database</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityOptions.MinRequiredPasswordLength">
+      <summary>Minimum required length for a text</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityOptions.PasswordValidator">
+      <summary>Validators passwords are of sufficient strength</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityOptions.UserNameValidator">
+      <summary>Validates usernames</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IdentityResult">
+      <summary>Represents the result of an identity operation</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityResult.#ctor(System.Boolean)">
+      <summary>Constructor taking a success flag</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityResult.#ctor(System.String[])">
+      <summary>Failure constructor that takes error messages</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityResult.Errors">
+      <summary>List of errors</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityResult.Failed(System.String[])">
+      <summary>Failed helper method</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityResult.Succeeded">
+      <summary>Success helper method</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityResult.Success">
+      <summary>True if the operation was successful</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IdentityRoleManager">
+      <summary>Roles API</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.#ctor(Microsoft.AspNet.Identity.IIdentityStore)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.AddUserToRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Add a user to a role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.CreateRoleAsync(Microsoft.AspNet.Identity.IRole,System.Threading.CancellationToken)">
+      <summary>Create a role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.DeleteRoleAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Delete a role, returns true if successful</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.FindRoleAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Find a role by id</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.FindRoleByNameAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Find a role by name</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.GetRolesForUserAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns the roles for the user</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.GetUsersInRoleAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns the users in the role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.IsUserInRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the user is in the specified role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.RemoveUserFromRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the user was removed from the role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityRoleManager.RoleExistsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the role exists</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IdentityRoleManager.Store">
+      <summary>Store to operate on</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IdentitySettings">
+      <summary>Class that holds various settings for the identity system</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentitySettings.#ctor"></member>
+    <member name="M:Microsoft.AspNet.Identity.IdentitySettings.Add(System.String,System.Object)">
+      <summary>Add a setting object with the specified key</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentitySettings.Get(System.String)">
+      <summary>Return a settings object, or create a new one if it does not exist</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentitySettings.GetIdentityOptions">
+      <summary>Return the IdentityManagerOptions</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentitySettings.GetOrCreate``1">
+      <summary>Return a settings object, or create a new one if it does not exist, will throw if the wrong type is present</summary>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IdentityStoreContextExtensions">
+      <summary>Extension methods that use the default CancellationToken.None</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityStoreContextExtensions.SaveChangesAsync(Microsoft.AspNet.Identity.IIdentityStore)">
+      <summary>Saves any changes to the stores (Note: stores are not required to support this pattern)</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IIdentityManagerFactory">
+      <summary>Factory used to construct IdentityManagers</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IIdentityManagerFactory.CreateStoreManager">
+      <summary>Factory method used to construct an IdentityManager with the specified settings and context</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IIdentityStore">
+      <summary>Used to coordinate operations involving the user, login, roles, and claims stores SaveChangesAsync will persist the changes (if the stores support this concept)</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IIdentityStore.Logins">
+      <summary>Maps local userIds to login providers, i.e. a local username/password, Google, Facebook, Twitter, Microsoft</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IIdentityStore.Roles">
+      <summary>Stores role information</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IIdentityStore.SaveChangesAsync(System.Threading.CancellationToken)">
+      <summary>Saves any changes to the stores (Note: stores are not required to support this pattern)</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IIdentityStore.Secrets">
+      <summary>Store used to store user name/hashed passwords</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IIdentityStore.Tokens">
+      <summary>Stores arbitrary tokens (i.e. access tokens, refresh tokens, confirmation tokens)</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IIdentityStore.UserClaims">
+      <summary>Stores claims for users</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IIdentityStore.UserManagement">
+      <summary>Store responsible for managing users (confirmation, lockout)</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IIdentityStore.Users">
+      <summary>Store responsible for creating/deleting/retrieving users by userId</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.ILoginManager">
+      <summary>Login related APIs: managing local or external logins</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ILoginManager.AddLocalLoginAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Create the specified user name and password local login</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ILoginManager.AddLoginAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Associate a login with a user (external or local)</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ILoginManager.GetLoginsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns a list of logins for a user</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ILoginManager.GetUserIdForLocalLoginAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns the local user id for a user login that matches</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ILoginManager.GetUserIdForLoginAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns the userId if there is a local login with the specified userName, null otherwise</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ILoginManager.HasLocalLoginAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the userId has a local login</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ILoginManager.RemoveLoginAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Remove a user login</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IPasswordManager">
+      <summary>Password related APIs: changing user name passwords, resetting passwords</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IPasswordManager.ChangePasswordAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Change a user's password</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IPasswordManager.CheckPasswordAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Validates a local user name/password combination</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IPasswordManager.GenerateResetPasswordTokenAsync(System.String,System.String,System.DateTime,System.Threading.CancellationToken)">
+      <summary>Create a token for the specified user that can be used to reset his password</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IPasswordManager.ResetPasswordAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Reset a user's password with the reset password token</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IRole">
+      <summary> Minimal set of data needed to persist role data </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IRole.Id">
+      <summary> Id of the role </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IRole.Name"></member>
+    <member name="T:Microsoft.AspNet.Identity.IRoleManager">
+      <summary>Role related APIs</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.AddUserToRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Add a user to a role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.CreateRoleAsync(Microsoft.AspNet.Identity.IRole,System.Threading.CancellationToken)">
+      <summary>Create a role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.DeleteRoleAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Delete a role, returns true if successful</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.FindRoleAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Find a role by id</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.FindRoleByNameAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Find a role by name</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.GetRolesForUserAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns the roles for the user</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.GetUsersInRoleAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns the users in the role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.IsUserInRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the user is in the specified role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.RemoveUserFromRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the user was removed from the role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleManager.RoleExistsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the role exists</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IRoleStore">
+      <summary> Interface for managing the creation and membership of roles </summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.AddUserToRoleAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.CreateRoleAsync(Microsoft.AspNet.Identity.IRole,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.DeleteRoleAsync(System.String,System.Boolean,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.FindRoleAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.FindRoleByNameAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.GetRolesForUserAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.GetUsersInRoleAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.IsUserInRoleAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.RemoveUserFromRoleAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IRoleStore.RoleExistsAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.AspNet.Identity.IStringValidator">
+      <summary>Interface used to specify custom username/text validation</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IStringValidator.Validate(System.String)">
+      <summary>Validates a string.</summary>
+      <returns>A result with <see cref="P:Microsoft.AspNet.Identity.IdentityResult.Success" /> set to <see cref="true" /> when validation succeeds; otherwise, a result with <see cref="P:Microsoft.AspNet.Identity.IdentityResult.Success" /> set to <see cref="false" />.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IToken">
+      <summary>Interface for a token</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IToken.Id">
+      <summary>Unique identifier for the token</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IToken.ValidUntilUtc">
+      <summary>Token is valid until this date</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IToken.Value">
+      <summary>Value of the token</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.ITokenManager">
+      <summary>Token related APIs</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ITokenManager.AddAsync(Microsoft.AspNet.Identity.IToken,System.Threading.CancellationToken)">
+      <summary>Add a new token to the store</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ITokenManager.FindAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Find a token in the TokenStore</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ITokenManager.RemoveAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Remove a token from the TokenStore</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.ITokenStore">
+      <summary>Store that contains tokens which can be used for different purposes (confirmation, access, refresh) and with expiration</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ITokenStore.AddAsync(Microsoft.AspNet.Identity.IToken,System.Threading.CancellationToken)">
+      <summary>Add a token to the store</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ITokenStore.CreateNewInstance">
+      <summary>Creates the appropriate IToken instance</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ITokenStore.FindAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Find a token</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ITokenStore.RemoveAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Remove a token from the store</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.ITokenStore.UpdateAsync(Microsoft.AspNet.Identity.IToken,System.Threading.CancellationToken)">
+      <summary>Update a token</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IUser">
+      <summary> Minimal interface for a user with a string user key </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUser.Id">
+      <summary> Unique key for the user </summary>
+      <returns>The unique key for the user</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUser.UserName"></member>
+    <member name="T:Microsoft.AspNet.Identity.IUserClaim">
+      <summary>Represents a claim for a user</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserClaim.ClaimType">
+      <summary>ClaimType for the user claim</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserClaim.ClaimValue">
+      <summary>value for the user's claim</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserClaim.UserId">
+      <summary>UserId for the user with the claim</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IUserClaimStore">
+      <summary>Stores claims for users.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserClaimStore.AddAsync(Microsoft.AspNet.Identity.IUserClaim,System.Threading.CancellationToken)">
+      <summary>Store a claim for the user with the specified type/value.</summary>
+      <returns>The task that performs the asynchronous operation.</returns>
+      <param name="userClaim">The user claim.</param>
+      <param name="cancellationToken">The cancellation token.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserClaimStore.GetUserClaimsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns the claims for the user with the issuer set.</summary>
+      <returns>The task that performs the asynchronous operation.</returns>
+      <param name="userId">The user ID.</param>
+      <param name="cancellationToken">The cancellation token.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserClaimStore.RemoveAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>RemoveAsync a user claim.</summary>
+      <returns>The task that performs the asynchronous operation.</returns>
+      <param name="userId">The user ID.</param>
+      <param name="claimType">The claim type.</param>
+      <param name="claimValue">The claim value.</param>
+      <param name="cancellationToken">The cancellation token.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IUserLogin">
+      <summary> Represents a linked login for a user (i.e. a local username/password or a Facebook/Google account </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserLogin.LoginProvider">
+      <summary> Provider for the linked login, i.e. Local, Facebook, Google, etc. </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserLogin.ProviderKey">
+      <summary> Key for the linked login at the provider </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserLogin.UserId">
+      <summary> UserId for the user who owns this account </summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IUserLoginStore">
+      <summary> Maps local userIds to account providers, i.e. a local username/password, Google, Facebook, Twitter, Microsoft </summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserLoginStore.AddAsync(Microsoft.AspNet.Identity.IUserLogin,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserLoginStore.CreateNewInstance(System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserLoginStore.GetLoginsAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserLoginStore.GetProviderKeyAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserLoginStore.GetUserIdAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserLoginStore.RemoveAsync(System.String,System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.AspNet.Identity.IUserManagement">
+      <summary>Minimal interface for holding user management info (i.e. Confirmed, LastSignInTime)</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserManagement.DisableSignIn">
+      <summary>Set if user is not allowed to sign in</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserManagement.LastSignInTimeUtc">
+      <summary>Last time the user was signed in</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserManagement.UserId">
+      <summary>Unique key for the user</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IUserManagementStore">
+      <summary>Responsible for creating/deleting/retrieving user management info</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManagementStore.CreateAsync(Microsoft.AspNet.Identity.IUserManagement,System.Threading.CancellationToken)">
+      <summary>Creates the specified IUserManagement object</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManagementStore.CreateNewInstance(System.String)">
+      <summary>Creates the appropriate IUserManagement instance for the user</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManagementStore.DeleteAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Deletes the specified IUserManagement for the userId</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManagementStore.FindAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Finds an IUserManagement by its key</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManagementStore.UpdateAsync(Microsoft.AspNet.Identity.IUserManagement,System.Threading.CancellationToken)">
+      <summary>Update the specified IUserManagement object</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IUserManager">
+      <summary>User related APIs: creating users, adding claims</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManager.AddClaimAsync(Microsoft.AspNet.Identity.IUserClaim,System.Threading.CancellationToken)">
+      <summary>Add a new user claim to the store</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManager.CreateExternalUserAsync(Microsoft.AspNet.Identity.IUser,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Create a user with an associated external login</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManager.CreateLocalUserAsync(Microsoft.AspNet.Identity.IUser,System.String,System.Threading.CancellationToken)">
+      <summary>Create a user with a linked local login with the specified password</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManager.CreateUserAsync(Microsoft.AspNet.Identity.IUser,System.Threading.CancellationToken)">
+      <summary>Create a user and its associated user management object</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManager.GetUserClaimsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Get a users claims</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserManager.RemoveClaimAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Remove a user claim</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IUserSecret">
+      <summary> Minimal set of data needed to persist login data </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserSecret.Secret">
+      <summary> Opaque string to validate the user, i.e. password </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.IUserSecret.UserName">
+      <summary> Username </summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.IUserSecretStore">
+      <summary> Stores login information (username/secret) </summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserSecretStore.CreateAsync(Microsoft.AspNet.Identity.IUserSecret,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserSecretStore.CreateNewInstance(System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserSecretStore.DeleteAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserSecretStore.FindAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserSecretStore.UpdateAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserSecretStore.ValidateAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.AspNet.Identity.IUserStore">
+      <summary> Responsible for creating/deleting/retrieving users by userId </summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IUserStore.CreateAsync(Microsoft.AspNet.Identity.IUser,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserStore.DeleteAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserStore.FindAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.IUserStore.FindByNameAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.AspNet.Identity.LoginManager"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManager.#ctor(Microsoft.AspNet.Identity.IdentityManager)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManager.AddLocalLoginAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Create the specified user name and password local login</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManager.AddLoginAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Associate a login with a user (external or local)</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManager.GetLoginsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns a list of logins for a user</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManager.GetUserIdForLocalLoginAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns the local user id for a user login that matches</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManager.GetUserIdForLoginAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns the userId if there is a local login with the specified userName, null otherwise</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManager.HasLocalLoginAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the userId has a local login</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManager.RemoveLoginAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Remove a user login</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.LoginManager.Store"></member>
+    <member name="T:Microsoft.AspNet.Identity.LoginManagerExtensions">
+      <summary>Extension methods for ILoginManager</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.AddLocalLogin(Microsoft.AspNet.Identity.ILoginManager,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.AddLocalLoginAsync(Microsoft.AspNet.Identity.ILoginManager,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.AddLogin(Microsoft.AspNet.Identity.ILoginManager,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.AddLoginAsync(Microsoft.AspNet.Identity.ILoginManager,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.GetLogins(Microsoft.AspNet.Identity.ILoginManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.GetLoginsAsync(Microsoft.AspNet.Identity.ILoginManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.GetUserIdForLocalLogin(Microsoft.AspNet.Identity.ILoginManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.GetUserIdForLocalLoginAsync(Microsoft.AspNet.Identity.ILoginManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.GetUserIdForLogin(Microsoft.AspNet.Identity.ILoginManager,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.GetUserIdForLoginAsync(Microsoft.AspNet.Identity.ILoginManager,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.HasLocalLogin(Microsoft.AspNet.Identity.ILoginManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.HasLocalLoginAsync(Microsoft.AspNet.Identity.ILoginManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.RemoveLogin(Microsoft.AspNet.Identity.ILoginManager,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.LoginManagerExtensions.RemoveLoginAsync(Microsoft.AspNet.Identity.ILoginManager,System.String,System.String,System.String)"></member>
+    <member name="T:Microsoft.AspNet.Identity.PasswordManager">
+      <summary>Password APIs</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManager.#ctor(Microsoft.AspNet.Identity.IdentityManager)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManager.ChangePasswordAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Change a user's password</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManager.CheckPasswordAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Validates a local user name/password combination</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManager.GenerateResetPasswordTokenAsync(System.String,System.String,System.DateTime,System.Threading.CancellationToken)">
+      <summary>Create a token for the specified user that can be used to reset his password</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.PasswordManager.Manager"></member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManager.ResetPasswordAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Reset a user's password with the reset password token</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.PasswordManagerExtensions">
+      <summary>Extension methods for IPasswordManager</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManagerExtensions.ChangePassword(Microsoft.AspNet.Identity.IPasswordManager,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManagerExtensions.ChangePasswordAsync(Microsoft.AspNet.Identity.IPasswordManager,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManagerExtensions.CheckPassword(Microsoft.AspNet.Identity.IPasswordManager,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManagerExtensions.CheckPasswordAsync(Microsoft.AspNet.Identity.IPasswordManager,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManagerExtensions.GenerateResetPasswordToken(Microsoft.AspNet.Identity.IPasswordManager,System.String,System.String,System.DateTime)"></member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManagerExtensions.GenerateResetPasswordTokenAsync(Microsoft.AspNet.Identity.IPasswordManager,System.String,System.String,System.DateTime)"></member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManagerExtensions.ResetPassword(Microsoft.AspNet.Identity.IPasswordManager,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.PasswordManagerExtensions.ResetPasswordAsync(Microsoft.AspNet.Identity.IPasswordManager,System.String,System.String)"></member>
+    <member name="T:Microsoft.AspNet.Identity.RoleManagerExtensions">
+      <summary>Extension methods for IRoleManager</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.AddUserToRoleAsync(Microsoft.AspNet.Identity.IRoleManager,System.String,System.String)">
+      <summary>Add a user to a role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.CreateRoleAsync(Microsoft.AspNet.Identity.IRoleManager,Microsoft.AspNet.Identity.IRole)">
+      <summary>Create a role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.DeleteRoleAsync(Microsoft.AspNet.Identity.IRoleManager,System.String,System.Boolean)">
+      <summary>Delete a role, returns true if successful</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.FindRoleAsync(Microsoft.AspNet.Identity.IRoleManager,System.String)">
+      <summary>Find a role by id</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.FindRoleByNameAsync(Microsoft.AspNet.Identity.IRoleManager,System.String)">
+      <summary>Find a role by name</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.GetRolesForUserAsync(Microsoft.AspNet.Identity.IRoleManager,System.String)">
+      <summary>Returns the roles for the user</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.GetUsersInRoleAsync(Microsoft.AspNet.Identity.IRoleManager,System.String)">
+      <summary>Returns the users in the role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.IsUserInRoleAsync(Microsoft.AspNet.Identity.IRoleManager,System.String,System.String)">
+      <summary>Returns true if the user is in the specified role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.RemoveUserFromRoleAsync(Microsoft.AspNet.Identity.IRoleManager,System.String,System.String)">
+      <summary>Returns true if the user was removed from the role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.RoleManagerExtensions.RoleExistsAsync(Microsoft.AspNet.Identity.IRoleManager,System.String)">
+      <summary>Returns true if the role exists</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.TokenManager">
+      <summary>Token related APIs</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManager.#ctor(Microsoft.AspNet.Identity.IIdentityStore)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManager.AddAsync(Microsoft.AspNet.Identity.IToken,System.Threading.CancellationToken)">
+      <summary>Add a new token to the store</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManager.FindAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Find a token in the TokenStore</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManager.RemoveAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Remove a token from the TokenStore</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.TokenManager.Store">
+      <summary>Store to operate on</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.TokenManagerExtensions">
+      <summary>Extension methods for ITokenManager</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManagerExtensions.Add(Microsoft.AspNet.Identity.ITokenManager,Microsoft.AspNet.Identity.IToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManagerExtensions.AddAsync(Microsoft.AspNet.Identity.ITokenManager,Microsoft.AspNet.Identity.IToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManagerExtensions.Find(Microsoft.AspNet.Identity.ITokenManager,System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManagerExtensions.FindAsync(Microsoft.AspNet.Identity.ITokenManager,System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManagerExtensions.Remove(Microsoft.AspNet.Identity.ITokenManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.TokenManagerExtensions.RemoveAsync(Microsoft.AspNet.Identity.ITokenManager,System.String)"></member>
+    <member name="T:Microsoft.AspNet.Identity.UserManager">
+      <summary>User related API</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManager.#ctor(Microsoft.AspNet.Identity.IdentityManager)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManager.AddClaimAsync(Microsoft.AspNet.Identity.IUserClaim,System.Threading.CancellationToken)">
+      <summary>Add a new user claim to the store</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManager.CreateExternalUserAsync(Microsoft.AspNet.Identity.IUser,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Create a user with an associated external login</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManager.CreateLocalUserAsync(Microsoft.AspNet.Identity.IUser,System.String,System.Threading.CancellationToken)">
+      <summary>Create a user with a linked local login with the specified password</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManager.CreateUserAsync(Microsoft.AspNet.Identity.IUser,System.Threading.CancellationToken)">
+      <summary>Create a user and its associated user management object</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManager.GetUserClaimsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Get a users claims</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.UserManager.Manager">
+      <summary>IdentityManager to operate on</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManager.RemoveClaimAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Remove a user claim</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.UserManagerExtensions">
+      <summary>Extension methods for IUserManager</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManagerExtensions.CreateExternalUser(Microsoft.AspNet.Identity.IUserManager,Microsoft.AspNet.Identity.IUser,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.UserManagerExtensions.CreateExternalUserAsync(Microsoft.AspNet.Identity.IUserManager,Microsoft.AspNet.Identity.IUser,System.String,System.String)">
+      <summary>Createa user with an associated external login</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManagerExtensions.CreateLocalUser(Microsoft.AspNet.Identity.IUserManager,Microsoft.AspNet.Identity.IUser,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.UserManagerExtensions.CreateLocalUserAsync(Microsoft.AspNet.Identity.IUserManager,Microsoft.AspNet.Identity.IUser,System.String)">
+      <summary>CreateAsync a user with a linked local login with the specified password</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManagerExtensions.CreateUser(Microsoft.AspNet.Identity.IUserManager,Microsoft.AspNet.Identity.IUser)">
+      <summary>Create a user and its associated user management object</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.UserManagerExtensions.CreateUserAsync(Microsoft.AspNet.Identity.IUserManager,Microsoft.AspNet.Identity.IUser)">
+      <summary>Create a user and its associated user management object</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.AspNet.Identity.EntityFramework</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.DefaultIdentityDbContext">
+      <summary>Concrete instance of the IdentityDbContext which uses the default framework entities</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.DefaultIdentityDbContext.#ctor">
+      <summary>Default constructor which uses the "DefaultConnection" connectionString</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.DefaultIdentityDbContext.#ctor(System.String)">
+      <summary>Constructor which takes the connection string to use</summary>
+      <param name="nameOrConnectionString">The connection string to use.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8">
+      <summary>Generic Context which takes entities for all of the sets needed for IIdentityManager</summary>
+      <typeparam name="TUser"></typeparam>
+      <typeparam name="TUserClaim"></typeparam>
+      <typeparam name="TUserSecret"></typeparam>
+      <typeparam name="TUserLogin"></typeparam>
+      <typeparam name="TRole"></typeparam>
+      <typeparam name="TUserRole"></typeparam>
+      <typeparam name="TToken"></typeparam>
+      <typeparam name="TUserManagement"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.#ctor">
+      <summary>Default constructor which uses the "DefaultConnection" connectionString</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.#ctor(System.String)">
+      <summary>Constructor which takes the connection string to use</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.Roles">
+      <summary>EntitySet of Roles</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.Tokens">
+      <summary>EntitySet of Tokens</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.UserClaims">
+      <summary>EntitySet of UserClaims</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.UserLogins">
+      <summary>EntitySet of UserLogins</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.UserManagement">
+      <summary>EntitySet of UserManagement</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.UserRoles">
+      <summary>EntitySet of UserRoles</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.Users">
+      <summary>EntitySet of Users</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.UserSecrets">
+      <summary>EntitySet of UserSecrets</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext`8.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})">
+      <summary>Validates that UserNames are unique and case insenstive</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContextWithCustomUser`1">
+      <summary>Concrete instance of the IdentityDbContext which uses a custom user entity but otherwise uses default framework entities</summary>
+      <typeparam name="TUser"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityDbContextWithCustomUser`1.#ctor"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.IdentityManagerFactory">
+      <summary>Factory implementation that returns an IdentityManager</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityManagerFactory.#ctor(Microsoft.AspNet.Identity.IdentitySettings,System.Func{Microsoft.AspNet.Identity.IIdentityStore})"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityManagerFactory.ContextFactory">
+      <summary>Factory method that creates an identity store context</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityManagerFactory.CreateStoreManager">
+      <summary>Factory method that creates an IdentityManager</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityManagerFactory.Settings">
+      <summary>IdentitySettings to use when creating IdentityManagers</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.IdentityStore">
+      <summary>Implements IIdentityStoreContext <see cref="T:Microsoft.AspNet.Identity.IIdentityStore" /></summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.#ctor">
+      <summary>Default constuctor which uses a new instance of a DefaultIdentityDbContext</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.#ctor(System.Data.Entity.DbContext)">
+      <summary>Constructor which takes a db context and wires up the stores with default instances using the context</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.DbContext">
+      <summary>Context which encapsulates the unit of work</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.Dispose">
+      <summary>Dispose the stores and dbcontext</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.Dispose(System.Boolean)">
+      <summary>If disposing, calls dispose on the stores and Context. Always nulls out the stores/dbcontext</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.Logins"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.Roles"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.SaveChangesAsync(System.Threading.CancellationToken)">
+      <summary>Calls SaveChangesAsync on the Context</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.Secrets"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.Tokens"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.UserClaims"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.UserManagement"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IdentityStore.Users"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.IUserRole">
+      <summary> Represents a user being in a role </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IUserRole.RoleId">
+      <summary> id of the role </summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.IUserRole.UserId">
+      <summary> id of the user </summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.Role">
+      <summary>Implements IRole <see cref="T:Microsoft.AspNet.Identity.IRole" /></summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Role.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Identity.EntityFramework.Role" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Role.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Identity.EntityFramework.Role" /> class.</summary>
+      <param name="roleName">The name of the role.</param>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.Role.Id">
+      <summary>Gets the identifier of this role.</summary>
+      <returns>The identifier of this role.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.Role.Name">
+      <summary>Gets the name of this role.</summary>
+      <returns>The name of this role.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.Role.UserRoles">
+      <summary>Gets a collection of user roles.</summary>
+      <returns>A collection of user roles.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2">
+      <summary>Base class for RoleStores using EF where TRole is the entity type of the role, and TUserInRole is the entity type of the user/role membership</summary>
+      <typeparam name="TRole"></typeparam>
+      <typeparam name="TUserInRole"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.#ctor(System.Data.Entity.DbContext)">
+      <summary>Constructor that takes the db context</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.AddUserToRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the user is successfully added to the role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.CreateRoleAsync(Microsoft.AspNet.Identity.IRole,System.Threading.CancellationToken)">
+      <summary>Creates a role, returns true if successful, false if not (role already exists)</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.DeleteRoleAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>DeleteById a role, returns true if successful</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.FindRoleAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.FindRoleByNameAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.GetRolesForUserAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns the roles for th euser</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.GetUsersInRoleAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.IsUserInRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the user is in the specified role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.RemoveUserFromRoleAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the user was removed from the role</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.RoleStore`2.RoleExistsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Returns true if the role exists</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.Store`1">
+      <summary>EntityFramework based Store that allows query/manipulation of a TEntity set</summary>
+      <typeparam name="TEntity"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Store`1.#ctor(System.Data.Entity.DbContext)">
+      <summary>Constructor that takes a Context</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.Store`1.Context">
+      <summary>Context for the store</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Store`1.Delete(`0)">
+      <summary>Mark an entity for deletion</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Store`1.DeleteById(System.Object)">
+      <summary>Overload that deletes an entity</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.Store`1.EntitySet">
+      <summary>EntitySet for this store</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Store`1.GetByIdAsync(System.Object,System.Threading.CancellationToken)">
+      <summary>FindAsync an entity by ID</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Store`1.Insert(`0)">
+      <summary>Insert an entity</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Store`1.Update(`0)">
+      <summary>Update an entity</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.Token">
+      <summary>EntityType that implements IToken <see cref="T:Microsoft.AspNet.Identity.IToken" /></summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.Token.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Identity.EntityFramework.Token" /> class.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.Token.Id">
+      <summary>Gets the identifier of this token.</summary>
+      <returns>The identifier of this token.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.Token.ValidUntilUtc">
+      <summary>Gets the date and time the token is valid.</summary>
+      <returns>The date and time the token is valid.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.Token.Value">
+      <summary>Gets the value of this token.</summary>
+      <returns>The value of this token.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.TokenStore`1">
+      <summary>Implements ITokenStore using EntityFramework where TToken is the entity type of the token being stored</summary>
+      <typeparam name="TToken"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.TokenStore`1.#ctor(System.Data.Entity.DbContext)">
+      <summary>Constructor that takes the db context</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.TokenStore`1.AddAsync(Microsoft.AspNet.Identity.IToken,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.TokenStore`1.CreateNewInstance"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.TokenStore`1.FindAsync(System.String,System.Boolean,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.TokenStore`1.RemoveAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.TokenStore`1.UpdateAsync(Microsoft.AspNet.Identity.IToken,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.User">
+      <summary>EntityType that implements IUser <see cref="T:Microsoft.AspNet.Identity.IUser" /></summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.User.#ctor">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.User.#ctor(System.String)">
+      <summary>Constructor that takes userName</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.User.Id"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.User.Logins">
+      <summary>The user's logins</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.User.Management">
+      <summary>The user's management object</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.User.Roles">
+      <summary>The user's roles</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.User.UserName"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserClaim">
+      <summary>EntityType that represents one specific user claim <see cref="T:Microsoft.AspNet.Identity.IUserClaim" /></summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserClaim.#ctor">
+      <summary>Constructor</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserClaim.ClaimType">
+      <summary>Gets or sets the type of the claim associated with the user.</summary>
+      <returns>The type of the claim associated with the user.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserClaim.ClaimValue">
+      <summary>Gets or sets the value of the claim.</summary>
+      <returns>The value of the claim.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserClaim.Key">
+      <summary>Unique key for the user claim</summary>
+      <returns>The unique key for the user claim.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserClaim.User">
+      <summary>Navigation property setting up the foreign key for User</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserClaim.UserId">
+      <summary>Gets or sets the user identifier associated with the claim.</summary>
+      <returns>The user identifier associated with the claim.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserClaimStore`1">
+      <summary>Implements IUserClaimStore using EntityFramework where TUserSecret is the entity type of the user claim being stored</summary>
+      <typeparam name="TUserClaim"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserClaimStore`1.#ctor(System.Data.Entity.DbContext)">
+      <summary>Constructor that takes the db context</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserClaimStore`1.AddAsync(Microsoft.AspNet.Identity.IUserClaim,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserClaimStore`1.GetUserClaimsAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserClaimStore`1.RemoveAsync(System.String,System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserLogin">
+      <summary>Entity type for a user's login (i.e. facebook, local password, google)</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLogin.#ctor">
+      <summary>Default constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLogin.#ctor(System.String,System.String,System.String)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserLogin.LoginProvider"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserLogin.ProviderKey"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserLogin.User">
+      <summary>Navigation property setting up the foreign key for User</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserLogin.UserId"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserLoginStore`1">
+      <summary>Implements IUserLoginStore using EntityFramework where TUserLogin is the entity type of the user login being stored</summary>
+      <typeparam name="TUserLogin"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLoginStore`1.#ctor(System.Data.Entity.DbContext)">
+      <summary>Constructor that takes a db context</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLoginStore`1.AddAsync(Microsoft.AspNet.Identity.IUserLogin,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLoginStore`1.CreateNewInstance(System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLoginStore`1.GetLoginsAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLoginStore`1.GetProviderKeyAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLoginStore`1.GetUserIdAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserLoginStore`1.RemoveAsync(System.String,System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserManagement">
+      <summary>Represents the user management instance.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserManagement.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Identity.EntityFramework.UserManagement" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserManagement.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Identity.EntityFramework.UserManagement" /> class using the specified user identifier..</summary>
+      <param name="userId">The unique identifier of the user.</param>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserManagement.DisableSignIn">
+      <summary>Gets or sets whether to disable the user sign in.</summary>
+      <returns>true to disable the user sign in; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserManagement.LastSignInTimeUtc">
+      <summary>Gets or sets the time when the user recently signed in.</summary>
+      <returns>The time when the user recently signed in.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserManagement.User">
+      <summary>Navigation property setting up the foreign key for User</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserManagement.UserId">
+      <summary>Gets or sets the unique identifier of the user.</summary>
+      <returns>The unique identifier of the user.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserManagementStore`1">
+      <summary>Represents the user management store.</summary>
+      <typeparam name="TUser">The type of the user.</typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserManagementStore`1.#ctor(System.Data.Entity.DbContext)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Identity.EntityFramework.UserManagementStore`1" /> class.</summary>
+      <param name="db">The context for the store.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserManagementStore`1.CreateAsync(Microsoft.AspNet.Identity.IUserManagement,System.Threading.CancellationToken)">
+      <summary>Creates a user management.</summary>
+      <returns>The created management store.</returns>
+      <param name="info">The user management information.</param>
+      <param name="cancellationToken">The cancellation token.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserManagementStore`1.CreateNewInstance(System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserManagementStore`1.DeleteAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Deletes a user management.</summary>
+      <returns>The deleted user management.</returns>
+      <param name="userId">The user identifier where the management will be deleted.</param>
+      <param name="cancellationToken">The cancellation token.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserManagementStore`1.FindAsync(System.String,System.Threading.CancellationToken)">
+      <summary>Searches for a user management of a specific user.</summary>
+      <returns>The searched user management.</returns>
+      <param name="userId">The user identifier.</param>
+      <param name="cancellationToken">The cancellation token.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserManagementStore`1.UpdateAsync(Microsoft.AspNet.Identity.IUserManagement,System.Threading.CancellationToken)">
+      <summary>Updates a user management.</summary>
+      <returns>The updated user management information.</returns>
+      <param name="info">The user management information.</param>
+      <param name="cancellationToken">The cancellation token.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserRole">
+      <summary>EntityType that represents a user belonging to a role <see cref="T:Microsoft.AspNet.Identity.EntityFramework.IUserRole" /></summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserRole.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Identity.EntityFramework.UserRole" /> class.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserRole.Role">
+      <summary>Navigation property setting up the foreign key for Role</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserRole.RoleId">
+      <summary>Gets or sets the role identifier.</summary>
+      <returns>The role identifier.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserRole.User">
+      <summary>Navigation property setting up the foreign key for User</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserRole.UserId">
+      <summary>Gets or sets the user identifier.</summary>
+      <returns>The user identifier.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserSecret">
+      <summary>EntityType that represents a username and secret(i.e. hashed password) <see cref="T:Microsoft.AspNet.Identity.IUserSecret" /></summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecret.#ctor">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecret.#ctor(System.String,System.String)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserSecret.Secret"></member>
+    <member name="P:Microsoft.AspNet.Identity.EntityFramework.UserSecret.UserName"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserSecretStore`1">
+      <summary>Implements IUserSecretStore using EntityFramework where TUserSecret is the entity type of the user secret being stored</summary>
+      <typeparam name="TUserSecret"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecretStore`1.#ctor(System.Data.Entity.DbContext)">
+      <summary>Constructor that takes a db context</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecretStore`1.CreateAsync(Microsoft.AspNet.Identity.IUserSecret,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecretStore`1.CreateNewInstance(System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecretStore`1.DeleteAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecretStore`1.FindAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecretStore`1.UpdateAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserSecretStore`1.ValidateAsync(System.String,System.String,System.Threading.CancellationToken)"></member>
+    <member name="T:Microsoft.AspNet.Identity.EntityFramework.UserStore`1">
+      <summary>Implements IUserStore using EntityFramework where TUser is the entity type of the user being stored</summary>
+      <typeparam name="TUser"></typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserStore`1.#ctor(System.Data.Entity.DbContext)">
+      <summary>Constructor that takes the db context</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserStore`1.CreateAsync(Microsoft.AspNet.Identity.IUser,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserStore`1.DeleteAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserStore`1.FindAsync(System.String,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.EntityFramework.UserStore`1.FindByNameAsync(System.String,System.Threading.CancellationToken)"></member>
+  </members>
+</doc>

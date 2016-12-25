@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.FriendlyUrls.Core.zh-Hans</id>
+    <version>1.0.2</version>
+    <title>Microsoft ASP.NET Friendly URLs 简体中文资源</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_rtw_chs.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>此程序包包含 ASP.NET Friendly URLs 的简体中文附属程序集。</description>
+    <language>zh-Hans</language>
+    <tags>Microsoft AspNet</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.FriendlyUrls.Core" version="[1.0.2]" />
+    </dependencies>
+  </metadata>
+</package>

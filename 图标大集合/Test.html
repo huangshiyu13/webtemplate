@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div>
+        <span>引用方式：CSS+Script+Class或是data-icon+字体文件</span>
+    </div>
+    <br />
+    <div class="glyph">
+        <span>加了glyph</span>
+		<div class="fs1" aria-hidden="true" data-icon="&#xe0a4;"></div>
+		<input type="text" readonly value="&amp;#xe0a4;" />
+	</div>
+    <br />
+    无glyph
+    <div class="fs1" aria-hidden="true" data-icon="&#xe0a4;"></div>
+		<input type="text" readonly value="&amp;#xe0a4;" />
+    
+    <br />
+     <br />
+    <br />
+    <br />
+    
+		<span aria-hidden="true" class="social_rss_circle"></span>
+		
+    <script>
+        document.getElementById("glyphs").addEventListener("click", function (e) {
+            var target = e.target;
+            if (target.tagName === "INPUT") {
+                target.select();
+            }
+        });
+	</script>
+
+</body>
+</html>
+

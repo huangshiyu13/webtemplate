@@ -1,0 +1,28 @@
+/*Medium*/
+@font-face {
+	font-family: 'Gotham-Medium';
+	src: url('GothamRounded-Medium.eot');
+	src: url('GothamRounded-Medium.ttf') format('woff'), url('GothamRounded-Medium.ttf') format('truetype'), url('GothamRounded-Medium.svg') format('svg');
+	font-style: normal;
+}
+/*Light*/
+@font-face {
+	font-family: 'Gotham-Light';
+	src: url('GothamRounded-Light.eot');
+	src: url('GothamRounded-Light.ttf') format('woff'), url('GothamRounded-Light.ttf') format('truetype'), url('GothamRounded-Light.svg') format('svg');
+	font-style: normal;
+}
+/*Bold*/
+@font-face {
+	font-family: 'Gotham-Bold';
+	src: url('GothamRounded-Bold.eot');
+	src: url('GothamRounded-Bold.ttf') format('woff'), url('GothamRounded-Bold.ttf') format('truetype'), url('GothamRounded-Bold.svg') format('svg');
+	font-style: normal;
+}
+/*Book*/
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('GothamRounded-Book.eot');
+	src: url('GothamRounded-Book.ttf') format('woff'), url('GothamRounded-Book.ttf') format('truetype'), url('GothamRounded-Book.svg') format('svg');
+	font-style: normal;
+}

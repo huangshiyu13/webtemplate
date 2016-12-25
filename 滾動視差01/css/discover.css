@@ -1,0 +1,692 @@
+/*
+ * discover.css
+ * 发现页css
+ * binn,2014/12/2 
+ * */
+body {
+    width:100%;
+    height:100%;
+    min-width:1200px;
+}
+a:hover{
+    text-decoration: none;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+}
+#wrap {
+    width:100%;
+    position:relative;
+}
+/* main */
+#main {
+    width:100%;
+    background-color:#EBECED;
+    position:relative;
+    overflow:hidden;
+}
+#templetWrapDiv {
+    height:350px;
+    width:100%;
+    background-color:#3B3B3B;
+    background-image:url(/img/discover/topBack.png);
+}
+.templetWrapScroll {
+    width:1200px;
+    height:350px;
+    overflow:hidden;
+    margin:0 auto;
+    position:relative;
+    -webkit-mask-image:-webkit-gradient(linear,left top,right top,color-stop(0,rgba(0,0,0,.2)),color-stop(.1,#000),color-stop(.9,#000),color-stop(1,rgba(0,0,0,.2)));
+}
+.customBtn {
+    width:1200px;
+    position:relative;
+    top:35px;
+    color:#FFF;
+    z-index:1;
+    margin:0 auto;
+    text-align:right;
+    padding-right:80px;
+}
+.customBtn>span {
+    cursor:pointer;
+}
+.customBlack {
+    position:absolute;
+    width:100%;
+    height:350px;
+    background-color:rgba(0,0,0,.4);
+    top:0px;
+    display:none;
+}
+.customWrap {
+    width:600px;
+    height:50px;
+    position:relative;
+    top:-200px;
+    margin:0 auto;
+    display:none;
+}
+
+.customWidth {
+    width:130px;        
+    height:40px;
+    outline:none;
+    border-radius:3px;
+    border:none;
+    text-align:center;
+}
+
+.customWidth:focus {
+    box-shadow:0px 0px 10px #00AEBB;
+}
+
+.customX {
+    margin-left:10px;
+    color:#FFF;
+    font-size:22px;
+    position:relative;
+    top:4px;
+}
+
+.customD {
+    margin-left:10px;
+    color:#FFF;
+    font-size:22px;
+    position:relative;
+    top:5px;
+    left:20px;
+}
+
+.customHeight {
+    width:130px;        
+    height:40px;
+    outline:none;
+    border-radius:3px;
+    border:none;
+    text-align:center;
+    margin-left:10px;
+}
+.customHeight:focus {
+    box-shadow:0px 0px 10px #00AEBB;
+}
+
+.customSelect {
+    width:70px;
+    height:40px;
+    outline:none;
+    border-radius:3px;
+    background-color:#FFF;
+    text-algin:center;
+    margin-left:10px;
+}
+
+.customStart {
+    width:130px;        
+    height:40px;
+    outline:none;
+    border-radius:3px;
+    border:none;
+    text-align:center;
+    color:#FFF;
+    background-color:#00AEBB;
+    position:absolute;
+    right:0px;
+    top:0px;
+    line-height:40px;
+    cursor:pointer;
+    transition:all .3s;
+    -webkit-transition:all .3s;
+    -o-transition:all .3s;
+    -moz-transition:all .3s;
+}
+
+.customStart:hover {
+    background: #2a8c95;
+    color: #fff;
+}
+
+.templetWrap {
+    width:2700px;
+    height:300px;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+}
+
+.templetChoose {
+    width:144px;
+    height:198px;
+    float:left;
+    margin-top:43px;
+    margin-left:80px;
+    border-radius:3px;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+}
+.onFocus>.templetBackground{
+    border:3px solid rgba(47,195,208,1);
+    -ms-filter:brightness(1);
+    -webkit-filter:brightness(1);
+    -o-filter:brightness(1);
+    -moz-filter:brightness(1);
+}
+.templetBackground {
+    width:100%;
+    height:100%;
+    position:absolute;
+    -ms-filter:brightness(0.7);
+    -webkit-filter:brightness(0.7);
+    -o-filter:brightness(0.7);
+    -moz-filter:brightness(0.7);
+    padding:3px;
+    border:3px solid rgba(255,255,255,0.3);
+}
+.templetImg {
+    margin:56px 42px;
+    position:absolute;
+}
+.templetSpan {
+    color:#FFF;
+    position:absolute;
+    bottom:20px;
+    display:block;
+    width:100%;
+    text-align:center;
+}
+.templetLeftBtn {
+    opacity:0.1;
+    position:absolute;
+    width:35px;
+    height:44px;
+    left:0px;
+    top:160px;
+    cursor:pointer;
+    background-image:url(/img/discover/templetBtn.png);
+    background-position:-54px 0px;
+}
+.templetRightBtn {
+    opacity:0.5;
+    position:absolute;
+    width:35px;
+    height:44px;
+    right:0px;
+    top:160px;
+    cursor:pointer;
+    background-image:url(/img/discover/templetBtn.png);
+    background-position:0px 0px;
+}
+.contentShowSpan {
+    width:0px;
+    height:0px;
+    border:16px solid transparent;
+    border-bottom-color:#EBECED;
+    position:absolute;
+    bottom:0px;
+    left:136px;
+}
+.contentWrapDiv {
+    width:1200px;
+    margin:30px auto;
+    margin-bottom:100px;
+}
+.contentWrap {
+    width:1200px;
+}
+.contentWrap:after {
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+}
+.content {
+    width:230px;
+    height:288px;
+    border-radius:5px;
+    box-shadow:2px 2px 0px #DEDEDE;
+    float:left;
+    position:relative;
+    margin:10px 5px;
+    min-height:281px;
+    overflow: hidden;
+}
+#contentNewDesign {
+    background-color:#FFF;
+    cursor:pointer;
+    display:table-cell;
+    text-align:center;
+}
+#contentNewDesignImg {
+    width:63px;
+    height:58px;
+    margin:auto auto;
+    vertical-align:middle;
+    margin-top:25%;
+}
+#contentNewDesignTitle,.contentNewDesignWandH{
+    font-size:15px;
+    color:#9C9FA4;
+    font-weight:700;
+    display:block;
+    margin-top:20px; 
+}
+
+#widthAndheigth{
+    font-size:15px;
+    color:#9C9FA4;
+    font-weight:700;
+    display:block;
+    margin-top:5px; 
+}
+.contentNewDesignWandH{
+	margin-top:5px;
+}
+
+.content img {
+    width:100%;
+    height:238px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+.contentTitle {
+    width:230px;
+    height:51px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    line-height:51px;
+    padding-left:10px;
+    background-color:#FFF;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.start {
+    color: #fff;
+    width:110px;
+    height:30px;
+    border-radius:3px;
+    background-color:#2FC3D0;
+    position:absolute;
+    top:130px;
+    left:60px;
+    display:none;
+    opacity:0;
+    cursor:pointer;
+    text-align: center;
+    padding-left: 20px;
+    line-height: 33px;
+    transition:all .3s;
+    -webkit-transition:all .3s;
+    -o-transition:all .3s;
+    -moz-transition:all .3s;
+}
+.start a {
+    color: #fff;
+}
+.start:hover{
+    background: #2a8c95;
+    color: #fff;
+}
+.contentDiv{
+	min-height:281px;
+	background-color:#ffffff;
+}
+.contentDiv:hover.contentDiv .start{
+    display:block;
+    -webkit-animation:startShow 0.3s;
+    -webkit-animation-fill-mode:forwards;
+    -ms-animation:startShow 0.3s;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:startShow 0.3s;
+    -o-animation-fill-mode:forwards;
+    -moz-animation:startShow 0.3s;
+    -moz-animation-fill-mode:forwards;
+}
+@-webkit-keyframes startShow {
+    0% {
+        opacity:0;
+        top:130px;
+    }
+    70% {
+        opacity:1;
+        top:105px;
+    }
+    100% {
+        opacity:1;
+        top:110px;
+    }
+}
+@-moz-keyframes startShow {
+    0% {
+        opacity:0;
+        top:130px;
+    }
+    70% {
+        opacity:1;
+        top:105px;
+    }
+    100% {
+        opacity:1;
+        top:110px;
+    }
+}
+@-ms-keyframes startShow {
+    0% {
+        opacity:0;
+        top:130px;
+    }
+    70% {
+        opacity:1;
+        top:105px;
+    }
+    100% {
+        opacity:1;
+        top:110px;
+    }
+}
+@-o-keyframes startShow {
+    0% {
+        opacity:0;
+        top:130px;
+    }
+    70% {
+        opacity:1;
+        top:105px;
+    }
+    100% {
+        opacity:1;
+        top:110px;
+    }
+}
+.startSpan {
+    background-image:url(/img/discover/gr-icon.png);
+    background-position:-72px 0px;
+    width:24px;
+    height:24px;
+    position:absolute;
+    top:3px;
+    left:15px;
+}
+.startText {
+    color:#FFF;
+    line-height:30px;
+    font-size:18px;
+    display:inline-block;
+    width:80px;
+    text-align:right;
+}
+#share {
+    width:150px;
+    height:40px;
+    background-color:#2FC3D0;
+    line-height:40px;
+    position:absolute;
+    bottom:0px;
+    right:150px;
+    text-align:center;
+    font-size:18px;
+    color:#FFF;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+    cursor:pointer;
+}
+#shareWrap {
+    width:300px;
+    height:200px;
+    position:absolute;
+    padding-top:26px;
+    padding-left:20px;
+    background-color:#FFF;
+    border-top-right-radius:3px;
+    bottom:-200px;
+    right:0px;
+}
+.friendMail {
+    color:#B6B6B6;
+    font-size:19px;
+}
+.friendInput {
+    border-radius:3px;
+    margin-top:10px;
+    width:260px;
+    border:none;
+    height:30px;
+    outline:none;
+    border:1px solid #B6B6B6;
+    padding-left:10px;
+}
+.shareText {
+    margin-top:14px;
+    font-size:19px;
+    color:#B6B6B6;
+}
+.shareSpanWrap {
+    height:24px;
+    width:251px;
+    margin-top:10px;
+}
+.shareSpan {
+    width:24px;
+    height:24px;
+    display:inline-block;
+    background-image:url(/img/discover/sj-icon.png);
+}
+.shareWeix {
+    background-position:0px 0px;
+}
+.shareWeib {
+    background-position:-24px 0px;
+}
+.shareQq {
+    background-position:-48px 0px;
+}
+.shareRenr {
+    background-position:-72px 0px;
+}
+.shareDoub {
+    background-position:-96px 0px;
+}
+/* footer*/
+/*footer分享部分css By Ming*/
+.share{
+	position:absolute;
+	top:-40px;
+	right:70px;
+	width:325px;
+	height:230px;
+	font-size:18px;
+	color:#c2c2c2;
+	perspective:150;
+	-webkit-perspective:150; /* Safari and Chrome */
+	transition: all ..5s;
+	-moz-transition: all .5s;	/* Firefox 4 */
+	-webkit-transition: all .5s;	/* Safari 和 Chrome */
+	-o-transition: all .5s;	/* Opera */
+}
+.shareClose{
+	width:16px;
+	height:16px;
+	position:absolute;
+	right:5px;
+	top:5px;
+	line-height:16px;
+	transition: all .2s;
+	-moz-transition: all .2s;	/* Firefox 4 */
+	-webkit-transition: all .2s;	/* Safari 和 Chrome */
+	-o-transition: all .2s;	/* Opera */
+}
+.shareClose i{
+	padding:0px;
+	margin:0px;
+	border:0px;
+    position: relative;
+    top: -3px
+}
+.shareEmailError{
+	position:absolute;
+	top:61px;
+	left:20px;
+	width:210px;
+	height:32px;
+	color:rgba(180,0,0,0.9);
+	background:rgb(150,150,150);
+	text-align:center;
+	line-height:32px;
+}
+.shareTitle{
+	width:150px;
+	height:40px;
+	font-size:18px;
+	line-height:45px;
+	color:#fff;
+	text-align:center;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	background:#2FC3D0;
+}
+.shareEmailInput{
+	width:100%;
+	height:32px;
+}
+.shareEmailInput input{
+	width:210px;
+	height:32px;
+	padding-left:10px;
+	color:#000;
+	border:1px solid #ccc;
+	transition: all .5s;
+	-moz-transition: all .5s;	/* Firefox 4 */
+	-webkit-transition: all .5s;	/* Safari 和 Chrome */
+	-o-transition: all .5s;	/* Opera */
+}
+.shareTitle{
+	cursor:pointer;
+}
+.shareEmail div:first-child{
+	margin-bottom:5px;
+}
+.shareEmailInput button{
+	width:55px;
+	height:33px;
+	border:0px;
+	padding:0px;
+	margin:0px;
+	border-radius:2px;
+	color:#fff;
+	font-size:16px;
+	background:#2FC3D0;
+	margin-right:20px;
+	float:right;
+	transition: all .5s;
+	-moz-transition: all .5s;	/* Firefox 4 */
+	-webkit-transition: all .5s;	/* Safari 和 Chrome */
+	-o-transition: all .5s;	/* Opera */
+}
+.shareButton a{
+	text-decoration:none;
+}
+.shareContent{
+	background:#fff;
+	position:relative;
+}
+.shareEmail{
+	margin-top:30px;
+}
+.shareEmailInput{
+	margin-bottom:10px;
+}
+.shareButton i{
+	margin-right:5px;
+	color:#000;
+	font-size:25px;
+	transition: all .2s;
+	-moz-transition: all .2s;	/* Firefox 4 */
+	-webkit-transition: all .2s;	/* Safari 和 Chrome */
+	-o-transition: all .2s;	/* Opera */
+}
+.shareContent{
+	padding-left:20px;
+	height:0px;
+	border-top-right-radius:10px;
+	overflow:hidden;
+	transition: all .5s;
+	-moz-transition: all .5s;	/* Firefox 4 */
+	-webkit-transition: all .5s;	/* Safari 和 Chrome */
+	-o-transition: all .5s;	/* Opera */
+}
+
+.weixinImg{
+	position:absolute;
+	width:100px;
+	height:100px;
+	right: 400px;
+	top: -100px;
+	perspective:100;
+	-webkit-perspective:100; /* Safari and Chrome */
+}
+.weixinImg img{
+	width:100%;
+	transform: rotateY(90deg);
+	-webkit-transform: rotateY(90deg); /* Safari and Chrome */
+	transition: all .5s;
+	-moz-transition: all .5s;	/* Firefox 4 */
+	-webkit-transition: all .5s;	/* Safari 和 Chrome */
+	-o-transition: all .5s;	/* Opera */
+}
+.kongjian:hover{
+	color:#FFC028;
+}
+.shareClose{
+	cursor: pointer;
+}
+.weixin:hover{
+	color:#44b739;
+}
+.weibo:hover{
+	color:#eb3c3c;
+}
+.qq:hover{
+	color:#3183cb;
+}
+.renren:hover{
+	color:#3d68b8;
+}
+.douban:hover{
+	color:#00b957;
+}
+/*通用footer部分css*/
+#footer {
+	position:relative;
+    width:100%;
+    height:90px;
+    background-color:#3D3D3D;
+}
+.footerText {
+    width:600px;
+    margin:0 auto;
+    text-align:center;
+    padding-top:20px;
+}
+.footerText>span {
+    margin:10px;
+    color:#999;
+    line-height:2;
+    font-size:14px;
+}
+.footerText>span>a{
+	color:#999;
+	text-decoration:none;
+}
+.flowerDiv {
+    height:28px;
+    width:100%;
+    background-image:url(/img/discover/flower.png);
+}

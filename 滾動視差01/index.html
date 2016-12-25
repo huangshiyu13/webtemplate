@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1_DTD/xhtml1-transitional.dtd">
+
+<!-- saved from url=(0035)#/index.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<title>单页网站</title>
+
+<meta name="keywords" content="">
+
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/index.css" type="text/css">
+
+<link rel="stylesheet" href="css/animate.css" type="text/css">
+
+<link rel="stylesheet" href="css/jquery.minicolors.css">
+
+<link rel="stylesheet" href="css/discover.css">
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.minicolors.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+var browser={
+
+	versions:function(){
+
+		var u = navigator.userAgent, app = navigator.appVersion;
+
+		return {
+
+			trident: u.indexOf('Trident') > -1, //IE内核
+
+			presto: u.indexOf('Presto') > -1, //opera内核
+
+			webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+
+			gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+
+			android: u.indexOf('Android') > -1, //android终端或者uc浏览器
+
+			iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+
+			iPad: u.indexOf('iPad') > -1, //是否iPad
+
+			webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+
+		};
+
+	}(),
+
+	language:(navigator.browserLanguage || navigator.language).toLowerCase()
+
+}
+
+
+
+if(browser.versions.mobile || browser.versions.iPhone || browser.versions.android){
+
+	//document.write("<script src=\"js/phoneIndex.js\">"+"</scr"+"ipt>");
+
+	//document.write("<script src=\"js/bootstrap.js\">"+"</scr"+"ipt>");
+
+	//document.write("<link  href='css/bootstrap.css.css' rel='stylesheet' type='text/css' />");
+
+	window.location.href="/indexPhone/index.html";
+
+}
+
+else{
+
+	document.write("<script src=\"/mod/index/index.js\">"+"</scr"+"ipt>");
+
+}
+
+</script><script src="js/index.js"></script>
+
+</head>
+
+
+
+<body>
+
+
+
+<div id="index_pageChose" style="top: 327px;">
+
+	<div id="1pageChose" class="page1 pageChose adjustAuto active" style="width: 13px; height: 13px; margin-top: 30px; padding-left: 0px;"></div>
+
+    <div id="2pageChose" class="page2 pageChose adjustAuto" style="width: 13px; height: 13px; margin-top: 30px; padding-left: 0px;"></div>
+
+    <div id="3pageChose" class="page3 pageChose adjustAuto" style="width: 13px; height: 13px; margin-top: 30px; padding-left: 0px;"></div>
+
+    <div id="4pageChose" class="page4 pageChose adjustAuto" style="width: 13px; height: 13px; margin-top: 30px; padding-left: 0px;"></div>
+
+    <div id="5pageChose" class="page5 pageChose adjustAuto" style="width: 13px; height: 13px; margin-top: 30px; padding-left: 0px;"></div>
+
+    <div id="6pageChose" class="page6 pageChose adjustAuto" style="width: 13px; height: 13px; margin-top: 30px; padding-left: 0px;"></div>
+
+</div>
+
+<div id="indexDiv" style="height: 934px;">
+
+    <div id="page1" class="indexPage row" style="height: 934px; top: 0px;">
+
+    	<div class="page1top adjustAuto" style="width: 1920px; height: 150px; left: 0px; top: 0px; margin-top: 0px; padding-left: 0px;"></div>
+
+        <div class="page1img1 page1img adjustAuto" style="width: 36px; height: 36px; left: 120px; top: 80px; margin-top: 0px; padding-left: 0px;"><img src="images/1.png"></div>
+
+        <div class="page1img2 page1img adjustAuto" style="width: 36px; height: 36px; left: 120px; margin-top: 0px; padding-left: 0px;"><img src="images/2.png"></div>
+
+        <div class="page1img3 page1img adjustAuto" style="width: 36px; height: 36px; top: 80px; margin-top: 0px; padding-left: 0px;"><img src="images/3.png"></div>
+
+        <div class="page1img4 page1img adjustAuto" style="width: 36px; height: 36px; margin-top: 0px; padding-left: 0px;"><img src="images/4.png"></div>
+
+        <div class="page1Right adjustAuto" style="right: 0px; width: 700px; height: 1080px; top: 0px; margin-top: 0px; padding-left: 100px;">
+
+         	<div class="logo adjustAuto" style="opacity: 1; width: 323px; height: 131px; margin-top: 250px; padding-left: 0px;">此处放logo</div>
+
+            <div class="page1text1 adjustAutoText" style="opacity: 1; font-size: 32px; width: 520px; height: 50px; margin-top: 20px;">贴近你的创意</div>
+
+            <div class="page1text2 adjustAutoText" style="opacity: 1; font-size: 20px; width: 520px; height: 100px; margin-top: 10px;">从未想象的简单与有趣，给你全新的线上设计体验，随时随地开启设计，呈现你的创意和想法。</div>
+
+            <a href="#/index/reg.do" target="_blank">
+
+                <div class="sign adjustAutoText" style="opacity: 1; font-size: 22px; width: 260px; height: 40px; left: 390px; line-height: 40px; margin-top: 10px;">注&nbsp;&nbsp;&nbsp;册</div>
+
+            </a>
+
+            <a href="#/index/login.do" target="_blank">
+
+                <div class="login adjustAutoText" style="opacity: 1; font-size: 22px; width: 260px; height: 40px; line-height: 40px; margin-top: 10px;">登&nbsp;&nbsp;&nbsp;录</div>
+
+            </a>
+
+        </div>
+
+        <div class="page1bottom adjustAuto" style="width: 1920px; height: 150px; left: 0px; margin-top: 0px; padding-left: 0px;"></div>
+
+    </div>
+
+    <div id="page2" class="indexPage row" style="height: 934px; top: 0px;">
+
+   		<div class="page2bg adjustAuto" style="width: 1300px; height: 835px; left: 310px; margin-top: 0px; padding-left: 0px;">
+
+        	<div class="page2text1 adjustAutoText" style="font-size: 42px; width: 450px; height: 100px; left: 100px; top: 50px; margin-top: 0px;">创造丰富的作品</div>
+
+            <div class="page2text2 adjustAutoText" style="font-size: 22px; width: 620px; height: 100px; left: 100px; top: 120px; margin-top: 0px;">不让复杂的设计软件拘束你的创意，用最简单有趣的方式制作海报、ppt、信息图、贺卡、名片等所有你想要的一切。</div>
+
+            <div class="page2img1 pageImg adjustAuto" style="width: 1300px; height: 681px; left: 0px; top: 300px; margin-top: 0px; padding-left: 0px;"><img src="images/22.png"></div>
+
+            <div class="page2img8 pageImg adjustAuto" style="width: 190px; height: 228px; left: 1015px; top: -50px; margin-top: 0px; padding-left: 0px;"><img src="images/1(1).png"></div>
+
+            <!---
+
+            <div class="page2img1 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_2.png" /></div>
+
+            <div class="page2img2 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_3.png" /></div>
+
+            <div class="page2img3 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_4.png" /></div>
+
+            <div class="page2img4 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_5.png" /></div>
+
+            <div class="page2img5 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_6.png" /></div>
+
+            <div class="page2img6 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_7.png" /></div>
+
+            <div class="page2img7 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_8.png" /></div>
+
+
+
+            <div class="page2imgDiv1 pageImgDiv adjustAuto"></div>
+
+            <div class="page2imgDiv2 pageImgDiv adjustAuto"></div>
+
+            <div class="page2imgDiv3 pageImgDiv adjustAuto"></div>
+
+            <div class="page2imgDiv4 pageImgDiv adjustAuto"></div>
+
+            <div class="page2imgDiv5 pageImgDiv adjustAuto"></div>
+
+            <div class="page2imgDiv6 pageImgDiv adjustAuto"></div>
+
+            <div class="page2imgDiv7 pageImgDiv adjustAuto"></div>---->
+
+        </div>
+
+    </div>
+
+
+
+    <!--第3页-->
+
+    <div id="page3" class="indexPage row" style="height: 934px; top: 0px;">
+
+    	<div class="page3bg adjustAuto" style="width: 1300px; height: 835px; left: 310px; top: 120px; margin-top: 0px; padding-left: 0px;">
+
+        	<div class="page3text1 adjustAutoText" style="font-size: 42px; width: 450px; height: 100px; left: 630px; top: 50px; margin-top: 0px;">简单的拖拉拽</div>
+
+            <div class="page3text2 adjustAutoText" style="font-size: 22px; width: 630px; height: 100px; left: 320px; top: 120px; margin-top: 0px;">搜索你需要的素材，通过拖拉拽即可完成素材的挑选与使用，这一切不需要下载任何插件或文件，让你更专注于自己的创意。</div>
+
+            <div class="page3img1 pageImg adjustAuto" style="width: 260px; height: 260px; left: 85px; top: 530px; margin-top: 0px; padding-left: 0px;"><img src="images/1(2).png"></div>
+
+            <div class="page3img2 pageImg adjustAuto" style="width: 272px; height: 272px; left: 1070px; top: 280px; margin-top: 0px; padding-left: 0px;"><img src="images/2(1).png"></div>
+
+            <div class="page3img3 pageImg adjustAuto" style="width: 221px; height: 221px; left: -60px; top: 210px; margin-top: 0px; padding-left: 0px;"><img src="images/3(1).png"></div>
+
+            <div class="page3img4 pageImg adjustAuto" style="width: 697px; height: 457px; left: 278px; top: 294px; margin-top: 0px; padding-left: 0px;"><img src="images/4(1).png"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--第4页-->
+
+    <div id="page4" class="indexPage row" style="height: 934px; top: 0px;">
+
+    	<div class="page4bg adjustAuto" style="width: 1300px; height: 835px; left: 310px; top: 120px; margin-top: 0px; padding-left: 0px;">
+
+        	<div class="page4text1 adjustAutoText" style="font-size: 42px; width: 450px; height: 100px; left: 630px; top: 585px; margin-top: 0px;">免费与尽情</div>
+
+            <div class="page4text2 adjustAutoText" style="font-size: 22px; width: 980px; height: 100px; left: 100px; top: 680px; margin-top: 0px;">创客贴为你提供大量免费的无背景图片、高质量的摄影图片、网络字体、背景、模板等素材，方便你自由创意。上传自己的素材到云端，无论何时何地都能使用，再也不用担心找不到素材。</div>
+
+            <div class="page4img1 pageImg adjustAuto" style="width: 180px; height: 254px; left: -90px; top: 450px; margin-top: 0px; padding-left: 0px;"><img src="images/1(3).png"></div>
+
+            <div class="page4img2 pageImg adjustAuto" style="width: 135px; height: 131px; left: 450px; top: 530px; margin-top: 0px; padding-left: 0px;"><img src="images/2(2).png"></div>
+
+            <div class="page4img5 pageImg adjustAuto" style="width: 165px; height: 56px; left: 960px; top: 720px; margin-top: 0px; padding-left: 0px;"><img src="images/5(1).png"></div>
+
+            <div class="page4img6 pageImg adjustAuto" style="width: 167px; height: 211px; left: 85px; top: 185px; margin-top: 0px; padding-left: 0px;"><img src="images/6(1).png"></div>
+
+            <div class="page4img7 pageImg adjustAuto" style="width: 28px; height: 154px; left: 40px; top: 245px; margin-top: 0px; padding-left: 0px;"><img src="images/7.png"></div>
+
+            <div class="page4img8 pageImg adjustAuto" style="width: 401px; height: 332px; left: 310px; top: 60px; margin-top: 0px; padding-left: 0px;"><img src="images/8.png"></div>
+
+            <div class="page4img9 pageImg adjustAuto" style="width: 315px; height: 118px; left: 321px; top: 73px; margin-top: 0px; padding-left: 0px;"><img src="images/9.png"></div>
+
+            <div class="page4img10 pageImg adjustAuto" style="width: 525px; height: 525px; left: 770px; top: 10px; margin-top: 0px; padding-left: 0px;"><img src="images/10.png"></div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="page5" class="indexPage row" style="height: 934px; top: 0px;">
+
+    	<div class="page6bottom adjustAuto" style="width: 1920px; height: 200px; margin-top: 0px; padding-left: 0px;"></div>
+
+    	<div class="page6text1 adjustAutoText" style="font-size: 62px; width: 500px; height: 100px; left: 500px; top: 200px; margin-top: 0px;">PRINT &amp; SHARE<br>输出分享
+
+        </div>
+
+        <div class="page6text2 adjustAutoText" style="font-size: 21px; width: 530px; height: 315px; left: 500px; top: 370px; margin-top: 0px;">你可以分享设计到社交网络，富媒体的设计分享，让创意的展现不再是二维的世界；也可以输出成格式文件，平台为你提供高清的png、pdf格式输出，无论是传输还是打印印刷都将轻松实现。
+
+        </div>
+
+        <div class="page6img1 pageImg adjustAuto" style="width: 952px; height: 753px; left: 740px; top: 320px; margin-top: 0px; padding-left: 0px;"><img src="images/1(4).png"></div>
+
+        <div class="page6img3 pageImg adjustAuto" style="width: 189px; height: 190px; left: 200px; top: 360px; margin-top: 0px; padding-left: 0px;"><img src="images/3(2).png"></div>
+
+        <div class="page6img2 pageImg adjustAuto" style="width: 544px; height: 418px; left: 1125px; top: 351px; margin-top: 0px; padding-left: 0px;"><img src="images/2(3).png"></div>
+
+        <div class="page6img4 pageImg adjustAuto" style="width: 188px; height: 188px; left: 200px; top: 180px; margin-top: 0px; padding-left: 0px;"><img src="images/4(2).png"></div>
+
+        <div class="page6img5 pageImg adjustAuto" style="width: 224px; height: 231px; left: 200px; top: 600px; margin-top: 0px; padding-left: 0px;"><img src="images/5(2).png"></div>
+
+    </div>
+
+    <div id="page6" class="indexPage row" style="height: 934px; top: 0px;">
+
+    	<div class="page9top adjustAuto" style="width: 1920px; height: 150px; left: 0px; top: 0px; margin-top: 0px; padding-left: 0px;"></div>
+
+        <div class="page9bottom adjustAuto" style="width: 1920px; height: 150px; left: 0px; margin-top: 0px; padding-left: 0px;"></div>
+
+        <div class="page9img5 page9img page9img11 adjustAuto" style="width: 366px; height: 366px; left: 755px; top: 255px; margin-top: 0px; padding-left: 0px;"><img src="images/5(3).png"></div>
+
+        <div class="page9img6 page9img adjustAuto" style="width: 274px; height: 74px; left: 805px; top: 406px; margin-top: 0px; padding-left: 0px;"><img src="images/6(2).png"></div>
+
+        <div class="page9img1 page9img adjustAuto" style="width: 100px; height: 100px; left: 100px; margin-top: 0px; padding-left: 0px;"><img src="images/1(5).png"></div>
+
+        <div class="page9img2 page9img adjustAuto" style="width: 100px; height: 100px; left: 100px; top: 50px; margin-top: 0px; padding-left: 0px;"><img src="images/2(4).png"></div>
+
+        <div class="page9img3 page9img adjustAuto" style="width: 100px; height: 100px; margin-top: 0px; padding-left: 0px;"><img src="images/3(3).png"></div>
+
+        <div class="page9img4 page9img adjustAuto" style="width: 100px; height: 100px; top: 50px; margin-top: 0px; padding-left: 0px;"><img src="images/4(3).png"></div>
+
+        <a href="#/index/login.do"><div class="page9img5 page9img adjustAuto" style="width: 366px; height: 366px; left: 755px; top: 255px; margin-top: 0px; padding-left: 0px;"><img src="images/5(3).png"></div></a>
+
+        <a href="#/index/login.do"><div class="page9img6 page9img adjustAuto" style="width: 274px; height: 74px; left: 805px; top: 406px; margin-top: 0px; padding-left: 0px;"><img src="images/6(2).png"></div></a>
+
+        <a href="#/index/login.do"><div class="page9img7 page9img adjustAuto" style="width: 311px; height: 41px; left: 780px; top: 670px; margin-top: 0px; padding-left: 0px;"><img src="images/7(1).png"></div></a>
+
+        <a href="#/index/login.do"><div class="page9img7 page9img adjustAuto" style="width: 311px; height: 41px; left: 780px; top: 670px; margin-top: 0px; padding-left: 0px;"><img src="images/7(1).png"></div></a>
+
+        <div style="position:absolute;bottom:0px;width:100%">
+
+        <div class="footerText">
+
+            <span>chuangkit.com?2013-2014</span>
+
+            <span>京ICP1231232号</span>
+
+        </div>
+
+        <div></div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</div></body></html>

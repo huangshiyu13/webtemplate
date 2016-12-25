@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.AspNet.Identity.Owin</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNet.Identity.IdentityExtensions">
+      <summary>扩展，以更轻松地获取标识的用户名/用户 ID 声明。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityExtensions.FindFirstValue(System.Security.Claims.ClaimsIdentity,System.String)">
+      <summary>如果存在具有指定类型的声明，则返回第一个声明的声明值；否则返回 null。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityExtensions.GetUserId(System.Security.Principal.IIdentity)">
+      <summary>使用 UserIdClaimType 返回用户 ID。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.IdentityExtensions.GetUserName(System.Security.Principal.IIdentity)">
+      <summary>使用 UserNameClaimType 返回用户名。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.Owin.AuthenticationIdentityManager">
+      <summary>Owin aware identity manager that adds sign in/sign out and claims functionality</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationIdentityManager.#ctor(Microsoft.AspNet.Identity.IdentitySettings,Microsoft.AspNet.Identity.IIdentityStore)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationIdentityManager.#ctor(Microsoft.AspNet.Identity.IIdentityStore)">
+      <summary>Constructor that uses the default settings</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.AuthenticationIdentityManager.Authentication">
+      <summary>Authentication APIs (SignIn, SignOut)</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.Owin.AuthenticationManager">
+      <summary>Authentication APIs (SignIn/SignOut)</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.#ctor(Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions,Microsoft.AspNet.Identity.IdentityManager)">
+      <summary>Constructor</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.CheckPasswordAndSignInAsync(Microsoft.Owin.Security.IAuthenticationManager,System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Validates that the password matches and then signs the token in</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.ConfirmSignInTokenAsync(System.String,System.Threading.CancellationToken)">
+      <summary>If the token is found, allows the user to sign in</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.CreateAndSignInExternalUserAsync(Microsoft.Owin.Security.IAuthenticationManager,Microsoft.AspNet.Identity.IUser,System.Threading.CancellationToken)">
+      <summary>Create an external user and sign them in</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.CreateApplicationClaimsIdentity(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+      <summary>Creates a claims identity with the ApplicationAuthenticaitonType, UserNameClaimType and ConfigRole type</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.GetExternalIdentityAsync(Microsoft.Owin.Security.IAuthenticationManager)">
+      <summary>Return the identity associated with the default external authentication type</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.GetUserIdentityClaimsAsync(System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Threading.CancellationToken)">
+      <summary>Return the claims for a token, which will contain the UserIdClaimType, UserNameClaimType, a claim representing each Role and any claims specified in the UserClaims</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.LinkExternalIdentityAsync(System.Security.Claims.ClaimsIdentity,System.String,System.Threading.CancellationToken)">
+      <summary>Try to link the given identity to the specified token</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.AuthenticationManager.Manager">
+      <summary>IdentityManager for operations</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.AuthenticationManager.Options">
+      <summary>Config</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.RequireTokenConfirmationForSignInAsync(System.String,System.String,System.DateTime,System.Threading.CancellationToken)">
+      <summary>Create a token for the specified user and disables sign in. ConfirmSignInTokenAsync will confirm this token and reenable sign in.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.SignInAsync(Microsoft.Owin.Security.IAuthenticationManager,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Boolean,System.Threading.CancellationToken)">
+      <summary>Signs in the active principal with a identity that contains claims set to the result of GetUserIdentityClaims and the specified claims</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.SignInExternalIdentityAsync(Microsoft.Owin.Security.IAuthenticationManager,System.Security.Claims.ClaimsIdentity,System.Threading.CancellationToken)">
+      <summary>Signs the identity in if the external identity is already linked</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.AuthenticationManager.UpdateUserDisableSignIn(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Set the AllowSignIn flag for a user</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.Owin.IAuthenticationManager">
+      <summary>Authentication APIs (SignIn/SignOut)</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.CheckPasswordAndSignInAsync(Microsoft.Owin.Security.IAuthenticationManager,System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Validates that the password matches and then signs the token in</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.ConfirmSignInTokenAsync(System.String,System.Threading.CancellationToken)">
+      <summary>If the token is found, allows the user to sign in</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.CreateAndSignInExternalUserAsync(Microsoft.Owin.Security.IAuthenticationManager,Microsoft.AspNet.Identity.IUser,System.Threading.CancellationToken)">
+      <summary>Create an external user and sign them in</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.CreateApplicationClaimsIdentity(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+      <summary>Creates a claims identity with the ApplicationAuthenticaitonType, UserNameClaimType and ConfigRole type</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.GetExternalIdentityAsync(Microsoft.Owin.Security.IAuthenticationManager)">
+      <summary>Return the identity associated with the default external authentication type</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.GetUserIdentityClaimsAsync(System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Threading.CancellationToken)">
+      <summary>Return the claims for a token, which will contain the UserIdClaimType, UserNameClaimType, a claim representing each Role and any claims specified in the UserClaims</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.LinkExternalIdentityAsync(System.Security.Claims.ClaimsIdentity,System.String,System.Threading.CancellationToken)">
+      <summary>Try to link the given identity to the specified token</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.RequireTokenConfirmationForSignInAsync(System.String,System.String,System.DateTime,System.Threading.CancellationToken)">
+      <summary>Require a call to ConfirmSignInToken with the given token before this user can be signed in</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.SignInAsync(Microsoft.Owin.Security.IAuthenticationManager,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Boolean,System.Threading.CancellationToken)">
+      <summary>Signs in the active principal with a identity that contains claims set to the result of GetUserIdentityClaims and the specified claims</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.SignInExternalIdentityAsync(Microsoft.Owin.Security.IAuthenticationManager,System.Security.Claims.ClaimsIdentity,System.Threading.CancellationToken)">
+      <summary>Signs the identity in if the external identity is already linked</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManager.UpdateUserDisableSignIn(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>Set the AllowSignIn flag for a user</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions">
+      <summary>Adds extensions methods related to SignIn using OWIN middleware and the IdentityManager to generate the appropriate user claims</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.CheckPasswordAndSignIn(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,System.String,System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.CheckPasswordAndSignInAsync(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,System.String,System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.ConfirmSignInToken(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.ConfirmSignInTokenAsync(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.CreateAndSignInExternalUser(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,Microsoft.AspNet.Identity.IUser)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.CreateAndSignInExternalUserAsync(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,Microsoft.AspNet.Identity.IUser)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.GetExternalIdentity(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.LinkExternalIdentity(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,System.Security.Claims.ClaimsIdentity,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.LinkExternalIdentityAsync(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,System.Security.Claims.ClaimsIdentity,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.RequireTokenConfirmationForSignIn(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,System.String,System.String,System.DateTime)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.RequireTokenConfirmationForSignInAsync(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,System.String,System.String,System.DateTime)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.SignIn(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.SignIn(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.SignInAsync(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.SignInAsync(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,System.String,System.Boolean,System.Threading.CancellationToken)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.SignInExternalIdentity(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,System.Security.Claims.ClaimsIdentity)"></member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IAuthenticationManagerExtensions.SignInExternalIdentityAsync(Microsoft.AspNet.Identity.Owin.IAuthenticationManager,Microsoft.Owin.Security.IAuthenticationManager,System.Security.Claims.ClaimsIdentity)"></member>
+    <member name="T:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions">
+      <summary>Configuration for the Identity system</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.#ctor">
+      <summary>Default constructor which uses the built in default options</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.ApplicationAuthenticationType">
+      <summary>The AuthenticationType used in the UseSignInCookies extension method for the active signed in identity.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.ClaimsIssuer">
+      <summary>Issuer used for the claims generated</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.ExternalAuthenticationType">
+      <summary>The AuthenticationType used by the UseSignInCookies extension method for the external signed in identity.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.LoginPath">
+      <summary>Path to the login page in the app</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.LogoutPath">
+      <summary>Path to the logout page in the app</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.RoleClaimType">
+      <summary>Claim type used for role claims</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.UserIdClaimType">
+      <summary>Claim type used for the user id</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions.UserNameClaimType">
+      <summary>Claim type used for the user name</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Identity.Owin.IdentitySettingsExtensions">
+      <summary>Represents the extensions used in identity settings.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Identity.Owin.IdentitySettingsExtensions.GetAuthenticationOptions(Microsoft.AspNet.Identity.IdentitySettings)">
+      <summary>Returns the authentication options for the identity.</summary>
+      <returns>The authentication options for the identity.</returns>
+      <param name="settings">The identity settings.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationManagerExtensions">
+      <summary>Extensions methods on IAuthenticationManager that add methods for using the default Application and External authentication type constants</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationManagerExtensions.GetExternalAuthenticationTypes(Microsoft.Owin.Security.IAuthenticationManager)">
+      <summary>Return the authentication types which are considered external because they have captions</summary>
+    </member>
+    <member name="T:Owin.AppBuilderExtensions">
+      <summary>Extensions off of IAppBuilder to make it easier to configure the SignInCookies</summary>
+    </member>
+    <member name="M:Owin.AppBuilderExtensions.UseExternalSignInCookie(Owin.IAppBuilder)">
+      <summary>Configure the app to use owin middleware based cookie authentication for external identities</summary>
+    </member>
+    <member name="M:Owin.AppBuilderExtensions.UseExternalSignInCookie(Owin.IAppBuilder,System.String)">
+      <summary>Configure the app to use owin middleware based cookie authentication for external identities</summary>
+    </member>
+    <member name="M:Owin.AppBuilderExtensions.UseOAuthBearerTokens(Owin.IAppBuilder,Microsoft.Owin.Security.OAuth.OAuthAuthorizationServerOptions,System.String)">
+      <summary>Configure the app to use owin middleware based oauth bearer tokens</summary>
+    </member>
+    <member name="M:Owin.AppBuilderExtensions.UseSignInCookies(Owin.IAppBuilder)">
+      <summary>Use application and external sign in cookies for the app</summary>
+    </member>
+    <member name="M:Owin.AppBuilderExtensions.UseSignInCookies(Owin.IAppBuilder,Microsoft.AspNet.Identity.Owin.IdentityAuthenticationOptions)">
+      <summary>Configure the app to use owin middleware based cookie authentication for the active identity and external identities</summary>
+    </member>
+  </members>
+</doc>

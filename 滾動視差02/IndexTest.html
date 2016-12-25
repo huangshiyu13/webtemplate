@@ -1,0 +1,1120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>单页视觉差滚屏</title>
+<style>
+/* reset start */
+html,body{ overflow:hidden; height:100%;}
+body,h1,h2,h3,h4,p,ul,ol{ padding:0; margin:0; font:14px "微软雅黑";}
+li{ list-style:none;}
+img{ border:none;}
+a{ text-decoration:none;}
+a:active{ color:#009ee0;}
+/* reset end */
+
+/* common start */
+.clear{zoom:1;}
+.clear:after{ content:""; display:block; clear:both;}
+.commonTitle{ color:#009ee0; font-size:80px; line-height:0.8; font-weight:bold; letter-spacing:-5px;}
+.commonText{ color:white; line-height:1.5; font-size:15px;}
+/* common end */
+
+/* frame start */
+#main{ width:100%; height:100%;}
+#header{ width:100%; height:80px; background:white;}
+#headerMain{ width:1100px; height:100%; margin:0 auto; position:relative;}
+#logo{ float:left; margin-top:30px;}
+#nav{ float:right; margin-top:50px;}
+#nav li{ float:left; position:relative; margin-left:40px;}
+#nav li .up{ position:absolute; left:0; top:0; color:black; width:0%; overflow:hidden; transition:.5s width;}
+#nav li:hover .up{ width:100%;}
+#arrow{ width:21px; height:11px; background:url(img/menuIndicator.png) no-repeat; position:absolute; left:50%; bottom:-11px; transition:.5s left; z-index:10;}
+#content{ width:100%; position:relative; overflow:hidden;}
+#list{ width:100%; position:absolute; top:0; left:0; transition:.5s top;}
+#list .liList{ width:2000px; position:relative; left:50%; margin-left:-1000px; overflow:hidden;}
+#list .divList{ width:1100px; height:520px; margin:0px auto; position:relative;}
+#menu{ position:fixed; right:0; top:50%; z-index:20;}
+#menu li{ width:10px; height:10px; border-radius:50%; margin:10px; border:1px white solid; cursor:pointer;}
+#menu li.active{ background:white; cursor:default;}
+/* frame end */
+
+/* home start */
+#home{ background:url(img/bg1.jpg) no-repeat;}
+#homeContent .homeContent1{ width:100%; height:100%; position:relative; perspective:800px; transform-style:preserve-3d; -webkit-perspective:800px; -webkit-transform-style:preserve-3d; transition:1s;}
+#homeContent .homeContent1 li{  width:100%; height:100%; position:absolute; left:0; top:0; background:black; visibility:hidden;}
+#homeContent .homeContent1 li:nth-of-type(1){background:#dc6c5f;}
+#homeContent .homeContent1 li:nth-of-type(2){background:#95dc84;}
+#homeContent .homeContent1 li:nth-of-type(3){background:#64b9d2;}
+#homeContent .homeContent1 li h1{ color:white; text-align:center; padding-top:200px;}
+#homeContent .homeContent1 li.active{ z-index:1; visibility:visible;}
+
+#homeContent .homeContent2{ position:absolute; bottom:0; z-index:2; text-align:center; width:100%; transition:1s;}
+#homeContent .homeContent2 li{ width:20px; height:20px; border-radius:50%; background:rgba(255,255,255,0.5); display:inline-block; margin:2px; box-shadow:0 0 4px rgba(25,25,25,0.8); cursor:pointer;}
+#homeContent .homeContent2 li.active{ background:white; cursor:default;}
+
+#homeContent .homeContent1 .leftShow{ animation:1s homeLeftShow; visibility:visible; z-index:3;-webkit-animation:1s homeLeftShow;}
+#homeContent .homeContent1 .rightHide{ animation:1s homeRightHide; visibility:hidden; -webkit-animation:1s homeRightHide;}
+
+
+#homeContent .homeContent1 .leftHide{ animation:1s homeLeftHide; visibility:hidden; -webkit-animation:1s homeLeftHide;}
+#homeContent .homeContent1 .rightShow{ animation:1s homeRightShow; visibility:visible; z-index:3; -webkit-animation:1s homeRightShow;}
+
+@keyframes homeLeftHide{
+	0%{ transform:translateZ(0px); visibility:visible;}
+	40%{ transform:translate(-40%,0) scale(0.8) rotateY(20deg);}
+	100%{ transform:translateZ(-200px);}
+}
+@keyframes homeRightShow{
+	0%{ transform:translateZ(-200px);}
+	40%{ transform:translate(40%,0) scale(0.8) rotateY(-20deg);}
+	100%{ transform:translateZ(0px);}
+}
+
+@-webkit-keyframes homeLeftHide{
+	0%{ -webkit-transform:translateZ(0px); visibility:visible;}
+	40%{ -webkit-transform:translate(-40%,0) scale(0.8) rotateY(20deg);}
+	100%{ -webkit-transform:translateZ(-200px);}
+}
+@-webkit-keyframes homeRightShow{
+	0%{ -webkit-transform:translateZ(-200px);}
+	40%{ -webkit-transform:translate(40%,0) scale(0.8) rotateY(-20deg);}
+	100%{ -webkit-transform:translateZ(0px);}
+}
+
+@keyframes homeLeftShow{
+	0%{ transform:translateZ(-200px);}
+	40%{ transform:translate(-40%,0) scale(0.8) rotateY(20deg);}
+	100%{ transform:translateZ(0px);}
+}
+@keyframes homeRightHide{
+	0%{ transform:translateZ(0px); visibility:visible;}
+	40%{ transform:translate(40%,0) scale(0.8) rotateY(-20deg);}
+	100%{ transform:translateZ(-200px);}
+}
+@-webkit-keyframes homeLeftShow{
+	0%{ -webkit-transform:translateZ(-200px);}
+	40%{ -webkit-transform:translate(-40%,0) scale(0.8) rotateY(20deg);}
+	100%{ -webkit-transform:translateZ(0px);}
+}
+@-webkit-keyframes homeRightHide{
+	0%{ -webkit-transform:translateZ(0px); visibility:visible;}
+	40%{ -webkit-transform:translate(40%,0) scale(0.8) rotateY(-20deg);}
+	100%{ -webkit-transform:translateZ(-200px);}
+}
+
+/* home end */
+
+/* course start */
+#course{ background:url(img/bg3.jpg) no-repeat;}
+#course .courseContent1{ padding:50px; position:relative; z-index:1;}
+#course .courseContent2{ width:400px; padding-left:50px; position:relative; z-index:1;}
+#course .courseContent3{ width:480px; position:absolute; right:50px; top:70px; z-index:1;}
+#course .courseLine{ width:9px; height:410px; background:url(img/plus_row.png) no-repeat; position:absolute; left:0; top:0; margin-top:-5px; margin-left:-5px;}
+#course .courseLogo{ width:120px; height:132px; float:left; margin-top:1px; position:relative; cursor:pointer; perspective:800px; -webkit-perspective:800px;}
+#course .courseBefore{ width:100%; height:100%; position:absolute; left:0; top:0; background-repeat:no-repeat; background-position:center center;  backface-visibility:hidden; -webkit-backface-visibility:hidden; transition:1s;}
+#course .courseAfter{ width:100%; height:100%; position:absolute; left:0; top:0; background:#009ee0; color:white; padding:15px; box-sizing:border-box; text-indent:2em; transform:rotateY(-180deg); -webkit-transform:rotateY(-180deg); backface-visibility:hidden;  -webkit-backface-visibility:hidden; transition:1s;}
+#course .courseLogo:hover .courseBefore{ transform:rotateY(180deg); -webkit-transform:rotateY(180deg);}
+#course .courseLogo:hover .courseAfter{ transform:rotateY(0deg); -webkit-transform:rotateY(0deg);}
+#course .plane1{ width:359px; height:283px; background:url(img/plane1.png) no-repeat; position:absolute; left:300px; top:-100px; transition:1s;}
+#course .plane2{ width:309px; height:249px; background:url(img/plane2.png) no-repeat; position:absolute; left:-100px; top:200px; transition:1s;}
+#course .plane3{ width:230px; height:182px; background:url(img/plane3.png) no-repeat; position:absolute; left:300px; top:400px; transition:1s;}
+/* course end */
+
+/* works start */
+#works{ background:url(img/bg4.jpg) no-repeat;}
+#worksContent{}
+#worksContent .worksContent1{ padding:50px 0 100px 50px; position:relative; z-index:1;}
+#worksContent .worksContent2{ padding-left:50px; position:relative; z-index:1;}
+#worksContent .worksImgParent{ width:220px; height:133px; float:left; overflow:hidden; margin:0 1px; position:relative;}
+#worksContent .worksImgParent:last-of-type{ width:332px;}
+#worksContent .worksImgMark{ width:100%; height:100%; position:absolute; left:0; top:0; background:rgba(25,25,25,0.8); color:white; padding:15px; box-sizing:border-box; opacity:0; transition:.5s;}
+#worksContent .worksImg{ transition:.5s;}
+#worksContent .worksImgMark div{ width:32px; height:34px; background:url(img/zoomico.png) no-repeat; margin:10px auto; cursor:pointer; transition:.5s;}
+#worksContent .worksImgMark div:hover{ background-position:0 -36px;}
+#worksContent .worksImgParent:hover .worksImgMark{ opacity:1;}
+#worksContent .worksImgParent:hover .worksImg{ transform:scale(1.5) rotate(20deg);}
+#worksContent .worksContent3{ width:167px; height:191px; background:url(img/robot.png) no-repeat; position:absolute; left:900px; top:170px; animation:10s linear infinite worksMove; -webkit-animation:10s linear infinite worksMove; z-index:1;}
+@keyframes worksMove{
+	0%{}
+	49%{transform:rotateY(0deg);}
+	50%{ left:450px; transform:rotateY(180deg);}
+	100%{ transform:rotateY(180deg);}
+}
+@-webkit-keyframes worksMove{
+	0%{}
+	49%{-webkit-transform:rotateY(0deg);}
+	50%{ left:450px; -webkit-transform:rotateY(180deg);}
+	100%{ -webkit-transform:rotateY(180deg);}
+}
+#works .pencel1{ width:180px; height:97px; background:url(img/pencel1.png) no-repeat; position:absolute; transition:1s; left:500px; top:0;}
+#works .pencel2{ width:268px; height:38px; background:url(img/pencel2.png) no-repeat; position:absolute; transition:1s; left:300px; top:250px;}
+#works .pencel3{ width:441px; height:231px; background:url(img/pencel3.png) no-repeat; position:absolute; transition:1s; left:650px; top:300px;}
+/* works end */
+
+/* about start */
+#about{ background:url(img/bg5.jpg) no-repeat;}
+#aboutContent .aboutContent1{ padding:50px 0 100px 50px;}
+#aboutContent .aboutContent2{ padding-left:50px; width:400px;}
+#aboutContent .aboutContent3{}
+#about .blueLine{ width:357px; height:998px; background:url(img/greenLine.png) no-repeat; position:absolute; left:50%; top:0;}
+#aboutContent .aboutImg{ position:absolute; width:260px; height:200px; border:5px solid rgba(255,255,255,0.5); border-radius:8px; z-index:3; overflow:hidden; cursor:pointer; transition:1s;}
+#aboutContent .aboutImg:nth-of-type(1){ left:750px; top:50px;}
+#aboutContent .aboutImg:nth-of-type(2){ left:600px; top:290px;}
+#aboutContent .aboutImg ul{ width:100%; height:100%; position:absolute; left:0; top:0; z-index:5;}
+#aboutContent .aboutImg ul li{ float:left; position:relative; overflow:hidden;}
+#aboutContent .aboutImg ul img{ position:absolute; transition:.5s;}
+#aboutContent .aboutImg span{ width:100%; height:100%; position:absolute; left:0; top:0; transform:scale(1.5); -webkit-transform:scale(1.5); transition:.5s;}
+
+/* about end */
+
+/* team start */
+#team{ background:url(img/bg2.jpg) no-repeat;}
+#team .teamContent1{ padding:50px; float:left; width:400px; transition:1s;}
+#team .teamContent2{ padding:50px; float:right; width:400px; transition:1s;}
+#team .teamContent3{ position:absolute; bottom:-150px; left:50%; margin-left:-472px;}
+#team .teamContent3 ul{}
+#team .teamContent3 li{ width:118px; height:448px; background:url(img/team.png) no-repeat; float:left; cursor:pointer; transition:1s;}
+#canvasBubble{ position:absolute; left:0; bottom:100px; cursor:pointer;}
+/* team end */
+
+#music{ width:14px; height:14px; background:url(img/musicoff.gif) no-repeat; float:left; margin:50px 0 0 5px; cursor:pointer;}
+#loading{}
+#loading div{ width:100%; height:50%; position:absolute; left:0; background:#009ee0; z-index:50; transition:1s;}
+#loading div:nth-of-type(1){ top:0;}
+#loading div:nth-of-type(2){ bottom:0;}
+#loading span{ width:0%; height:4px; background:white; position:absolute; left:0; top:50%; margin-top:-2px; z-index:60; transition:.5s;}
+</style>
+<script>
+
+//console.log( window.innerWidth );    1366
+//console.log( window.innerHeight );   654  /  643
+
+//container : 1100 * 600   ( 如果想适应更多的分辨率，让效果展示的更好，利用css3 media query 来做响应式布局 , bootStrap )
+
+window.onload = function(){
+
+	var oHeader = $('header');
+	var oNav = $('nav');
+	var oArrow = $('arrow');
+	var oList = $('list');
+	var oContent = $('content');
+	var aLiNav = oNav.getElementsByTagName('li');
+	var aLiList = getByClass( oList , 'liList' );
+	var aDivList = getByClass( oList , 'divList' );
+	var oWorksContent = $('worksContent');
+	var oWorksContent2 = getByClass(oWorksContent , 'worksContent2')[0];
+	var oHomeContent = $('homeContent');
+	var oHomeContent1 = getByClass(oHomeContent , 'homeContent1')[0];
+	var oHomeContent2 = getByClass(oHomeContent , 'homeContent2')[0];
+	var oCourseContent = $('courseContent');
+	var oCourseContent3 = getByClass(oCourseContent , 'courseContent3')[0];
+	var oAboutContent = $('aboutContent');
+	var oAboutContent3 = getByClass(oAboutContent , 'aboutContent3')[0];
+	var oTeamContent = $('teamContent');
+	var oTeamContent3 = getByClass(oTeamContent , 'teamContent3')[0];
+
+	var oMenu = $('menu');
+	var aLiMenu = oMenu.getElementsByTagName('li');
+	var oMusic = $('music');
+	var oAudio = $('audio1');
+	var oLoading = $('loading');
+
+	var iNow = 0;
+	var prevIndex = 0;
+	var iContentHeight = 0;
+
+	showLoading();
+	contentAuto();
+	listContentAuto();
+	bindNav();
+	mouseWheel();
+	workContent();
+	homeContent();
+	courseContent();
+	aboutContent();
+	teamContent();
+	showMusic();
+	window.onresize = fnResize;
+
+	//toMove(4);
+
+	function showLoading(){
+		var oSpan = oLoading.getElementsByTagName('span')[0];
+		var aDiv = oLoading.getElementsByTagName('div');
+		var arr = ['bg1.jpg','bg2.jpg','bg3.jpg','bg4.jpg','bg5.jpg','about1.jpg','about2.jpg','about3.jpg','about4.jpg','worksimg1.jpg','worksimg2.jpg','worksimg3.jpg','worksimg4.jpg','team.png','greenLine.png'];
+		var iNow = 0;
+
+		for(var i=0;i<arr.length;i++){
+
+			var objImg = new Image();
+			objImg.src = 'img/'+arr[i];
+			objImg.onload = function(){
+				iNow++;
+				oSpan.style.width = iNow/arr.length*100 + '%';
+				/*if(iNow == arr.length){
+					alert(123);
+				}*/
+			};
+
+		}
+		oSpan.addEventListener('webkitTransitionend',spanChange,false);
+		oSpan.addEventListener('transitionend',spanChange,false);
+
+		function spanChange(){
+			if(oSpan.style.width == '100%'){
+				oSpan.style.display = 'none';
+				aDiv[0].style.height = 0;
+				aDiv[1].style.height = 0;
+			}
+		}
+
+		aDiv[0].addEventListener('webkitTransitionend',divChange,false);
+		aDiv[0].addEventListener('transitionend',divChange,false);
+
+
+		function divChange(){
+			oLoading.parentNode.removeChild(oLoading);
+			oMusic.onclick();
+			cjAnimate[0].inAn();
+		}
+
+		//预加载 js css
+		/*var bj = document.createElement('object');
+		bj.data = 'base.js';
+		document.body.appendChild(bj);
+		bj.width = 0;
+		bj.height = 0;
+		bj.onload = function(){
+		};*/
+
+	}
+
+	function bindNav(){
+
+		var oDiv = aLiNav[0].getElementsByTagName('div')[0];
+		oDiv.style.width = '100%';
+		oArrow.style.left = aLiNav[0].offsetLeft + aLiNav[0].offsetWidth/2 - oArrow.offsetWidth/2 + 'px';
+
+		for(var i=0;i<aLiNav.length;i++){
+			aLiNav[i].index = i;
+			aLiNav[i].onmousedown = function(){
+				prevIndex = iNow;
+				iNow = this.index;
+				toMove( this.index );
+			};
+		}
+		for(var i=0;i<aLiMenu.length;i++){
+			aLiMenu[i].index = i;
+			aLiMenu[i].onclick = function(){
+				prevIndex = iNow;
+				iNow = this.index;
+				toMove( this.index );
+			};
+		}
+	}
+
+	function toMove(index){
+
+		for(var i=0;i<aLiNav.length;i++){
+			var oDiv = aLiNav[i].getElementsByTagName('div')[0];
+			oDiv.style.width = '';
+		}
+		var oDiv = aLiNav[index].getElementsByTagName('div')[0];
+		oDiv.style.width = '100%';
+
+		oArrow.style.left = aLiNav[index].offsetLeft + aLiNav[index].offsetWidth/2 - oArrow.offsetWidth/2 + 'px';
+
+		oList.style.top = - index * iContentHeight + 'px';
+		for(var i=0;i<aLiMenu.length;i++){
+			aLiMenu[i].className = '';
+		}
+		aLiMenu[index].className = 'active';
+
+		if( cjAnimate[index].inAn ){
+			cjAnimate[index].inAn();
+		}
+		if( cjAnimate[prevIndex].outAn ){
+			cjAnimate[prevIndex].outAn();
+		}
+
+	}
+
+	function contentAuto(){
+		iContentHeight = viewHeight() - oHeader.offsetHeight;
+		oContent.style.height = iContentHeight + 'px';
+		for(var i=0;i<aLiList.length;i++){
+			aLiList[i].style.height = iContentHeight + 'px';
+		}
+		oList.style.top = - iNow * iContentHeight + 'px';
+	}
+
+	function listContentAuto(){
+		var mt = (iContentHeight - 520)/2;
+		for(var i=0;i<aDivList.length;i++){
+			aDivList[i].style.marginTop = mt + 'px';
+		}
+	}
+
+	function fnResize(){
+		contentAuto();
+		listContentAuto();
+	}
+
+	function mouseWheel(){
+		//火狐 : DOMMouseScroll( DOM事件必须用绑定事件的方式去写 addEventListener )
+		//IE ,  谷歌 : mousewheel
+		var bBtn = true;
+		var timer = null;
+		if(oContent.addEventListener){
+			oContent.addEventListener('DOMMouseScroll',function(ev){
+				var ev = ev || window.event;
+				clearTimeout(timer);
+				timer = setTimeout(function(){
+					toChange(ev);
+				},200);
+			},false);
+		}
+		oContent.onmousewheel = function(ev){
+			var ev = ev || window.event;
+			clearTimeout(timer);
+			timer = setTimeout(function(){
+				toChange(ev);
+			},200);
+		};
+
+		function toChange(ev){
+			//alert(ev.detail);  //↓ 3  ↑ -3
+			//alert(ev.wheelDelta); //↓ -120  ↑ 120
+
+			if(ev.detail){
+				bBtn = ev.detail > 0 ? true : false;
+			}
+			else{
+				bBtn = ev.wheelDelta < 0 ? true : false;
+			}
+
+			if( (iNow == 0 && !bBtn) || (iNow == aLiList.length-1 && bBtn) ){return;}
+
+			prevIndex = iNow;
+			if(bBtn){   //↓
+				if(iNow != aLiList.length-1){
+					iNow++;
+				}
+				toMove(iNow);
+			}
+			else{   //↑
+				if(iNow != 0){
+					iNow--;
+				}
+				toMove(iNow);
+			}
+
+			if(ev.preventDefault){
+				ev.preventDefault();
+			}
+			else{
+				return false;
+			}
+		}
+
+	}
+
+	function workContent(){
+		//oWorksContent2
+		var data = [
+			{ img : 'img/worksimg1.jpg' , text : '测试文字，哈哈哈啊司法所地1' },
+			{ img : 'img/worksimg2.jpg' , text : '测试文字，哈哈哈啊司法所地2' },
+			{ img : 'img/worksimg3.jpg' , text : '测试文字，哈哈哈啊司法所地3' },
+			{ img : 'img/worksimg4.jpg' , text : '测试文字，哈哈哈啊司法所地4' }
+		];
+		for(var i=0;i<data.length;i++){
+			var oDivParent = document.createElement('div');
+			oDivParent.className = 'worksImgParent';
+			oDivParent.innerHTML = '<img class="worksImg" src="'+(data[i].img)+'"><div class="worksImgMark"><span>'+(data[i].text)+'</span><div></div></div>';
+			oWorksContent2.appendChild(oDivParent);
+		}
+
+	}
+
+	function homeContent(){
+		//oHomeContent1
+		//oHomeContent2
+		var aLi1 = oHomeContent1.getElementsByTagName('li');
+		var aLi2 = oHomeContent2.getElementsByTagName('li');
+		var oldIndex = 0;
+		var iNowHome = 0;
+
+		var data = [
+			{ text : 'one layer'},
+			{ text : 'two layer'},
+			{ text : 'three layer'},
+			{ text : 'four layer'}
+		];
+		create();
+		function create(){
+			for(var i=0;i<data.length;i++){
+				var oLi1 = document.createElement('li');
+				oLi1.innerHTML = '<h1 class="commonTitle">'+(data[i].text)+'</h1>';
+				var oLi2 = document.createElement('li');
+				if(i == 0){
+					oLi1.className = 'active';
+					oLi2.className = 'active';
+				}
+				oHomeContent1.appendChild(oLi1);
+				oHomeContent2.appendChild(oLi2);
+			}
+
+		}
+
+		for(var i=0;i<aLi2.length;i++){
+			aLi2[i].index = i;
+			aLi2[i].onclick = function(){
+				for(var i=0;i<aLi2.length;i++){
+					aLi2[i].className = '';
+				}
+				this.className = 'active';
+
+				if( oldIndex < this.index ){   //从左向右
+					aLi1[oldIndex].className = 'leftHide';
+					aLi1[this.index].className = 'rightShow';
+				}
+				else if( oldIndex > this.index ){  //从右向走
+					aLi1[oldIndex].className = 'rightHide';
+					aLi1[this.index].className = 'leftShow';
+				}
+				oldIndex = this.index;
+				iNowHome = this.index;
+			};
+		}
+
+		var timer = setInterval(change,3000);
+
+		oHomeContent.onmouseover = function(){
+			clearInterval(timer);
+		};
+
+		function change(){
+			iNowHome++;
+
+			if(iNowHome == aLi2.length){
+				iNowHome = 0;
+			}
+
+			for(var i=0;i<aLi2.length;i++){
+				aLi2[i].className = '';
+			}
+			aLi2[iNowHome].className = 'active';
+			aLi1[oldIndex].className = 'leftHide';
+			aLi1[iNowHome].className = 'rightShow';
+
+			oldIndex = iNowHome;
+
+		}
+	}
+
+	function courseContent(){
+		//oCourseContent3
+		var data = [
+			{ img : 'img/binoli.png' , text : '测试文字111' },
+			{ img : 'img/bks.png' , text : '测试文字222' },
+			{ img : 'img/gu.png' , text : '测试文字333' },
+			{ img : 'img/hlx.png' , text : '测试文字444' },
+			{ img : 'img/binoli.png' , text : '测试文字111' },
+			{ img : 'img/binoli.png' , text : '测试文字111' },
+			{ img : 'img/binoli.png' , text : '测试文字111' },
+			{ img : 'img/binoli.png' , text : '测试文字111' },
+			{ img : 'img/binoli.png' , text : '测试文字111' },
+			{ img : 'img/binoli.png' , text : '测试文字111' },
+			{ img : 'img/binoli.png' , text : '测试文字111' },
+			{ img : 'img/binoli.png' , text : '测试文字111' }
+		];
+		create();
+		function create(){
+			var w = 120;
+			for(var i=0;i<5;i++){
+				var oLine = document.createElement('div');
+				oLine.className = 'courseLine';
+				oLine.style.left = i*120 + 'px';
+				oCourseContent3.appendChild(oLine);
+			}
+			for(var i=0;i<data.length;i++){
+				var oDiv = document.createElement('div');
+				oDiv.className = 'courseLogo';
+				oDiv.innerHTML = '<div class="courseBefore" style="background-image:url('+(data[i].img)+');"></div><div class="courseAfter">'+(data[i].text)+'</div>';
+				oCourseContent3.appendChild(oDiv);
+			}
+
+		}
+	}
+
+	function aboutContent(){
+		//oAboutContent3
+		var aUl = oAboutContent3.getElementsByTagName('ul');
+		var aSpan = oAboutContent3.getElementsByTagName('span');
+
+		for(var i=0;i<aUl.length;i++){
+			change( aUl[i] , aSpan[i] );
+		}
+
+		function change(ul,span){
+
+			var w = ul.offsetWidth/2;
+			var h = ul.offsetHeight/2;
+			var src = ul.dataset.src;
+
+			for(var i=0;i<4;i++){
+				var oLi = document.createElement('li');
+				oLi.style.width = w + 'px';
+				oLi.style.height = h + 'px';
+				var oImg = document.createElement('img');
+				oImg.src = src;
+				oImg.style.left = - i%2 * w + 'px';
+				oImg.oldleft = - i%2 * w;
+				oImg.style.top =  - Math.floor(i/2) * h + 'px';
+				oImg.oldtop = - Math.floor(i/2) * h;
+				oLi.appendChild(oImg);
+				ul.appendChild(oLi);
+			}
+
+			var data = [
+				{ name : 'top' , value : h },
+				{ name : 'left' , value : - w*2 },
+				{ name : 'left' , value : w },
+				{ name : 'top' , value : - h*2 },
+			];
+			var aImg = ul.getElementsByTagName('img');
+
+			ul.onmouseover = function(){
+
+				for(var i=0;i<aImg.length;i++){
+					aImg[i].style[ data[i].name ] = data[i].value + 'px';
+				}
+				//span.style.transform = 'scale(1)';
+				//span.style.webkitTransform = 'scale(1)';
+				setStyle(span,'transform','scale(1)');
+			};
+			ul.onmouseout = function(){
+				for(var i=0;i<aImg.length;i++){
+					aImg[i].style[ data[i].name ] = aImg[i]['old'+data[i].name] + 'px';
+				}
+				//span.style.transform = 'scale(1.5)';
+				setStyle(span,'transform','scale(1.5)');
+			};
+		}
+	}
+
+	function teamContent(){
+		//oTeamContent3
+		var aLi = oTeamContent3.getElementsByTagName('li');
+		var oC = null;
+		var w = 118;
+		var h = 300;
+		var timer1 = null;
+		var timer2 = null;
+		create();
+		bindList();
+		function create(){
+			var oUl = document.createElement('ul');
+			for(var i=0;i<8;i++){
+				var oLi = document.createElement('li');
+				oLi.style.backgroundPosition =  -(i*w) +'px 0';
+				oUl.appendChild(oLi);
+			}
+			oTeamContent3.appendChild(oUl);
+		}
+		function bindList(){
+
+			oTeamContent3.onmouseleave = function(){
+				removeCanvas();
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].style.opacity = 1;
+				}
+			};
+
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].index = i;
+				aLi[i].onmouseover = function(){
+					addCanvas();
+					oC.style.left = this.index * w + 'px';
+					for(var i=0;i<aLi.length;i++){
+						aLi[i].style.opacity = 0.5;
+					}
+					this.style.opacity = 1;
+				};
+			}
+		}
+		function addCanvas(){
+			if(!oC){
+				oC = document.createElement('canvas');
+				oC.id = 'canvasBubble';
+				oC.width = w;
+				oC.height = h;
+				oTeamContent3.appendChild(oC);
+				bindCanvas();
+			}
+		}
+		function removeCanvas(){
+			clearInterval(timer1);
+			clearInterval(timer2);
+			oTeamContent3.removeChild(oC);
+			oC = null;
+		}
+		function bindCanvas(){
+			var oGC = oC.getContext('2d');
+
+			var setArr = [];   //存储要绘制的所有图形的数据
+
+			timer1 = setInterval(function(){
+
+				oGC.clearRect(0,0,oC.width,oC.height);
+
+				for(var i=0;i<setArr.length;i++){
+
+					setArr[i].num += 5;
+
+					setArr[i].x = setArr[i].startX - Math.sin(setArr[i].num*Math.PI/180)*setArr[i].step;
+					setArr[i].y = setArr[i].startY - (setArr[i].num*Math.PI/180)*setArr[i].step;
+
+					if( setArr[i].y < 50 ){
+						setArr.splice(i,1);
+					}
+
+				}
+
+				for(var i=0;i<setArr.length;i++){
+					oGC.fillStyle = 'rgba('+setArr[i].c1+','+setArr[i].c2+','+setArr[i].c3+','+setArr[i].c4+')';
+					oGC.beginPath();
+						oGC.moveTo(setArr[i].x,setArr[i].y);
+						oGC.arc(setArr[i].x,setArr[i].y,setArr[i].r,0,360*Math.PI/180);
+					oGC.closePath();
+					oGC.fill();
+				}
+
+			},1000/60);
+
+			timer2 = setInterval(function(){
+
+				var x = Math.random()*oC.width;
+				var y = oC.height - 10;
+				var r = Math.random()*6 + 2;
+				var c1 = Math.round(Math.random()*255);
+				var c2 = Math.round(Math.random()*255);
+				var c3 = Math.round(Math.random()*255);
+				var c4 = 1;
+				var num = 0;
+				var step = Math.random()*20 + 10;
+				var startX = x;
+				var startY = y;
+
+				setArr.push({
+					x : x,
+					y : y,
+					r : r,
+					c1 : c1,
+					c2 : c2,
+					c3 : c3,
+					c4 : c4,
+					num : num,
+					step : step,
+					startX : x,
+					startY : y
+				});
+
+			},100);
+		}
+	}
+
+	var cjAnimate = [
+		{
+			inAn : function(){
+				oHomeContent1.style.opacity = 1;
+				oHomeContent2.style.opacity = 1;
+				setStyle(oHomeContent1,'transform','translate(0,0)');
+				setStyle(oHomeContent2,'transform','translate(0,0)');
+			},
+			outAn : function(){
+				oHomeContent1.style.opacity = 0;
+				oHomeContent2.style.opacity = 0;
+				setStyle(oHomeContent1,'transform','translate(0,-150px)');
+				setStyle(oHomeContent2,'transform','translate(0,100px)');
+			}
+		},
+		{
+			inAn : function(){
+				var oPlane1 = getByClass(oCourseContent,'plane1')[0];
+				var oPlane2 = getByClass(oCourseContent,'plane2')[0];
+				var oPlane3 = getByClass(oCourseContent,'plane3')[0];
+				setStyle(oPlane1 , 'transform','translate(0,0)');
+				setStyle(oPlane2 , 'transform','translate(0,0)');
+				setStyle(oPlane3 , 'transform','translate(0,0)');
+			},
+			outAn : function(){
+				var oPlane1 = getByClass(oCourseContent,'plane1')[0];
+				var oPlane2 = getByClass(oCourseContent,'plane2')[0];
+				var oPlane3 = getByClass(oCourseContent,'plane3')[0];
+				setStyle(oPlane1 , 'transform','translate(-200px,-200px)');
+				setStyle(oPlane2 , 'transform','translate(-200px,200px)');
+				setStyle(oPlane3 , 'transform','translate(200px,-200px)');
+			}
+		},
+		{
+			inAn : function(){
+				var oPencel1 = getByClass(oWorksContent,'pencel1')[0];
+				var oPencel2 = getByClass(oWorksContent,'pencel2')[0];
+				var oPencel3 = getByClass(oWorksContent,'pencel3')[0];
+				setStyle(oPencel1 , 'transform','translate(0,0)');
+				setStyle(oPencel2 , 'transform','translate(0,0)');
+				setStyle(oPencel3 , 'transform','translate(0,0)');
+			},
+			outAn : function(){
+				//oWorksContent
+				var oPencel1 = getByClass(oWorksContent,'pencel1')[0];
+				var oPencel2 = getByClass(oWorksContent,'pencel2')[0];
+				var oPencel3 = getByClass(oWorksContent,'pencel3')[0];
+				setStyle(oPencel1 , 'transform','translate(0,-200px)');
+				setStyle(oPencel2 , 'transform','translate(0,200px)');
+				setStyle(oPencel3 , 'transform','translate(0,200px)');
+			}
+		},
+		{
+			inAn : function(){
+				var aAboutImg = getByClass( oAboutContent , 'aboutImg' );
+				setStyle(aAboutImg[0],'transform','rotate(0)');
+				setStyle(aAboutImg[1],'transform','rotate(0)');
+			},
+			outAn : function(){
+				//oAboutContent
+				var aAboutImg = getByClass( oAboutContent , 'aboutImg' );
+				setStyle(aAboutImg[0],'transform','rotate(45deg)');
+				setStyle(aAboutImg[1],'transform','rotate(-45deg)');
+			}
+		},
+		{
+			inAn : function(){
+				var oTeamContent1 = getByClass(oTeamContent , 'teamContent1')[0];
+				var oTeamContent2 = getByClass(oTeamContent , 'teamContent2')[0];
+				oTeamContent1.style.opacity = 1;
+				oTeamContent2.style.opacity = 1;
+				setStyle(oTeamContent1,'transform','translate(0,0)');
+				setStyle(oTeamContent2,'transform','translate(0,0)');
+			},
+			outAn : function(){
+				var oTeamContent1 = getByClass(oTeamContent , 'teamContent1')[0];
+				var oTeamContent2 = getByClass(oTeamContent , 'teamContent2')[0];
+				oTeamContent1.style.opacity = 0;
+				oTeamContent2.style.opacity = 0;
+				setStyle(oTeamContent1,'transform','translate(-200px,0)');
+				setStyle(oTeamContent2,'transform','translate(200px,0)');
+			}
+		}
+	];
+
+	/*cjAnimate[4].outAn();
+	setTimeout(function(){
+		cjAnimate[4].inAn();
+	},2000);*/
+	for(var i=0;i<cjAnimate.length;i++){
+		cjAnimate[i].outAn();
+	}
+
+	function showMusic(){
+		var onoff = true;
+		oMusic.onclick = function(){
+			if(onoff){
+				this.style.background = 'url(img/musicon.gif)';
+				oAudio.play();
+			}
+			else{
+				this.style.background = 'url(img/musicoff.gif)';
+				oAudio.pause();
+			}
+			onoff = !onoff;
+		};
+	}
+
+	function $(id){
+		return document.getElementById(id);
+	}
+
+	function viewWidth(){
+		return window.innerWidth || document.documentElement.clientWidth;
+	}
+
+	function viewHeight(){
+		return window.innerHeight || document.documentElement.clientHeight;
+	}
+
+	function getByClass(oParent,sClass){
+		var aElem = oParent.getElementsByTagName('*');
+		var arr = [];
+		for(var i=0;i<aElem.length;i++){
+			if( aElem[i].className == sClass ){
+				arr.push( aElem[i] );
+			}
+		}
+		return arr;
+	}
+
+	function setStyle(obj,attr,value){
+		obj.style[attr] = value;
+		obj.style['webkit'+attr.substring(0,1).toUpperCase() + attr.substring(1)] = value;
+	}
+
+};
+
+</script>
+</head>
+
+<body>
+<div id="main">
+	<div id="loading">
+    	<div></div>
+        <div></div>
+        <span></span>
+    </div>
+	<div id="header">
+    	<div id="headerMain">
+        	<a href="#" id="logo">
+            	<img src="img/logo.png">
+            </a>
+            <div id="music">
+            	<audio id="audio1" src="img/audio.mp3" preload="auto" loop></audio>
+            </div>
+            <ul id="nav">
+            	<li>
+                	<a href="javascript:;">
+                    	<div class="up"><img src="img/home_gruen.png"></div>
+                        <div><img src="img/home.png"></div>
+                    </a>
+                </li>
+                <li>
+                	<a href="javascript:;">
+                    	<div class="up">Course</div>
+                        <div>Course</div>
+                    </a>
+                </li>
+                <li>
+                	<a href="javascript:;">
+                    	<div class="up">Works</div>
+                        <div>Works</div>
+                    </a>
+                </li>
+                <li>
+                	<a href="javascript:;">
+                    	<div class="up">About</div>
+                        <div>About</div>
+                    </a>
+                </li>
+                <li>
+                	<a href="javascript:;">
+                    	<div class="up">Team</div>
+                        <div>Team</div>
+                    </a>
+                </li>
+            </ul>
+            <div id="arrow"></div>
+        </div>
+    </div>
+    <div id="content">
+    	<ul id="menu">
+        	<li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    	<ul id="list">
+        	<li id="home" class="liList">
+            	<div id="homeContent" class="divList">
+                	<ul class="homeContent1">
+                    	<!--<li class="active">
+                        	<h1 class="commonTitle">one layer</h1>
+                        </li>
+                        <li>
+                        	<h1 class="commonTitle">two layer</h1>
+                        </li>
+                        <li>
+                        	<h1 class="commonTitle">three layer</h1>
+                        </li>-->
+                    </ul>
+                    <ul class="homeContent2">
+                    	<!--<li class="active"></li>
+                        <li></li>
+                        <li></li>-->
+                    </ul>
+                </div>
+            </li>
+            <li id="course" class="liList">
+            	<div id="courseContent" class="divList">
+                	<div class="courseContent1">
+                    	<h1 class="commonTitle">
+                        	<span>EINIGE</span><br>
+                            <span>UNSERER</span><br>
+                            <span>KUNDEN</span>
+                        </h1>
+                    </div>
+                    <div class="courseContent2">
+                    	<p class="commonText">
+                        	Das Kundenvertrauen in unsere Kompetenz ist die notwendige Basis einer erfolgreichen Zusammenarbeit, gleichzeitig aber auch das größte Lob, das man uns entgegenbringen kann.
+                            <br>
+                            Diese und viele weitere große und kleine Kunden vertrauen uns seit Jahren, was uns stolz macht, und dafür sagen wir an dieser Stelle einfach mal.
+                        </p>
+                    </div>
+                    <div class="courseContent3">
+                    	<!--<div class="courseLine"></div>
+                        <div class="courseLine" style="left:120px;"></div>
+                        <div class="courseLine" style="left:240px;"></div>
+                        <div class="courseLine" style="left:360px;"></div>
+                        <div class="courseLine" style="left:480px;"></div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1测试文字1测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>
+                        <div class="courseLogo">
+                        	<div class="courseBefore" style="background-image:url(img/binoli.png);"></div>
+                            <div class="courseAfter">测试文字1</div>
+                        </div>-->
+                    </div>
+                    <div class="plane1"></div>
+                    <div class="plane2"></div>
+                    <div class="plane3"></div>
+                </div>
+            </li>
+            <li id="works" class="liList">
+            	<div id="worksContent" class="divList">
+                	<div class="worksContent1">
+                    	<h1 class="commonTitle">
+                        	<span>EINBLICK</span><br>
+                            <span>ERKENNTNIS</span><br>
+                            <span>ERGEBNIS</span>
+                        </h1>
+                    </div>
+                    <div class="worksContent2">
+                    	<!--<div class="worksImgParent">
+                        	<img class="worksImg" src="img/worksimg1.jpg">
+                            <div class="worksImgMark">
+                            	<span>测试文字，哈哈哈啊司法所地方测试文字，哈哈哈啊司法所地方</span>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="worksImgParent">
+                        	<img class="worksImg" src="img/worksimg2.jpg">
+                            <div class="worksImgMark">
+                            	<span>测试文字，哈哈哈啊司法所地方</span>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="worksImgParent">
+                        	<img class="worksImg" src="img/worksimg3.jpg">
+                            <div class="worksImgMark">
+                            	<span>测试文字，哈哈哈啊司法所地方</span>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="worksImgParent">
+                        	<img class="worksImg" src="img/worksimg4.jpg">
+                            <div class="worksImgMark">
+                            	<span>测试文字，哈哈哈啊司法所地方</span>
+                                <div></div>
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="worksContent3"></div>
+                    <div class="pencel1"></div>
+                    <div class="pencel2"></div>
+                    <div class="pencel3"></div>
+                </div>
+            </li>
+            <li id="about" class="liList">
+            	<div id="aboutContent" class="divList">
+                	<div class="aboutContent1">
+                    	<h1 class="commonTitle">
+                        	<span>DIE</span><br>
+                            <span>SPEZIELLE</span><br>
+                            <span>VIELFALT</span>
+                        </h1>
+                    </div>
+                    <div class="aboutContent2">
+                    	<p class="commonText">
+                        	Der bunte Medienmix ist die Faszination die uns antreibt und das, was man an uns schätzt. Von A bis Z und von vorne bis hinten nehmen wir Ihr Projekt unter unsere Fittiche und lassen es zu etwas Großartigem heranwachsen.
+                        </p>
+                    </div>
+                    <div class="aboutContent3">
+                    	<div class="aboutImg">
+                        	<ul data-src="img/about1.jpg">
+                            </ul>
+                            <span style="background:url(img/about2.jpg) no-repeat;"></span>
+                        </div>
+                        <div class="aboutImg">
+                        	<ul data-src="img/about3.jpg">
+                            </ul>
+                            <span style="background:url(img/about4.jpg) no-repeat;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="blueLine"></div>
+            </li>
+            <li id="team" class="liList">
+            	<div id="teamContent" class="divList">
+                	<div class="teamContent1">
+                    	<h1 class="commonTitle">
+                        	<span>WIR SIND</span><br>
+                            <span>VOXELAIR</span>
+                        </h1>
+                    </div>
+                    <div class="teamContent2">
+                    	<p class="commonText">
+                        	Wir sind seit 2002 eine Full-Service-Werbeagentur mit Stammsitz in Heimsheim, zwischen Stuttgart und Karlsruhe.
+                            <br>
+                            Über 60 Jahre Erfahrung vereinen das gesamte VoxelAir-Team. Dabei hat jedes Voxel neben professionellem Allroundwissen auch sein ganz spezielles Gebiet, um selbst die individuellsten Kundenwünsche schnell und kompetent umzusetzen.
+                        </p>
+                    </div>
+                    <div class="teamContent3"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

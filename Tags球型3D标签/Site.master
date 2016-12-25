@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="zh">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <%--为了让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放，需要添加viewport
+        initial-scale=1.0 确保网页加载时，以 1:1 的比例呈现，不会有任何的缩放。
+        user-scalable=no 可以禁用其缩放（zooming）功能
+        maximum-scale=1.0 与 user-scalable=no 一起使用。这样禁用缩放功能后，用户只能滚动屏幕，就能让您的网站看上去更像原生应用的感觉。
+        --%>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%: Page.Title %> - DemoExtention</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="Content/favicon.ico" rel="shortcut icon" type="image/x-icon" />    
+    <asp:ContentPlaceHolder ID="ContentPlaceHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        /*.btn-default{
+            font-size:25px ;
+        }*/
+    </style>       
+
+</head>
+<body style="padding-top:10px;">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+
+		<div class="navbar navbar-default" style="margin-bottom: 10px;">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		<%--      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>--%>
+                
+               <img src="Content/favicon.ico" style="width:85px;height:40px; float:left;" />
+		      <a class="navbar-brand" href="../DemoMain.aspx" style="margin-left:10px;">生产管理</a>
+                
+		    </div>
+
+		  </div>
+		</div>
+
+        <div class="container body-content" style="width:100%;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+<%--            <hr />
+            <footer>
+                <p>
+                    &copy; 2007 - <%: DateTime.Now.Year %> 重庆四联测控技术有限公司.版权所有.保留所有权利.渝ICP备12005022号.
+                    <br />
+                    &copy; 2007 - <%: DateTime.Now.Year %> Chongqing Silian Measure & Control Technology Co., Ltd. All rights reserved.
+                </p>
+            </footer>--%>
+        </div>
+    </form>
+</body>
+</html>

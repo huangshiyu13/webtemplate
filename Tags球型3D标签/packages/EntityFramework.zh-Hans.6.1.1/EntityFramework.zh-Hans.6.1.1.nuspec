@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>EntityFramework.zh-Hans</id>
+    <version>6.1.1</version>
+    <title>实体框架简体中文资源</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=320539&amp;clcid=0x804</licenseUrl>
+    <projectUrl>http://go.microsoft.com/fwlink/?LinkId=320540&amp;clcid=0x804</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=386613&amp;clcid=0x804</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>此文件包中包含了实体框架的简体中文卫星程序集</description>
+    <summary>实体框架文件包简体中文资源</summary>
+    <releaseNotes />
+    <copyright />
+    <language>zh-Hans</language>
+    <dependencies>
+      <dependency id="EntityFramework" version="[6.1.1]" />
+    </dependencies>
+  </metadata>
+</package>

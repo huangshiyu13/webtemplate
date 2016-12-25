@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Providers.Core.zh-Hans</id>
+    <version>2.0.0</version>
+    <title>Microsoft ASP.NET Universal Providers Core Libraries 简体中文资源</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_rtw_CHS.htm</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>此程序包包含 ASP.NET Universal Providers Core Libraries 的简体中文附属程序集。</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <language>zh-Hans</language>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Providers.Core" version="[2.0.0]" />
+    </dependencies>
+  </metadata>
+</package>

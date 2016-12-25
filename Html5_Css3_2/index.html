@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/content.css" />
+	<title>快应下载页</title>
+	<script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.SuperSlide.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		jQuery('#ios_slide').slide({mainCell:".bd ul",titCell:".hd ul li",effect:"leftLoop",autoPlay:true});
+		jQuery('#android_slide').slide({mainCell:".bd ul",titCell:".hd ul li",effect:"leftLoop",autoPlay:true});
+
+		$('#ios_slide .hd ul').css('marginLeft',-($('#ios_slide .hd ul li').length*20-10)/2+'px');
+		$('#android_slide .hd ul').css('marginLeft',-($('#android_slide .hd ul li').length*20-10)/2+'px');
+
+		$(window).scroll(function(){
+			if($(window).scrollTop()>$('.intro').offset().top-400 && $(window).scrollTop()<$('.intro').offset().top+600)
+			{
+				$('.intro .pa').addClass('pop_animate');
+			}
+			else
+			{
+				$('.intro .pa').removeClass('pop_animate');
+			}
+		});
+		$('.weixin').hover(function(){
+			$('.weixin_ewm').show();
+		},function(){
+			$('.weixin_ewm').hide();
+		});
+	});
+
+	</script>
+</head>
+<body>
+	<div class="header pt10">
+		<div class="w1000 clearfix bc pr">
+			<div class="logo fl bg"></div>
+			<div class="fr mt10">
+				<div class="fl lh40"><span class="f16">关注我们：</span></div>
+				<div class="fl weixin bg"><a href="#" class="db"></a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="weixin_ewm pl10 pr10 pt10 pb10 pa">
+				<div class="bc"><img src="images/ewm.png"  /></div>
+				<p class="tc">微信扫一扫，关注快应公众号</p>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="ky_logo bc"><img src="images/ky_logo.png" /></div>
+		<div class="ky_text bg bc"></div>
+		<div class="bg_img pr">
+			<div class="bg pa cloud1 c1"></div>
+			<div class="bg pa cloud1 c2"></div>
+			<div class="bg pa cloud2 c3"></div>
+			<div class="bg pa cloud1 c4"></div>
+			<div class="bg pa cloud2 c5"></div>
+			<div class="bg pa cloud1 c6"></div>
+			<div class="bg pa car"></div>
+			<div class="bg pa car2"></div>
+			<div class="bg pa car3"></div>
+		</div>
+		<div class="download">
+			<ul class="clearfix w1000 bc">
+				<li class="fl">
+					<a href="#" class="db android_btn"></a>
+					<p class="mt10"><a class="tc db f16 lh200pct" href="#">Android版本下载</a></p>
+				</li>
+				<li class="fl">
+					<img class="db" src="images/ewm.png" />
+					<p class="mt10"><a class="tc db f16 lh200pct" href="#">扫码下载</a></p>
+				</li>
+				<li class="fl">
+					<a href="#" class="db ipone_btn"></a>
+					<p class="mt10"><a class="tc db f16 lh200pct" href="#">IOS版本下载</a></p>
+				</li>
+			</ul>
+		</div>
+		<div class="intro">
+			<div class="w1000 bc pr">
+				<div class="app_tit bc bg"></div>
+				<div class="app_intro bc mt20">
+					<p class="tc f16 lh200pct">一款火爆校园的“任务/活动”响应神器。</p>
+	 				<p class="tc f16 lh200pct">在这里，您可以散布您的任何逗比想法或愿望哦！</p>
+	 				<p class="tc f16 lh200pct">关键是：附近的“同学”会快速响应您，帮助实现您的想法和愿望啦！~</p>
+				</div>
+				<div class="icon_1 bg pa"></div>
+				<div class="icon_2 bg pa"></div>
+				<div class="icon_3 bg pa"></div>
+				<div class="icon_4 bg pa"></div>
+				<div class="icon_5 bg pa"></div>
+				<div class="icon_6 bg pa"></div>
+			</div>
+		</div>
+		<div class="new w1000 bc pr top0">
+			<h2 class="new_header tc">媒体关注</h2>
+			<ul class="pl20 pb50">
+				<li class="clearfix pt20 pb20">
+					<div class="new_img mr20 fl"><a href="http://www.iyiou.com/p/14987" target="_blank"  title="快应COO黄小波：众包将重新定义时间和成本"><img  class="db" src="images/wt3.jpg" title="快应COO黄小波：众包将重新定义时间和成本" alt="从轻任务到企业活动众包，快应不只是校园版的Zaarly"/></a></div>
+					<div class="new_text fl">
+						<h2 class="new_tit mb10"><a href="http://www.iyiou.com/p/14987" target="_blank"  title="快应COO黄小波：众包将重新定义时间和成本" class="f18">快应COO黄小波：众包将重新定义时间和成本</a></h2>
+						<p class="new_article f14 lh150pct fc_999">众包的实质是重新定义时间和成本。在机制成熟的国家，众包模式更自由和高效。在众包和社交网络的新世界里，将会发生以前想象不到的生活方式。但要在国内迅速发展，除了巨头的引领还需要国民素质的提高...</p>
+						<p class="from tr fc_gray">来自<span class="fc_gray">亿欧网</span>|<span class="fc_gray">2014年12月20日 09:43</span></p>
+					</div>
+				</li>
+				<li class="clearfix pt20 pb20">
+					<div class="new_img mr20 fl"><a href="http://www.36kr.com/p/217593.html" target="_blank"  title="从轻任务到企业活动众包，快应不只是校园版的Zaarly"><img class="db" src="images/wt2.jpg" title="从轻任务到企业活动众包，快应不只是校园版的Zaarly" alt="从轻任务到企业活动众包，快应不只是校园版的Zaarly" /></a></div>
+					<div class="new_text fl">
+						<h2 class="new_tit mb10"><a href="http://www.36kr.com/p/217593.html" target="_blank"  title="从轻任务到企业活动众包，快应不只是校园版的Zaarly" class="f18">从轻任务到企业活动众包，快应不只是校园版的Zaarly</a></h2>
+						<p class="new_article f14 lh150pct fc_999">在大学时，想找个人帮忙去快递、打个饭，迟到了帮叫个到，打球跑步还想约个伴儿，这个时候除了朋友，还真不知道去哪儿找人。企业学校办活动，社团承办下来了就开始策划、宣传、刷楼，挨个寝室发传单还不被人爱答不理...</p>
+						<p class="from tr fc_gray">来自<span class="fc_gray">36氪</span>|<span class="fc_gray">2014年12月08日 09:43</span></p>
+					</div>
+				</li>
+				<li class="clearfix pt20 pb20">
+					<div class="new_img mr20 fl"><a href="http://tech.sina.com.cn/i/2014-11-25/10229824104.shtml" target="_blank"  title="众包平台“快应”发力高校C2C服务市场"><img class="db" src="images/wt1.jpg" title="众包平台“快应”发力高校C2C服务市场" alt="众包平台“快应”发力高校C2C服务市场"/></a></div>
+					<div class="new_text fl">
+						<h2 class="new_tit mb10"><ahref="http://tech.sina.com.cn/i/2014-11-25/10229824104.shtml" target="_blank"  title="众包平台“快应”发力高校C2C服务市场" class="f18">众包平台“快应”发力高校C2C服务市场</a></h2>
+						<p class="new_article f14 lh150pct fc_999">目前高校存在巨大的众包需求，没有一款移动互联网产品可以很好承载，正好给了快应发展的机会，快应的上线，一定程度上解决了莘莘学子们的实际问题。在未来，O2O模式下的C2C众包服务对接将会是一轮趋势...</p>
+						<p class="from tr fc_gray">来自<span class="fc_gray">新浪科技</span>|<span class="fc_gray">2014年11月25日 10:22</span></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="show_ios pr top0">
+			<div class="w1000 bc pr clearfix">
+				<div class="show_tit bg pa"></div>
+				<div class="show_bg bg pa"></div>
+				<div class="show_slide ios fr">
+					<div id="ios_slide">
+						<div class="bd">
+							<ul>
+								<li><img src="images/img1.jpg" /></li>
+								<li><img src="images/img2.jpg" /></li>
+							</ul>
+						</div>
+						<div class="hd pr">
+							<ul class="clearfix pa">
+								<li class="on"></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="show_android">
+			<div class="w1000 bc pr clearfix">
+				<div class="show_tit bg pa"></div>
+				<div class="show_bg bg pa"></div>
+				<div class="show_slide android fl">
+					<div id="android_slide">
+						<div class="bd">
+							<ul>
+								<li><img src="images/img3.jpg" /></li>
+								<li><img src="images/img4.jpg" /></li>
+								<li><img src="images/img5.jpg" /></li>
+								<li><img src="images/img6.jpg" /></li>
+							</ul>
+						</div>
+						<div class="hd pr">
+							<ul class="clearfix pa">
+								<li class="on"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p class="tc">“快应”由广州爱特安为网络技术有限公司研发并拥有对应的版权</p>
+		<p class="tc">Copyright 2012 - 2014 Aiitec All Rights Reserved.  粤ICP备10206031号</p>
+	</div>
+	
+</body>
+</html>

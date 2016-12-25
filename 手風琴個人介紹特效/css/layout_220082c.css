@@ -1,0 +1,718 @@
+/* 
+    Document   : layout.css
+    Created on : 2013.06.24
+    Author     : Jessica Kung
+*/
+
+body, html, #container {
+	height: 100%;
+}
+
+#container {
+    height:auto !important;
+}
+
+body > #container {
+	height: auto;
+	min-height: 100%;
+}
+
+body, html {
+	font-family: "Microsoft YaHei","微软雅黑",Candara,Tahoma,SimSun !important;
+	font-size: 16px;
+	background: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    color: #1a1a1a;
+    font-weight: 400;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1
+}
+
+#header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	*height: 81px;
+	vertical-align: middle;
+    background:#fff;
+	z-index: 9000;
+}
+
+#main-navbar-list a:hover {
+	color: #00adef;
+}
+
+#secondary-navbar a:hover {
+	color: #F1E400;
+}
+
+img {
+	border: 0;
+}
+
+#logo {
+	margin-left: 10%;
+	font-size: 46px;
+	margin-top: 17px;
+	float: left;
+}
+
+#logo a {
+	color: #fff;
+}
+
+#logo a:hover {
+	color: #cfcfcf;
+}
+
+#login-register-wrapper {
+	float: right;
+	margin-right: 10%;
+	font-size: 12px;
+	color: #7a8181;
+}
+
+#login-register a {
+	color: #bbb;
+}
+
+#small-menu {
+	display: none;
+}
+
+#main-navbar-wrapper, #secondary-navbar-wrapper {
+	width: 100%;
+}
+
+#main-navbar-wrapper {
+	height: 80px;
+	*height: 0px;
+}
+
+#secondary-navbar-wrapper {
+    background:#00adef;
+	height:46px;
+}
+
+#main-navbar, #secondary-navbar {
+	position: absolute;
+	float: right;
+	margin-right: 10%;
+	right: 0;
+}
+
+#main-navbar {
+	display:block;
+    height:44px;
+    line-height:44px;
+	bottom:0px;
+}
+
+#secondary-navbar {
+	bottom:-34px;
+}
+
+#secondary-about, #secondary-products {
+	display: none;
+}
+
+#header.stuck
+{
+	position: fixed;
+    top: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+#header li, #header li {
+	display:inline-block;
+    *display:inline;
+    zoom:1;
+    font-size:16px;
+    margin:0;
+    padding:0;
+}
+
+/*
+#header li.first a, #header li.first {
+	padding-left: 0px;
+}
+*/
+
+#header li.last a, #header li.last {
+	padding-right: 0px;
+}
+
+#main-navbar-list li a {
+    display:block;
+	text-decoration:none;
+	color:#1a1a1a;
+    padding:0 18px;
+}
+
+#secondary-navbar li a {
+    display:block;
+	text-decoration:none;
+	color:#fff;
+    padding:0 18px;
+}
+
+#main-navbar-list li a.navbar-active {
+	color:#fff;
+    background:#00adef;
+}
+
+#secondary-navbar li a.navbar-active {
+	color:#F1E400;
+}
+
+#content-wrapper {
+	padding-top: 80px;
+	padding-bottom: 30px;
+	min-height:92%;
+}
+
+.ad {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center!important;
+	overflow: hidden!important;
+	width: 100%!important;
+	margin: 0;
+	padding: 0;
+	height: 438px;
+}
+
+.ad-text-container {
+	margin: 100px 0 0 10%;
+	vertical-align: middle;
+}
+.description-text {
+	padding-bottom: 60px;
+}
+
+.panel-no-bottom {
+	padding: 60px 10% 0 10%;
+}
+
+.panel {
+	padding: 60px 10%;
+}
+
+button {
+	background-color: #00adef;
+	font-family: "Microsoft YaHei","微软雅黑",Candara,Tahoma,SimSun !important;
+	color: #fff;
+	border: none;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 26px;
+	padding: 14px 40px;
+	*padding: 7px 40px 8px 40px;
+	*overflow: visible;
+	transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+	background-color: #008acb;
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+}
+
+.blue-button {
+	background-color: #00adef;
+}
+
+.gray-button {
+	background-color: #c7c7c7;
+}
+
+.gray-button:hover {
+	background-color: #999;
+}
+
+.orange-button {
+	background-color: #ffa200;
+}
+
+.orange-button:hover {
+	background-color: #d88900;
+}
+
+.header1 {
+	font-size: 58px;
+	padding-bottom: 10px;
+}
+
+.header2 {
+	font-size: 44px;
+}
+
+.header3 {
+	font-size: 22px;
+}
+
+.header4 {
+	font-size: 16px;
+}
+
+.description-text {
+	font-size: 16px;
+	margin-left: 5px;
+}
+
+h1, h2, h3, h4 {
+	text-align: left;
+	margin: 0;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 58px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+	color: #469acb;
+}
+
+a:hover {
+	color: #1a1a1a;
+	cursor: pointer;
+}
+
+*:focus {
+    outline: 0;
+}
+
+form {
+	margin: 0;
+}
+
+textarea {
+	font-size: 16px;
+	padding: 14px;
+	border: #cfcfcf 1px solid;
+	resize: none;
+}
+
+textarea:focus {
+	border: 1px solid #000;
+}
+
+input {
+	height: 34px;
+	border: #cfcfcf 1px solid;
+	padding-left: 4%;
+	padding-right: 8%;
+	font-size: 16px;
+	font-family: "Microsoft YaHei","微软雅黑",Candara,Tahoma,SimSun !important;
+}
+
+input:focus {
+	border: 1px solid #000;
+}
+
+input[type="submit"]::-moz-focus-inner {border:0;}
+
+::-webkit-input-placeholder { 
+	font-family: "Microsoft YaHei", "微软雅黑", Candara, Tahoma, SimSun !important;
+	font-weight: 100;
+	color: #999;
+}
+
+::-moz-placeholder { 
+	font-family: "Microsoft YaHei", "微软雅黑", Candara, Tahoma, SimSun !important;
+	font-weight: 100; 	
+	color: #999; 
+} /* firefox 19+ */
+
+:-ms-input-placeholder { 
+	font-family: "Microsoft YaHei", "微软雅黑", Candara, Tahoma, SimSun !important;
+	font-weight: 100; 
+	color: #999;
+} /* ie */
+
+input:-moz-placeholder { 
+	font-family: "Microsoft YaHei", "微软雅黑", Candara, Tahoma, SimSun !important;
+	font-weight: 100;
+	color: #999;
+}
+
+img.center {
+	display: block;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+#footer-wrapper {
+	width: 100%;
+	clear: both;
+	position: relative;
+	z-index: 10;
+	/*height: 380px;*/
+	margin-top: -30px;
+	text-align: center;
+    background:#f9f9f9;
+}
+
+#footer-header {
+    height:70px;
+    line-height:70px;
+	font-size:24px;
+	text-align:center;
+	color:#fff;
+	background-color:#92949b;
+}
+
+#footer-header >div a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 24px;
+}
+#footer-header div{
+	margin-left: 85px;
+	display: inline-block;
+}
+.footer-phone{
+	margin-left: -5px !important;
+}
+#footer-header img{
+	position: relative;
+	top: 7px;
+}
+#footer-content{
+	padding:2% 9.5% 0;
+}
+.footer-list{
+	display: inline-block;
+	margin-left: 8%;
+	text-align: left;
+	color: #6a737b;
+	
+}
+.footer-list dt {
+	color: #6a737b;
+	font-size: 14px;
+	line-height: 25px;
+}
+.footer-list dt >a{
+	color: #6a737b;
+}
+
+.footer-list >h4{
+    color:#333;
+}
+
+#footer-bottom{
+	color: #6a737b;
+	font-size: 12px;
+    padding:10px 0 25px 0;
+    /*
+	text-align: right;
+	background-color: #f5f5f5;
+	position: relative;
+	right: 3px;
+    */
+}
+
+.imgWrap {
+    width:1001px;
+    margin:0 auto;
+    position:relative;
+}
+
+.imgWrap img {
+    display:block;
+}
+
+
+/*-- 2014.8.19 New --*/
+ul, li {
+    list-style-type:none;
+}
+img {
+    border:none;
+}
+body {
+    overflow-x:hidden;
+}
+#ag-header-wrap {
+    width:100%;
+    height:60px;
+    background:#f4f4f4;
+    border-bottom:1px solid #c6c6c6;
+}
+.ag-header {
+    width:1002px;
+    height:60px;
+    position:relative;
+    margin:0 auto;
+    font-family:'Microsoft YaHei';
+}
+.ag-header a.ag-header-homeLink {
+    display:block;
+    width:100px;
+    height:60px;
+    float:left;
+}
+.ag-header ul {
+    float:left;
+}
+.ag-header ul li {
+    height:60px;
+    float:left;
+    margin-left:20px;
+    position:relative;
+}
+.ag-header ul li:hover .ag-header-nav {
+    display:block;
+}
+.ag-header ul li:hover a {
+    color:#469acb;
+}
+.ag-header ul li > a {
+    display:block;
+    height:60px;
+    line-height:64px;
+    font-size:16px;
+    color:#333;
+    text-align:left;
+}
+.ag-header ul li.current-page > a {
+    color:#469acb;
+}
+.ag-header ul li .ag-header-nav {
+    display:none;
+    background:#f4f4f4;
+    border:1px solid #c6c6c6;
+    border-top:none;
+    border-radius: 0 0 8px 8px;
+    padding-bottom:5px;
+    position:absolute;
+    left:-10px;
+    z-index:99999;
+}
+.ag-header ul li .ag-header-nav a {
+    display:block;
+    height:34px;
+    line-height:24px;
+    color:#333;
+    text-align:left;
+    padding:0 10px;
+    white-space:nowrap;
+}
+.ag-header ul li .ag-header-nav a:hover {
+    color:#469acb;
+}
+.ag-header .ag-header-login {
+    height:32px;
+    float:right;
+    padding:14px 0;
+}
+.ag-header .ag-header-login a {
+    display:block;
+    width:auto;
+    height:32px;
+    float:left;
+    margin-left:10px;
+}
+/* modify by chonggao for header with date 2015/02/05  */
+.ag-header .ag-header-login a.ag-header-login-btn {
+    height:23px;
+    line-height:23px;
+    font-size:14px;
+    color:#fff;
+    text-align:center;
+    margin-top:5px;
+    padding:0 15px;
+    border-radius:12px;
+    background:#469acb;
+}
+.ag-header .ag-header-login a img {
+    width:28px;
+    height:28px;
+    display:block;
+    float:left;
+    position:relative;
+    z-index:1;
+    top:3px;
+}
+.ag-header .ag-header-login a span {
+    width:1px;
+    height:23px;
+    line-height:22px;
+    font-size:14px;
+    color:#fff;
+    text-align:left;
+    text-indent:10px;
+    float:left;
+    margin:5px 0 0 -7px;
+    background:#707070;
+    border-radius:0 12px 12px 0;
+    white-space:nowrap;
+    overflow:hidden;
+}
+/*modify end*/
+#ag-container {
+    width:100%;
+    margin:0px;
+    background:#f1f1f1;
+    font-family:'Microsoft YaHei';
+    color:#262626;
+}
+.ag-container-wrap {
+    width:1002px;
+    height:auto;
+    position:relative;
+    margin:0 auto;
+    font-family:'Microsoft YaHei';
+}
+#ag-footer {
+    width:100%;
+    clear:both;
+    padding:0px;
+    font-family:'Microsoft YaHei';
+    position:relative;
+    background:#f5f5f5;
+    border-top:74px solid #ccd0d9;
+}
+.ag-footer-top {
+    width:1002px;
+    height:48px;
+    position:absolute;
+    top:-74px;
+    left:50%;
+    margin-left:-500px;
+    padding:13px 0;
+}
+.ag-footer-top a {
+    display:block;
+    height:48px;
+    line-height:48px;
+    float:left;
+    margin:0px;
+    padding-left:54px;
+    font-size:28px;
+    color:#000;
+    text-align:left;
+    white-space:nowrap;
+    background-image:url('http://static.agrant.cn/static/images/ag-icon_bc1916c.png');
+    background-repeat:no-repeat;
+    background-position:left;
+}
+.ag-footer-top a.ag-footer-top-phone {
+    width:180px;
+    background-position:left 0px;
+    cursor:default;
+}
+.ag-footer-top a.ag-footer-top-mail {
+    width:284px;
+    margin-left:130px;
+    background-position:left -48px;
+}
+.ag-footer-top a.ag-footer-top-msg {
+    width:116px;
+    margin-left:130px;
+    background-position:left -96px;
+}
+.ag-footer-middle {
+    width:810px;
+    margin:0 auto;
+    padding:30px 0 20px 192px;
+    position:relative;
+    background-image:url('http://static.agrant.cn/static/images/ag-logo-footer_8407831.png');
+    background-repeat:no-repeat;
+    background-position:left 30px;
+    overflow:hidden;
+}
+.ag-footer-middle ul {
+    display:block;
+    float:left;
+    margin-left:100px;
+    position:relative;
+}
+.ag-footer-middle ul li {
+    height:24px;
+    line-height:24px;
+    font-size:12px;
+    color:#556173;
+}
+.ag-footer-middle ul li:first-child {
+    font-size:16px;
+    margin-bottom:10px;
+}
+.ag-footer-middle ul li a {
+    font-size:12px;
+    color:#556173;
+}
+.ag-footer-middle ul li a:hover {
+    color:#469acb;
+    text-decoration:underline;
+}
+.ag-footer-bottom {
+    width:1002px;
+    height:20px;
+    line-height:20px;
+    margin:0 auto;
+    padding-bottom:15px;
+    font-size:12px;
+    color:#999;
+    text-align:right;
+}
+.ag-content-title {
+    width:100%;
+    height:115px;
+    background:#f1f1f1;
+    border-top:1px solid #d4d4d4;
+    border-bottom:1px solid #d4d4d4;
+    position:relative;
+    text-align:center;
+}
+.ag-content-title img.point {
+    position:absolute;
+    bottom:-25px;
+    left:50%;
+    margin-left:-15px;
+    z-index:1;
+}
+.temp-return {
+    padding:0 10% 30px 10%;
+}
+.temp-help {
+    background-color: white !important;
+    color: gray!important;
+	border:1px solid gray;
+}
+.temp-help:hover{
+	border:1px solid #ffae22 !important;
+	color: #ffae22 !important;
+}
+/*-- 2014.8.19 New --*/

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin.Security.Facebook</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext">
+      <summary>提供对经 Facebook 身份验证的信息的访问。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.#ctor(Microsoft.Owin.IOwinContext,Newtonsoft.Json.Linq.JObject,System.String,System.String)"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.AccessToken">
+      <summary>获取或设置访问令牌。</summary>
+      <returns>访问令牌。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Email">
+      <summary>获取或设置用于访问 Facebook 的电子邮件。</summary>
+      <returns>用于访问 Facebook 的电子邮件。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.ExpiresIn"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Id">
+      <summary>获取或设置与上下文关联的标识符。</summary>
+      <returns>与上下文关联的标识符。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Identity">
+      <summary>获取或设置此实例的标识。</summary>
+      <returns>此实例的标识。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Link">
+      <summary>获取或设置指向 <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext" /> 的链接。</summary>
+      <returns>指向 <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext" /> 的链接。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Name">
+      <summary>获取或设置与上下文关联的名称。</summary>
+      <returns>与上下文关联的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Properties"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.User">
+      <summary>获取或设置访问身份验证的用户。</summary>
+      <returns>访问身份验证的用户。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.UserName"></member>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationMiddleware">
+      <summary>表示 Facebook 身份验证中间件。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Owin.IAppBuilder,Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions)">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationMiddleware" /> 类的新实例。</summary>
+      <param name="next">转到下一个应用程序。</param>
+      <param name="app">应用程序。</param>
+      <param name="options">用于对 Facebook 进行身份验证的选项。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationMiddleware.CreateHandler">
+      <summary>创建身份验证处理程序。</summary>
+      <returns>身份验证处理程序。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions">
+      <summary>提供 Facebook 身份验证选项。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.AppId">
+      <summary>获取或设置应用程序标识符。</summary>
+      <returns>应用程序标识符。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.AppSecret">
+      <summary>获取或设置应用程序机密。</summary>
+      <returns>应用程序密码。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.BackchannelCertificateValidator"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.BackchannelHttpHandler"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.BackchannelTimeout"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.CallbackPath"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.Caption">
+      <summary>获取或设置显示在应用程序中的文本标题。</summary>
+      <returns>显示在应用程序中的文本标题。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.Provider">
+      <summary>获取或设置身份验证提供程序。</summary>
+      <returns>身份验证提供程序。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.Scope">
+      <summary>获取或设置与身份验证关联的范围。</summary>
+      <returns>与身份验证关联的范围。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.SignInAsAuthenticationType">
+      <summary>获取或设置表示登录身份验证类型的字符串。</summary>
+      <returns>表示登录身份验证类型的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.StateDataFormat"></member>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider">
+      <summary>表示 Facebook 身份验证提供程序。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext)">
+      <summary>指示已经过身份验证的 Facebook。</summary>
+      <returns>完成身份验证的任务。</returns>
+      <param name="context">上下文。</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.OnAuthenticated">
+      <summary>获取或设置 OnAuthenticated 事件。</summary>
+      <returns>OnAuthenticated 事件。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.OnReturnEndpoint">
+      <summary>获取或设置 OnReturnEndpoint 事件。</summary>
+      <returns>OnReturnEndpoint 事件。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.Facebook.FacebookReturnEndpointContext)">
+      <summary>返回 Facebook 终结点。</summary>
+      <returns>完成终结点返回过程的任务。</returns>
+      <param name="context">上下文。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookReturnEndpointContext">
+      <summary>表示 Facebook 属性的返回终结点上下文。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookReturnEndpointContext.#ctor(Microsoft.Owin.IOwinContext,Microsoft.Owin.Security.AuthenticationTicket)"></member>
+    <member name="T:Microsoft.Owin.Security.Facebook.IFacebookAuthenticationProvider">
+      <summary>提供用于身份验证的 Facebook 上下文。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.IFacebookAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext)">
+      <summary>标识已经过身份验证的上下文。</summary>
+      <returns>已经过身份验证的上下文。</returns>
+      <param name="context">要进行身份验证的上下文。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.IFacebookAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.Facebook.FacebookReturnEndpointContext)">
+      <summary>返回 Facebook 终结点上下文。</summary>
+      <returns>Facebook 终结点上下文。</returns>
+      <param name="context">终结点上下文。</param>
+    </member>
+    <member name="T:Owin.FacebookAuthenticationExtensions">
+      <summary>提供 Facebook 身份验证的扩展方法。</summary>
+    </member>
+    <member name="M:Owin.FacebookAuthenticationExtensions.UseFacebookAuthentication(Owin.IAppBuilder,Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions)">
+      <summary>生成 OWIN 应用程序的 Facebook 身份验证。</summary>
+      <returns>生成身份验证的 <see cref="T:Owin.IAppBuilder" />。</returns>
+      <param name="app">应用程序生成器。</param>
+      <param name="options">Facebook 身份验证选项。</param>
+    </member>
+    <member name="M:Owin.FacebookAuthenticationExtensions.UseFacebookAuthentication(Owin.IAppBuilder,System.String,System.String)">
+      <summary>生成 OWIN 应用程序的 Facebook 身份验证。</summary>
+      <returns>生成身份验证的 <see cref="T:Owin.IAppBuilder" />。</returns>
+      <param name="app">应用程序生成器。</param>
+      <param name="appId">应用程序 ID。</param>
+      <param name="appSecret">应用程序密码。</param>
+    </member>
+  </members>
+</doc>

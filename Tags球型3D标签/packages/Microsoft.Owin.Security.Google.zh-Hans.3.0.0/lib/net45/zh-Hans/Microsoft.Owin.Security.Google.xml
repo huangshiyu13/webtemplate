@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin.Security.Google</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext">
+      <summary>表示已经过 Google 身份验证的上下文。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.#ctor(Microsoft.Owin.IOwinContext,System.Security.Claims.ClaimsIdentity,Microsoft.Owin.Security.AuthenticationProperties,System.Xml.Linq.XElement,System.Collections.Generic.IDictionary{System.String,System.String})"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.AttributeExchangeProperties">
+      <summary>获取或设置特性交换上下文的属性。</summary>
+      <returns>特性交换上下文的属性。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.Identity">
+      <summary>获取或设置与上下文关联的声明标识。</summary>
+      <returns>与上下文关联的声明标识。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.Properties"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.ResponseMessage">
+      <summary>获取或设置身份验证的响应消息。</summary>
+      <returns>身份验证的响应消息。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleAuthenticationMiddleware">
+      <summary>表示 Google 身份验证中间件。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Owin.IAppBuilder,Microsoft.Owin.Security.Google.GoogleAuthenticationOptions)">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Google.GoogleAuthenticationMiddleware" /> 类的新实例。</summary>
+      <param name="next">要进行身份验证的下一个应用程序。</param>
+      <param name="app">应用程序生成器。</param>
+      <param name="options">身份验证选项。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationMiddleware.CreateHandler">
+      <summary>创建此中间件的身份验证处理程序。</summary>
+      <returns>创建的 <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler`1" />。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions">
+      <summary>表示 Google 身份验证选项。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.BackchannelCertificateValidator"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.BackchannelHttpHandler"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.BackchannelTimeout"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.CallbackPath"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.Caption">
+      <summary>获取或设置用于身份验证的标题。</summary>
+      <returns>用于身份验证的标题。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.Provider">
+      <summary>获取或设置 Google 身份验证提供程序。</summary>
+      <returns>Google 身份验证提供程序。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.SignInAsAuthenticationType">
+      <summary>获取或设置用于登录 Google 的身份验证类型。</summary>
+      <returns>用于登录 Google 的身份验证类型。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.StateDataFormat"></member>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider">
+      <summary>表示 Google 身份验证提供程序。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Google.GoogleAuthenticatedContext)">
+      <summary>指示已经过身份验证的指定上下文。</summary>
+      <returns>表示用于对上下文进行身份验证的操作的任务。</returns>
+      <param name="context">已经过 Google 身份验证的上下文。</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.OnAuthenticated">
+      <summary>获取或设置调用 Authenticated 事件的函数。</summary>
+      <returns>调用 Authenticated 事件的函数。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.OnReturnEndpoint">
+      <summary>获取或设置调用 ReturnEndpoint 事件的函数。</summary>
+      <returns>调用 ReturnEndpoint 事件的函数。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.Google.GoogleReturnEndpointContext)">
+      <summary>指示指定的返回终结点上下文。</summary>
+      <returns>处理返回终结点的任务。</returns>
+      <param name="context">Google 返回终结点上下文。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleReturnEndpointContext">
+      <summary>表示 Google 返回终结点上下文。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleReturnEndpointContext.#ctor(Microsoft.Owin.IOwinContext,Microsoft.Owin.Security.AuthenticationTicket)"></member>
+    <member name="T:Microsoft.Owin.Security.Google.IGoogleAuthenticationProvider">
+      <summary>提供 Google 身份验证提供程序的界面。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.IGoogleAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Google.GoogleAuthenticatedContext)">
+      <summary>指示已经过身份验证的指定上下文。</summary>
+      <returns>表示用于对上下文进行身份验证的操作的任务。</returns>
+      <param name="context">已经过 Google 身份验证的上下文。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.IGoogleAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.Google.GoogleReturnEndpointContext)">
+      <summary>指示指定的返回终结点上下文。</summary>
+      <returns>处理返回终结点的任务。</returns>
+      <param name="context">Google 返回终结点上下文。</param>
+    </member>
+    <member name="T:Owin.GoogleAuthenticationExtensions">
+      <summary>表示 Google 身份验证的扩展方法。</summary>
+    </member>
+    <member name="M:Owin.GoogleAuthenticationExtensions.UseGoogleAuthentication(Owin.IAppBuilder)">
+      <summary>在中间件使用 Google 身份验证之后调用。</summary>
+      <returns>Google 身份验证。</returns>
+      <param name="app">应用程序生成器。</param>
+    </member>
+    <member name="M:Owin.GoogleAuthenticationExtensions.UseGoogleAuthentication(Owin.IAppBuilder,Microsoft.Owin.Security.Google.GoogleAuthenticationOptions)">
+      <summary>在中间件使用 Google 身份验证之后调用。</summary>
+      <returns>Google 身份验证。</returns>
+      <param name="app">应用程序生成器。</param>
+      <param name="options">Google 身份验证选项。</param>
+    </member>
+  </members>
+</doc>

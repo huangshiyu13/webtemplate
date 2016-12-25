@@ -1,0 +1,193 @@
+@media screen and (max-width: 768px){
+	
+	#estudio_02 .carrusel, #estudio_02 .textuales .slides li {box-sizing: border-box;}
+	#estudio_02 {min-height: initial;}
+
+	header .logo {top: 6.5%; left: 10%;}
+		header .logo img {width: 100px;}
+	header .btnMenu {top: 6%; right: 10%;}
+
+	#nav_main, #estudio_02 .clientList, #manchas .border, #manchas .circle, #manchas .mancha, .arrowsManifiesto, .arrowDown, .job ul li img, #casos.salazar .launch img.thumb, #casos .moreCase .proy .imgProy, #casos .moreCase .proy .arrowIr, #casos .moreCase .proy.mid .circleBalls {display: none !important;}
+		#slide3 .wpJobs {height: initial; width: 100%;}
+			.job {position: relative !important; left: 0 !important; right: 0 !important; top: 0 !important; margin:0 auto; margin-bottom: 20px;}
+			.job.flexBehance {padding: 10px 0;}
+				.flexBehance span {bottom: 46px;}
+			.job.flexMole {width: 370px; height: 235px;}
+				.flexMole .copy {width: 220px; top: 25px;}
+				.flexMole img.phone {width: 230px; top: -30px;}
+
+		#slide3 .splash {display: none !important;}
+	
+	 #inicio .welcome, #slide1 .welcome, #slide2 .welcome {margin-top: 0 !important; width: 80% !important; margin-left: 10%; height: initial !important}
+	.welcome {margin-top: 180px !important; margin-bottom: 0 !important;} 
+	#inicio .splash {margin-top: 35% !important;}
+	#slide1 .splash, #slide2 .splash {margin-top: 25% !important;}
+	.flexSivori li, .flexSivori {height: 320px;}
+	#slide3 {padding-bottom: 120px;}
+	#estudio_01 {padding-bottom: 200px;}
+	#estudio_01 .welcome, #estudio_01 .holaTxt, .wp960 {width: 80%;}
+	#estudio_02 .strip {height: 230px;}
+		#estudio_02 .number {right: 0;}
+		#estudio_02 .strip .slides {padding: 0;}
+		#estudio_02 .carrusel {width: 240px; margin-left: 10%; padding: 65px 45px 0;}
+	#estudio_02 .textuales .slides li {padding: 0 10%;}
+
+	#estudio_03 {padding-bottom: 100px;}
+	#estudio_03 .number {float: none; width: 40%;}
+	#estudio_03 .overflow {margin:0 auto; width: 100%;}
+	#estudio_03 .box03 {width: 29.3%; margin: 60px 3%;}
+	#estudio_03 .box03:nth-of-type(1) {margin-left:0;}
+	#estudio_03 .box03:nth-of-type(3) {margin-right:0;}
+	#estudio_03 .boxProceso {margin-left: 0;}
+		#estudio_03 .boxProceso p {width: 50%; float: none; border-bottom: solid 1px rgba(256,256,256,.4); padding: 5px 0;}
+	#estudio_05 {padding-bottom: 130px;}
+	#estudio_04 {padding-bottom: 0;}
+	.gradientManchas {background: initial !important;}
+	#estudio_04 .number {margin-left: 0;}
+	#manchas {height: initial; overflow: hidden;}
+	#manchas .boxInfo {position: relative; top: 0 !important; left: 0 !important; float: left; width: 50%; text-align: left !important; opacity: 1 !important; transform: initial !important;}
+
+	#estudio_06 {padding-top: 100px; padding-bottom: 30px;}
+		#estudio_06 .number {width: 100%; position: relative; text-align: center;}
+			#estudio_06 .number hr {margin-left: auto; margin-right: auto;}
+		#estudio_06 .awards {text-align: center; margin: 80px 0;}
+			#estudio_06 .awards .premio {width: 100%; float: none; margin:0 auto !important; margin-bottom: 60px !important; text-align: center;}
+				#estudio_06 .awards .icoPremio {width: 100%; display: block;}
+			#estudio_06 .awards .logros {text-align: left; width: 300px; margin:0 auto;}
+
+	#proyectos, #manifiesto {padding-bottom: 100px;}
+
+	#estudio_05 .instituciones {margin-left: 0;}
+
+	#contacto .welcome, #contacto .bajada, #contacto .wpBoxCont, #manifiesto .welcome, #casos .titCaso, #casos .drop p, #casos .launch p, #proyectos .wpProy, #proyectos .welcome, #manifiesto .boxManifiesto {width: 80%;}
+		#contacto .wpBoxCont .boxCont {width: 70%;  margin: 20px 0;}
+	
+	#manifiesto .boxManifiesto:last-of-type .num {margin-right: 50px;}
+
+	#proyectos .wpProy {margin: 50px auto; height: initial !important}
+		#proyectos .proy {position: relative !important; top: 0 !important; left: 0 !important; margin:0 auto; margin-bottom: 20px !important;}
+	
+	#casos.omega .headCasos {background-size: 800px; background-position: center 70%;}
+		#casos .titCaso {padding-top: 200px;}
+	#casos .launch {padding-bottom: 80px; min-height: initial !important}
+	#casos .launch .imgPrincipal, #casos .infoCase .wp960 p {width: 100%;}
+	#casos.omega .launch img.thumb {width: 130%; position: relative; top: 0; right: 0; display: block;}
+	#casos .launch span {margin-bottom: 20px;}
+	#casos .infoCase {padding: 80px 0;}
+	#casos.omega .infoCase .wp960, #casos.salazar .infoCase .wp960 {top: 0;}
+	#casos .placa .wp960 {height: initial !important; padding-top: 220px;}
+		#casos .placa .titCaso {position: relative !important; text-align: center; margin-bottom: 40px;}
+			#casos .placa .titCaso hr {margin: 30px auto;}
+		#casos .placa .share {position: relative !important; margin-top: 0;}
+	#casos .moreCase .wp960 {height: initial !important;}
+		#casos .moreCase .proy {position: relative !important; display: block; top: 0 !important; text-align: center !important; left: 0 !important; height: 145px !important; right: 0 !important; width: 100%; margin:0 auto !important; margin-bottom: 20px !important;}
+	#casos.salazar .imgBig {margin-top: -200px;}
+	#casos.emiliano .launch img.thumb, #casos.mole .launch img.thumb, #casos.liderar .infoCase .imgBig {position: relative; top: 0; right: 0; width: 100%;}
+	#casos.emiliano .infoCase .wp960.right {top: 10px;}
+	#casos.mole .infoCase .wp960 {top: 20px;}
+	#casos.mole .launch.mole .imgBig2 {bottom: initial; top: 0;}
+	#casos.mole .launch.mole .wp960 {height: 390px;}
+	#casos.foodpro .headCasos {background-size: 440px;}
+	#casos.foodpro .launch .wp960.right {top: -70px;}
+	#casos.foodpro .infoCase .wp960 {top: -50px;}
+	#casos.liderar .launch img.thumb {position: relative; margin-bottom: 30px; width: 100%;}
+	#casos.liderar .infoCase img.thumb {position: relative; width: 300px; display: block; margin:0 auto;}
+	#casos.sivori .headCasos {background-size: 67%}
+	#casos.sivori .launch img.thumb {top: -20px; position: relative; right: 0; width: 100%;}
+	#politicas > div > h3, #politicas > div > p,  #politicas .welcome {width: 80%;}
+	#politicas .wpPolit {margin-bottom: 150px;}
+	#politicas .welcome {margin-bottom: 50px !important;}
+
+	#casos + footer, #contacto + footer, #politicas + footer {margin-top: -90px !important;}
+	footer .legal {right: 10%;}
+	footer .social {left: 10%;}
+
+}
+
+@media screen and (max-width:640px){
+
+	#estudio_02 .carrusel {margin-left: 0;}
+
+}
+
+@media screen and (max-width:480px){
+
+	.number {font-size: 130px;}
+		.number hr {width: 65px; margin-bottom: 40px;}
+		.number span {font-size: 30px;}
+		hr.fat {height: 5px;}
+
+	.layer {position: relative !important;}
+	.splash.layer {position: absolute !important;}
+
+	#estudio_01 {min-height: 1300px; padding-bottom: 100px;}
+
+	#estudio_02 .strip {height: 310px;}
+		#estudio_02 .number {top: -90px;}
+		#estudio_02 .carrusel {padding-top: 185px; margin:0 auto !important;}
+	#estudio_02 .textuales {height: 310px;}
+
+	#estudio_03 .box03 {width: 100%; margin: 20px 0;}
+	#estudio_03 .box03:nth-of-type(1) {margin-top: 50px;}
+	#estudio_03 .box03:nth-of-type(3) {margin-bottom: 50px;}
+		#estudio_03 .box03 ul {margin-top: 10px;}
+	#estudio_03 .boxProceso h3 {margin-bottom: 15px;}
+	#estudio_03 .boxProceso p {width: 100%;}
+
+	#manchas .boxInfo {width: 100%; margin-bottom: 50px;}
+
+	#estudio_05 .instituciones {width: 100%;}
+		#estudio_05 .wpInst img {max-width: 100%;}
+
+	#contacto .wpBoxCont .boxCont {width: 100%;}
+
+	footer {margin-top: -90px; height: 75px;}
+	footer .politicas {top: -65px; left: 0; width: 150px; display: block; margin:0 auto;}
+	footer .legal {line-height: 15px;}
+	footer strong {display: block;}
+
+}
+
+@media screen and (max-width: 360px){
+
+	.flexMole img.phone, .flexFoodpro img.caja {display: none !important;}
+	
+	.welcome {margin-bottom: 0; margin-top: 130px !important;}
+		.welcome p {font-size: 40px; padding: 30px 0;}
+	
+	#slide3 .wpJobs {margin-top: 70px;}
+	.job {width: 95% !important;}
+		.flexMole .copy {width: 290px;}
+		.flexFoodpro {height: 170px;}
+			.flexFoodpro .copy {padding-left: 15px;}
+		.flexBehance .arrowIr {margin-left: 85px;}
+		.flexBehance span {right: 100px;}
+		.job.flexManifiesto {width: 90% !important; padding: 40px 10px; background-position: 40px 50px;}
+			.flexManifiesto span {margin-bottom: 20px;}
+
+	#estudio_02 .textuales {height: 370px;}
+
+	#proyectos .proy {width: 100% !important;}
+
+	#casos .titCaso {padding-top: 150px;}
+
+	#casos .launch .imgPrincipal {top: -65px;}
+
+	#casos.sivori .headCasos {background-size: 100%}
+
+	#estudio_06 .awards .logros {width: 100%;}
+
+	footer {position: relative;}
+		footer .social {left: 0; right: 0; margin:0 auto;}
+			footer .politicas {left: -15px;}
+		footer .legal {left: 0; right: 0; margin:0 auto; display: block; text-align: center; bottom: 0;}
+
+}
+
+@media screen and (max-width: 320px){
+
+	.flexMole .copy {width: 260px;}
+	.flexBehance .arrowIr {margin-left: 75px;}
+	.flexBehance span {right: 80px;}
+
+}

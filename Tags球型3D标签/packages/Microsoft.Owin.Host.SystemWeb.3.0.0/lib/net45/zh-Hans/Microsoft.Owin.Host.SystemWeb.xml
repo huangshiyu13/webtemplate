@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin.Host.SystemWeb</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.Host.SystemWeb.AuthenticationResult">
+      <summary>表示 OWIN 身份验证结果。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.AuthenticationResult.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Host.SystemWeb.AuthenticationResult" /> 类的新实例。</summary>
+      <param name="identity">结果的标识。</param>
+      <param name="extra">附加身份验证。</param>
+      <param name="properties">身份验证结果的属性。</param>
+    </member>
+    <member name="P:Microsoft.Owin.Host.SystemWeb.AuthenticationResult.Extra">
+      <summary>获取附加身份验证。</summary>
+      <returns>附加身份验证。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Host.SystemWeb.AuthenticationResult.Identity">
+      <summary>获取结果的标识。</summary>
+      <returns>结果的标识。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Host.SystemWeb.AuthenticationResult.Properties">
+      <summary>获取身份验证结果的属性。</summary>
+      <returns>身份验证结果的属性。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Host.SystemWeb.OwinHttpHandler">
+      <summary>将来自 <see cref="T:System.Web" /> 的请求作为 OWIN 请求进行处理。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.OwinHttpHandler.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Host.SystemWeb.OwinHttpHandler" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.OwinHttpHandler.BeginProcessRequest(System.Web.HttpContextBase,System.AsyncCallback,System.Object)">
+      <summary>启动对 HTTP 处理程序的异步调用。</summary>
+      <returns>一个 <see cref="T:System.IAsyncResult" />，其中包含有关进程状态的信息。</returns>
+      <param name="httpContext">一个 <see cref="T:System.Web.HttpContextBase" /> 对象，它提供对内部服务器对象（例如 Request、Response、Session 和 Server，用于为 HTTP 请求提供服务）的引用。</param>
+      <param name="callback">当完成异步方法调用时要调用的 <see cref="T:System.AsyncCallback" />。如果回调为 null，则不调用委托。</param>
+      <param name="extraData">处理请求所需的任何附加数据。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.OwinHttpHandler.EndProcessRequest(System.IAsyncResult)">
+      <summary>在进程结束时，提供异步进程结束方法。</summary>
+      <param name="result">一个 <see cref="T:System.IAsyncResult" />，其中包含有关进程状态的信息。</param>
+    </member>
+    <member name="P:Microsoft.Owin.Host.SystemWeb.OwinHttpHandler.IsReusable">
+      <summary>获取一个值，该值指示其他请求能否使用 <see cref="T:System.Web.IHttpHandler" /> 实例。</summary>
+      <returns>返回 true。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.OwinHttpHandler.System#Web#IHttpAsyncHandler#BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)">
+      <summary>启动对 HTTP 处理程序的异步调用。</summary>
+      <returns>一个 <see cref="T:System.IAsyncResult" />，其中包含有关进程状态的信息。</returns>
+      <param name="context">一个 <see cref="T:System.Web.HttpContext" /> 对象，它提供对内部服务器对象（例如 Request、Response、Session 和 Server，用于为 HTTP 请求提供服务）的引用。</param>
+      <param name="cb">当完成异步方法调用时要调用的 <see cref="T:System.AsyncCallback" />。如果回调为 null，则不调用委托。</param>
+      <param name="extraData">处理请求所需的任何附加数据。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.OwinHttpHandler.System#Web#IHttpHandler#ProcessRequest(System.Web.HttpContext)">
+      <summary>处理 HTTP 处理程序的请求。</summary>
+      <param name="context">上下文。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Host.SystemWeb.OwinRouteHandler">
+      <summary>通过 OWIN 管道处理路由。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.OwinRouteHandler.#ctor(System.Action{Owin.IAppBuilder})">
+      <summary>初始化 OwinRouteHandler。</summary>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.OwinRouteHandler.GetHttpHandler(System.Web.Routing.RequestContext)">
+      <summary>提供用于处理请求的对象。</summary>
+      <returns>一个处理请求的对象。</returns>
+      <param name="requestContext">一个对象，封装有关请求的信息。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.OwinRouteHandler.System#Web#Routing#IRouteHandler#GetHttpHandler(System.Web.Routing.RequestContext)">
+      <summary>提供用于处理请求的对象。</summary>
+      <returns>一个处理请求的对象。</returns>
+      <param name="requestContext">一个对象，封装有关请求的信息。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Host.SystemWeb.PreApplicationStart">
+      <summary>启动应用程序时注册 OWIN 请求处理模块。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Host.SystemWeb.PreApplicationStart.Initialize">
+      <summary>注册 OWIN 请求处理模块。</summary>
+    </member>
+    <member name="T:System.Web.HttpContextBaseExtensions">
+      <summary>提供 <see cref="T:System.Web.HttpContextBase" /> 的扩展方法。</summary>
+    </member>
+    <member name="M:System.Web.HttpContextBaseExtensions.GetOwinContext(System.Web.HttpContextBase)"></member>
+    <member name="M:System.Web.HttpContextBaseExtensions.GetOwinContext(System.Web.HttpRequestBase)"></member>
+    <member name="T:System.Web.HttpContextExtensions">
+      <summary>提供 <see cref="T:System.Web.HttpContext" /> 的扩展方法。</summary>
+    </member>
+    <member name="M:System.Web.HttpContextExtensions.GetOwinContext(System.Web.HttpContext)"></member>
+    <member name="M:System.Web.HttpContextExtensions.GetOwinContext(System.Web.HttpRequest)"></member>
+    <member name="T:System.Web.Routing.RouteCollectionExtensions">
+      <summary>提供扩展方法，用于将 OWIN 应用程序注册为 System.Web 路由。</summary>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinPath(System.Web.Routing.RouteCollection,System.String)">
+      <summary>注册默认 OWIN 应用程序的路由。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="pathBase">要映射到默认 OWIN 应用程序的路由路径。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinPath(System.Web.Routing.RouteCollection,System.String,System.Action{Owin.IAppBuilder})">
+      <summary>调用 System.Action 启动委托以生成 OWIN 应用程序，然后在给定的路径中为它注册一个路由。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="pathBase">要映射到给定 OWIN 应用程序的路由路径。</param>
+      <param name="startup">为生成 OWIN 应用程序而调用的 System.Action 委托。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinPath(System.Web.Routing.RouteCollection,System.String,System.String)">
+      <summary> 注册默认 OWIN 应用程序的路由。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="name">路由的给定名称。</param>
+      <param name="pathBase">要映射到默认 OWIN 应用程序的路由路径。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinPath(System.Web.Routing.RouteCollection,System.String,System.String,System.Action{Owin.IAppBuilder})">
+      <summary> 调用 System.Action 启动委托以生成 OWIN 应用程序，然后在给定的路径中为它注册一个路由。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="name">路由的给定名称。</param>
+      <param name="pathBase">要映射到给定 OWIN 应用程序的路由路径。</param>
+      <param name="startup">为生成 OWIN 应用程序而调用的 System.Action 委托。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinPath``1(System.Web.Routing.RouteCollection,System.String,System.String,``0)">
+      <summary> 为特定的 OWIN 应用程序入口点注册路由。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="name">路由的给定名称。</param>
+      <param name="pathBase">要映射到给定 OWIN 应用程序的路由路径。</param>
+      <param name="app">OWIN 应用程序入口点。</param>
+      <typeparam name="TApp">OWIN 应用程序入口点类型。</typeparam>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinPath``1(System.Web.Routing.RouteCollection,System.String,``0)">
+      <summary> 为特定的 OWIN 应用程序入口点注册路由。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="pathBase">要映射到给定 OWIN 应用程序的路由路径。</param>
+      <param name="app">OWIN 应用程序入口点。</param>
+      <typeparam name="TApp">OWIN 应用程序入口点类型。</typeparam>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinRoute(System.Web.Routing.RouteCollection,System.String,System.Action{Owin.IAppBuilder})">
+      <summary>提供为 OWIN 管道定义路由的方法。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="routeUrl">路由的 URL 模式。</param>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Action{Owin.IAppBuilder})">
+      <summary> 提供为 OWIN 管道定义路由的方法。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="routeName">路由的名称。</param>
+      <param name="routeUrl">路由的 URL 模式。</param>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Web.Routing.RouteValueDictionary,System.Action{Owin.IAppBuilder})">
+      <summary> 提供为 OWIN 管道定义路由的方法。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="routeName">路由的名称。</param>
+      <param name="routeUrl">路由的 URL 模式。</param>
+      <param name="defaults">当 URL 不包含所有参数时要使用的值。</param>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Action{Owin.IAppBuilder})">
+      <summary> 提供为 OWIN 管道定义路由的方法。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="routeName">路由的名称。</param>
+      <param name="routeUrl">路由的 URL 模式。</param>
+      <param name="defaults">当 URL 不包含所有参数时要使用的值。</param>
+      <param name="constraints">用于指定 URL 参数的有效值的正则表达式。</param>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Action{Owin.IAppBuilder})">
+      <summary> 提供为 OWIN 管道定义路由的方法。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="routeName">路由的名称。</param>
+      <param name="routeUrl">路由的 URL 模式。</param>
+      <param name="defaults">当 URL 不包含所有参数时要使用的值。</param>
+      <param name="constraints">用于指定 URL 参数的有效值的正则表达式。</param>
+      <param name="dataTokens">传递给路由处理程序的自定义值，但不使用这些值来确定路由是否与特定的 URL 模式匹配。这些值将传递给路由处理程序，并可以在其中用于处理请求。</param>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinRoute(System.Web.Routing.RouteCollection,System.String,System.Web.Routing.RouteValueDictionary,System.Action{Owin.IAppBuilder})">
+      <summary> 提供为 OWIN 管道定义路由的方法。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="routeUrl">路由的 URL 模式。</param>
+      <param name="defaults">当 URL 不包含所有参数时要使用的值。</param>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinRoute(System.Web.Routing.RouteCollection,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Action{Owin.IAppBuilder})">
+      <summary> 提供为 OWIN 管道定义路由的方法。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="routeUrl">路由的 URL 模式。</param>
+      <param name="defaults">当 URL 不包含所有参数时要使用的值。</param>
+      <param name="constraints">用于指定 URL 参数的有效值的正则表达式。</param>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+    <member name="M:System.Web.Routing.RouteCollectionExtensions.MapOwinRoute(System.Web.Routing.RouteCollection,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Action{Owin.IAppBuilder})">
+      <summary> 提供为 OWIN 管道定义路由的方法。</summary>
+      <returns>创建的路由。</returns>
+      <param name="routes">路由集合。</param>
+      <param name="routeUrl">路由的 URL 模式。</param>
+      <param name="defaults">当 URL 不包含所有参数时要使用的值。</param>
+      <param name="constraints">用于指定 URL 参数的有效值的正则表达式。</param>
+      <param name="dataTokens">传递给路由处理程序的自定义值，但不使用这些值来确定路由是否与特定的 URL 模式匹配。这些值将传递给路由处理程序，并可以在其中用于处理请求。</param>
+      <param name="startup">初始化用于处理路由请求的管道的方法。</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,467 @@
+@charset "utf-8"; /* CSS Document */
+
+/* CSS3滚动条 */
+::selection {background: #222 ; color: white ; text-shadow: none ;}
+::-webkit-scrollbar-track-piece{width:10px;background-color:#f2f2f2 ;  border-radius:50px}
+::-webkit-scrollbar{width:5px;height:6px}
+::-webkit-scrollbar-thumb{height:50px;background:#3fb560;  border-radius:50px}
+::-webkit-scrollbar-thumb:hover{background:#3fb560 ; cursor:pointer}  
+
+
+/* 页面选中颜色 */
+::-moz-selection {
+	background: #222;
+	color: #fff;
+}
+
+::selection {
+	background: #222;
+	color: #fff;
+} 
+
+*:focus {
+	outline: none;
+}
+/*消除谷歌下input边框* /
+
+
+
+/* 清除内外边距 */  
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td {
+	margin: 0;
+	padding: 0;
+   _background-image:url(about:blank);
+   _background-attachment:fixed;
+
+} 
+
+  
+/* 设置默认字体 */ 
+body, button, input, select, textarea {
+	font-family: "微软雅黑","宋体","Arail";
+	font-size: 12px;
+	line-height: 24px;
+}
+
+.titleFont
+{
+    font-family: "Microsoft yahei","微软雅黑","Tahoma","Verdana","Arial","sans-serif";
+}
+
+.contentFont
+{
+    font-family: "宋体","新宋体","Arial","sans-serif";
+}
+
+.enFont
+{
+    font-family: "Arial","sans-serif";
+}
+
+.yahei {
+	font-family: "微软雅黑","宋体","Arail";
+}
+
+.songti {
+	font-family: "宋体","微软雅黑","Arail";
+}
+
+.Arail {
+	font-family: "Arail","宋体","微软雅黑";
+}
+
+.Courier_New {
+	font-family: "Courier New", Courier, monospace
+}
+
+.Georgia {
+	font-family: Georgia, "Arail", Times, serif
+}
+
+
+/* 列表元素 */ 
+ul,ol,li {
+	list-style: none;
+}
+
+img {
+	border: none;
+}
+
+
+/* a标签 */ 
+a {
+	text-decoration: none ; color:#fff ;
+}
+
+a:hover {
+	text-decoration: none ;
+} 
+
+
+/* 定义浮动居中 */ 
+.fl {
+	float: left;
+	display: inline
+}
+
+.fr {
+	float: right;
+	display: inline
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+	height: 0px;
+	line-height: 0px;
+	font-size: 0px;
+}
+
+
+/* 重置h标签 */ 
+h1 {
+	font-size: 22px
+}
+
+h2 {
+	font-size: 20px
+}
+
+h3 {
+	font-size: 18px
+}
+
+h4 {
+	font-size: 16px
+}
+
+h5 {
+	font-size: 14px
+}
+
+h6 {
+	font-size: 12px
+}
+
+
+/* 字体大小 */ 
+.font12 {
+	font-size: 12px
+}
+
+.font14 {
+	font-size: 14px
+}
+
+.font16 {
+	font-size: 16px
+}
+
+.font18 {
+	font-size: 18px
+}
+
+.font20 {
+	font-size: 20px
+}
+
+.font22 {
+	font-size: 22px
+}
+
+.font24 {
+	font-size: 24px
+}
+
+.font26 {
+	font-size: 26px
+}
+
+.font28 {
+	font-size: 28px
+}
+
+
+.font30 {
+	font-size: 30px
+}
+
+
+/* 主色 */ 
+.zhuse{ color:#3fb560 }
+
+
+/* 所有颜色 */ 
+.chi {
+	color: #FF0000
+}
+
+.cheng {
+	color: #f65f04
+}
+
+.huang {
+	color: #f6e204
+}
+
+.lv {
+	color: #2cdf03
+}
+
+.qing {
+	color: #01ede5
+}
+
+
+.lan {
+	color: #27B4FD;
+}
+
+.zi {
+	color: #590afa
+}
+
+.hei {
+	color: #000
+}
+
+.bai {
+	color: #fff
+}
+
+.hui {
+	color: #999
+}
+
+
+/* 定义边距 */ 
+.mt5 {
+	margin-top: 5px
+}
+
+.mr5 {
+	margin-right: 5px
+}
+
+.mb5 {
+	margin-bottom: 5px
+}
+
+.ml5 {
+	margin-left: 5px
+}
+
+.mt10 {
+	margin-top: 10px
+}
+
+.mr10 {
+	margin-right: 10px
+}
+
+.mb10 {
+	margin-bottom: 10px
+}
+
+.ml10 {
+	margin-left: 10px
+}
+
+.mt15 {
+	margin-top: 15px
+}
+
+.mr15 {
+	margin-right: 15px
+}
+
+.mb15 {
+	margin-bottom: 15px
+}
+
+.ml15 {
+	margin-left: 15px
+}
+
+.mt20 {
+	margin-top: 20px
+}
+
+.mr20 {
+	margin-right: 20px
+}
+
+.mb20 {
+	margin-bottom: 20px
+}
+
+.ml20 {
+	margin-left: 20px
+}
+
+.mt25 {
+	margin-top: 25px
+}
+
+.mr25 {
+	margin-right: 25px
+}
+
+.mb25 {
+	margin-bottom: 25px
+}
+
+.ml25 {
+	margin-left: 25px
+}
+
+.mt30 {
+	margin-top: 30px
+}
+
+.mr30 {
+	margin-right: 30px
+}
+
+.mb30 {
+	margin-bottom: 30px
+}
+
+.ml30 {
+	margin-left: 30px
+}
+
+.mt35 {
+	margin-top: 35px
+}
+
+.mr35 {
+	margin-right: 35px
+}
+
+
+.mb35 {
+	margin-bottom: 35px
+}
+
+
+.ml35 {
+	margin-left: 35px
+}
+
+.mt40 {
+	margin-top: 40px
+}
+
+.mr40 {
+	margin-right: 40px
+}
+
+.mb40 {
+	margin-bottom: 40px
+}
+
+.ml40 {
+	margin-left: 40px
+}
+
+.mt50 {
+	margin-top: 50px;
+}
+
+.mr50 {
+	margin-right: 50px;
+}
+
+.mb50 {
+	margin-bottom: 50px;
+}
+
+.ml50 {
+	margin-left: 50px;
+}
+
+
+.pd10 {
+	padding:10px
+}
+
+.pd20 {
+	padding:20px
+}
+
+.pd30 {
+	padding:30px
+}
+
+.pd40 {
+	padding:40px
+}
+
+.pd50 {
+	padding:50px
+}
+
+
+/*
+
+CSS样式命名	说明
+
+#wrapper	页面外围控制整体布局宽度
+#container或#content	容器,用于最外层
+#layout	布局
+#head, #header	页头部分
+#foot, #footer	页脚部分
+#nav	主导航
+#subnav	二级导航
+#menu	菜单
+#submenu	子菜单
+#sideBar	侧栏
+#sidebar_a, #sidebar_b	左边栏或右边栏
+#main	页面主体
+#tag	标签
+#msg #message	提示信息
+#tips	小技巧
+#vote	投票
+#friendlink	友情连接
+#title	标题
+#summary	摘要
+#loginbar	登录条
+#searchInput	搜索输入框
+#hot	热门热点
+#search	搜索
+#search_output	搜索输出和搜索结果相似
+#searchBar	搜索条
+#search_results	搜索结果
+#copyright	版权信息
+#branding	商标
+#logo	网站LOGO标志
+#siteinfo	网站信息
+#siteinfoLegal	法律声明
+#siteinfoCredits	信誉
+#joinus	加入我们
+#partner	合作伙伴
+#service	服务
+#regsiter	注册
+arr/arrow	箭头
+#guild	指南
+#sitemap	网站地图
+#list	列表
+#homepage	首页
+#subpage	二级页面子页面
+#tool, #toolbar	工具条
+#drop	下拉
+#dorpmenu	下拉菜单
+#status	状态
+#scroll	滚动
+.tab	标签页
+.left .right .center	居左、中、右
+.news	新闻
+.download	下载
+.banner	广告条(顶部广告条)
+
+*/

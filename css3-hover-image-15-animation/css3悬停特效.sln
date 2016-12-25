@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "css3-hover-image-15-animation", "http://localhost:64869", "{E35CD31A-020C-4626-A506-2AF0DC2751F4}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64869"
+		Debug.AspNetCompiler.PhysicalPath = "..\css3-hover-image-15-animation\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64869\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64869"
+		Release.AspNetCompiler.PhysicalPath = "..\css3-hover-image-15-animation\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64869\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\css3-hover-image-15-animation\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E35CD31A-020C-4626-A506-2AF0DC2751F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E35CD31A-020C-4626-A506-2AF0DC2751F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

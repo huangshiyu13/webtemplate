@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin.Security.MicrosoftAccount</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.Security.MicrosoftAccount.IMicrosoftAccountAuthenticationProvider">
+      <summary>指定回调方法，<see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationMiddleware" /> 调用这些方法使开发人员可以控制身份验证过程。/&amp;amp;gt;</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.IMicrosoftAccountAuthenticationProvider.Authenticated(Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext)">
+      <summary>当 Microsoft 成功对用户进行身份验证时调用</summary>
+      <returns>表示已完成的操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns>
+      <param name="context">包含登录会话及用户 <see cref="T:System.Security.Claims.ClaimsIdentity" /> 的相关信息。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.IMicrosoftAccountAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountReturnEndpointContext)">
+      <summary>在 <see cref="T:System.Security.Claims.ClaimsIdentity" /> 保存到本地 Cookie 中且浏览器重定向到最初请求的 URL 之前调用。</summary>
+      <returns>表示已完成的操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext">
+      <summary>包含登录会话及用户 <see cref="T:System.Security.Claims.ClaimsIdentity" /> 的相关信息。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.#ctor(Microsoft.Owin.IOwinContext,Newtonsoft.Json.Linq.JObject,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext" /></summary>
+      <param name="context">OWIN 环境</param>
+      <param name="user">JSON 序列化的用户</param>
+      <param name="accessToken">由 Microsoft 身份验证服务提供的访问令牌</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.AccessToken">
+      <summary>获取由 Microsoft 身份验证服务提供的访问令牌</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.Email">
+      <summary>获取用户的电子邮件地址</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.FirstName">
+      <summary>获取用户的名字</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.Id">
+      <summary>获取 Microsoft 帐户用户 ID</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.Identity">
+      <summary>获取用于表示用户的 <see cref="T:System.Security.Claims.ClaimsIdentity" /></summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.LastName">
+      <summary>获取用户的姓氏</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.Name">
+      <summary>获取用户名</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.Properties">
+      <summary>获取或设置常见身份验证属性的属性包</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext.User">
+      <summary>获取 JSON 序列化的用户</summary>
+    </member>
+    <member name="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationMiddleware">
+      <summary>使用 Microsoft 帐户服务对用户进行身份验证的 OWIN 中间件</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Owin.IAppBuilder,Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions)">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationMiddleware" /></summary>
+      <param name="next">OWIN 管道中要调用的下一个中间件</param>
+      <param name="app">OWIN 应用程序</param>
+      <param name="options">中间件的配置选项</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationMiddleware.CreateHandler">
+      <summary>提供用于处理身份验证相关请求的 <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler" /> 对象。</summary>
+      <returns>配置了提供给构造函数的 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions" /> 的 <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler" />。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions">
+      <summary>
+        <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationMiddleware" /> 的配置选项</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.#ctor">
+      <summary>初始化新的 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions" />。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.BackchannelCertificateValidator">
+      <summary>获取或设置要用于验证在属于 Microsoft 帐户的返回通道通信中使用的终结点的固定证书验证程序。</summary>
+      <returns>固定证书验证程序。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.BackchannelHttpHandler">
+      <summary>用于与 Microsoft 通信的 HttpMessageHandler。除非值可以向下转换为 WebRequestHandler，否则不能在设置 BackchannelCertificateValidator 的同时设置此项。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.BackchannelTimeout">
+      <summary>获取或设置与 Microsoft 进行的返回通道通信的超时值（以毫秒为单位）。</summary>
+      <returns>返回通道超时值。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.CallbackPath">
+      <summary>应用程序的基路径内将返回用户代理的请求路径。此请求到达时，中间件将处理此请求。默认值为“/signin-microsoft”。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.Caption">
+      <summary>获取或设置用户可以在登录用户界面上显示的文本。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.ClientId">
+      <summary>由 Microsoft 身份验证服务分配的应用程序客户端 ID。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.ClientSecret">
+      <summary>由 Microsoft 身份验证服务分配的应用程序客户端机密。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.Provider">
+      <summary>获取或设置用于处理身份验证事件的 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.IMicrosoftAccountAuthenticationProvider" />。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.Scope">
+      <summary>要请求的权限列表。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.SignInAsAuthenticationType">
+      <summary>获取或设置将负责实际颁发用户 <see cref="T:System.Security.Claims.ClaimsIdentity" /> 的其他身份验证中间件的名称。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions.StateDataFormat">
+      <summary>获取或设置用于保护由中间件处理的数据的类型。</summary>
+    </member>
+    <member name="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationProvider">
+      <summary>默认 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.IMicrosoftAccountAuthenticationProvider" /> 实现。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationProvider.#ctor">
+      <summary>初始化新的 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationProvider" /></summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationProvider.Authenticated(Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext)">
+      <summary>当 Microsoft 成功对用户进行身份验证时调用</summary>
+      <returns>表示已完成的操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns>
+      <param name="context">包含登录会话及用户 <see cref="T:System.Security.Claims.ClaimsIdentity" /> 的相关信息。</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationProvider.OnAuthenticated">
+      <summary>获取或设置调用 Authenticated 方法时调用的函数。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationProvider.OnReturnEndpoint">
+      <summary>获取或设置调用 ReturnEndpoint 方法时调用的函数。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountReturnEndpointContext)">
+      <summary>在 <see cref="T:System.Security.Claims.ClaimsIdentity" /> 保存到本地 Cookie 中且浏览器重定向到最初请求的 URL 之前调用。</summary>
+      <returns>表示已完成的操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns>
+      <param name="context">包含登录会话及用户 <see cref="T:System.Security.Claims.ClaimsIdentity" /> 的相关信息</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountReturnEndpointContext">
+      <summary>向中间件提供程序提供上下文信息。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountReturnEndpointContext.#ctor(Microsoft.Owin.IOwinContext,Microsoft.Owin.Security.AuthenticationTicket)">
+      <summary>初始化新的 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountReturnEndpointContext" />。</summary>
+      <param name="context">OWIN 环境</param>
+      <param name="ticket">身份验证票证</param>
+    </member>
+    <member name="T:Owin.MicrosoftAccountAuthenticationExtensions">
+      <summary>使用 <see cref="T:Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationMiddleware" /> 的扩展方法</summary>
+    </member>
+    <member name="M:Owin.MicrosoftAccountAuthenticationExtensions.UseMicrosoftAccountAuthentication(Owin.IAppBuilder,Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticationOptions)">
+      <summary>使用 Microsoft 帐户对用户进行身份验证</summary>
+      <returns>已更新的 <see cref="T:Owin.IAppBuilder" /></returns>
+      <param name="app">传递给配置方法的 <see cref="T:Owin.IAppBuilder" /></param>
+      <param name="options">中间件配置选项</param>
+    </member>
+    <member name="M:Owin.MicrosoftAccountAuthenticationExtensions.UseMicrosoftAccountAuthentication(Owin.IAppBuilder,System.String,System.String)">
+      <summary>使用 Microsoft 帐户对用户进行身份验证</summary>
+      <param name="app">传递给配置方法的 <see cref="T:Owin.IAppBuilder" /></param>
+      <param name="clientId">由 Microsoft 身份验证服务分配的应用程序客户端 ID</param>
+      <param name="clientSecret">由 Microsoft 身份验证服务分配的应用程序客户端机密</param>
+    </member>
+  </members>
+</doc>

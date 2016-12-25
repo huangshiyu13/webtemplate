@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin.Security</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.Security.AppBuilderSecurityExtensions">
+      <summary>Provides extensions methods for app.Property values that are only needed by implementations of authentication middleware.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AppBuilderSecurityExtensions.GetDefaultSignInAsAuthenticationType(Owin.IAppBuilder)">
+      <summary>Returns the previously set AuthenticationType that external sign in middleware should use when the browser navigates back to their return url.</summary>
+      <param name="app">App builder passed to the application startup code</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AppBuilderSecurityExtensions.SetDefaultSignInAsAuthenticationType(Owin.IAppBuilder,System.String)">
+      <summary>Called by middleware to change the name of the AuthenticationType that external middleware should use when the browser navigates back to their return url.</summary>
+      <param name="app">App builder passed to the application startup code</param>
+      <param name="authenticationType">AuthenticationType that external middleware should sign in as.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationMode">
+      <summary> 控制身份验证中间件的行为。</summary>
+    </member>
+    <member name="F:Microsoft.Owin.Security.AuthenticationMode.Active">
+      <summary> 在主动模式下，身份验证中间件将在请求到达时更改用户标识，并在响应离开时更改 401 纯文本。</summary>
+    </member>
+    <member name="F:Microsoft.Owin.Security.AuthenticationMode.Passive">
+      <summary> 在被动模式下，身份验证中间件只在提示时提供用户标识，并且只会更改在附加质询数据中指定了身份验证类型的 401 响应。 </summary>
+    </member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationOptions">
+      <summary>所有身份验证中间件的基本选项。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationOptions.#ctor(System.String)">
+      <summary>初始化 AuthenticationOptions 基类的属性。</summary>
+      <param name="authenticationType">已分配到 AuthenticationType 属性。</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationOptions.AuthenticationMode">
+      <summary>如果为 Active，则身份验证中间件将更改传入的请求用户，并更改传出的 401 未授权响应。如果为 Passive，则仅当 AuthenticationType 已进行显式指定时，身份验证中间件才提供标识并更改响应。</summary>
+      <returns>身份验证模式。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationOptions.AuthenticationType">
+      <summary>选项中的 AuthenticationType 对应于 IIdentity AuthenticationType 属性。可以分配其他值，以便在一个管道中多次使用同一个身份验证中间件类型。</summary>
+      <returns>身份验证的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationOptions.Description">
+      <summary>为应用程序提供的有关身份验证类型的附加信息。</summary>
+      <returns>有关身份验证的附加信息。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.AuthenticationTicket">
+      <summary>表示身份验证票证。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.AuthenticationTicket.#ctor(System.Security.Claims.ClaimsIdentity,Microsoft.Owin.Security.AuthenticationProperties)"></member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationTicket.Identity">
+      <summary>获取或设置此票证的标识。</summary>
+      <returns>此票证的标识。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.AuthenticationTicket.Properties"></member>
+    <member name="T:Microsoft.Owin.Security.CertificateSubjectKeyIdentifierValidator">
+      <summary>Provides pinned certificate validation based on the subject key identifier of the certificate.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.CertificateSubjectKeyIdentifierValidator.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.Security.CertificateSubjectKeyIdentifierValidator" /> class.</summary>
+      <param name="validSubjectKeyIdentifiers">A set of subject key identifiers which are valid for an HTTPS request.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.CertificateSubjectKeyIdentifierValidator.Validate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)"></member>
+    <member name="T:Microsoft.Owin.Security.CertificateSubjectPublicKeyInfoValidator">
+      <summary>Provides method to validate the certificate subject public key info.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.CertificateSubjectPublicKeyInfoValidator.#ctor(System.Collections.Generic.IEnumerable{System.String},Microsoft.Owin.Security.SubjectPublicKeyInfoAlgorithm)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.Security.CertificateSubjectPublicKeyInfoValidator" /> class.</summary>
+      <param name="validBase64EncodedSubjectPublicKeyInfoHashes">The subject public key info to validate.</param>
+      <param name="algorithm">The algorithm used to encrypt the public key.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.CertificateSubjectPublicKeyInfoValidator.Validate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+      <summary>Validates the subject public key info.</summary>
+      <returns>true if the subject public key info is valid; otherwise, false.</returns>
+      <param name="sender">The certificate sender.</param>
+      <param name="certificate">The certificate that contains the subject public key info.</param>
+      <param name="chain">The certificate chain.</param>
+      <param name="sslPolicyErrors">The SSL policy errors.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.CertificateThumbprintValidator">
+      <summary>Represents the thumbprint validator.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.CertificateThumbprintValidator.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Owin.Security.CertificateThumbprintValidator" /> class.</summary>
+      <param name="validThumbprints">The valid thumbprints.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.CertificateThumbprintValidator.Validate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+      <summary>Indicates whether the validator validates the certificate.</summary>
+      <returns>true if the validator validates the certificate; otherwise, false.</returns>
+      <param name="sender">The sender.</param>
+      <param name="certificate">The certificate.</param>
+      <param name="chain">The chain.</param>
+      <param name="sslPolicyErrors">The errors in Ssl policy.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.ICertificateValidator">
+      <summary>Represents the list of objects being validated by the certificate validator.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.ICertificateValidator.Validate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+      <summary>Indicates whether certificate was validated by the validator.</summary>
+      <returns>true if the certificate was validated; otherwise, false.</returns>
+      <param name="sender">The sender.</param>
+      <param name="certificate">The certificate.</param>
+      <param name="chain">The chain.</param>
+      <param name="sslPolicyErrors">The Ssl Policy Errors.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.ISecureDataFormat`1">
+      <summary>Represents the data to secrure.</summary>
+      <typeparam name="TData">The generic type data.</typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Security.ISecureDataFormat`1.Protect(`0)">
+      <summary>Protects a data so that it cannot be formatted.</summary>
+      <returns>A data to protect.</returns>
+      <param name="data">The data.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.ISecureDataFormat`1.Unprotect(System.String)">
+      <summary>Decrypts the data in a specified text.</summary>
+      <returns>The data to decrypt.</returns>
+      <param name="protectedText">The protected text.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.SubjectPublicKeyInfoAlgorithm">
+      <summary>The algorithm used to generate the subject public key information blob hashes.</summary>
+    </member>
+    <member name="F:Microsoft.Owin.Security.SubjectPublicKeyInfoAlgorithm.Sha1">
+      <summary />
+    </member>
+    <member name="F:Microsoft.Owin.Security.SubjectPublicKeyInfoAlgorithm.Sha256">
+      <summary />
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.PropertiesDataFormat"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.PropertiesDataFormat.#ctor(Microsoft.Owin.Security.DataProtection.IDataProtector)"></member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.SecureDataFormat`1">
+      <typeparam name="TData"></typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.SecureDataFormat`1.#ctor(Microsoft.Owin.Security.DataHandler.Serializer.IDataSerializer{`0},Microsoft.Owin.Security.DataProtection.IDataProtector,Microsoft.Owin.Security.DataHandler.Encoder.ITextEncoder)"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.SecureDataFormat`1.Protect(`0)"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.SecureDataFormat`1.Unprotect(System.String)"></member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.TicketDataFormat"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.TicketDataFormat.#ctor(Microsoft.Owin.Security.DataProtection.IDataProtector)"></member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.Encoder.Base64TextEncoder">
+      <summary>表示 base64 文本格式编码器。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Encoder.Base64TextEncoder.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.DataHandler.Encoder.Base64TextEncoder" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Encoder.Base64TextEncoder.Decode(System.String)">
+      <summary>为指定的文本解码。</summary>
+      <returns>表示解码数据的 <see cref="T:System.Byte" />。</returns>
+      <param name="text">要解码的文本。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Encoder.Base64TextEncoder.Encode(System.Byte[])">
+      <summary>将数据转换为 base64 格式的字符串。</summary>
+      <returns>已转换为 base64 格式的数据字符串。</returns>
+      <param name="data">要转换的数据。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.Encoder.Base64UrlTextEncoder">
+      <summary>表示 Base64Url 文本格式编码器。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Encoder.Base64UrlTextEncoder.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.DataHandler.Encoder.Base64UrlTextEncoder" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Encoder.Base64UrlTextEncoder.Decode(System.String)">
+      <summary>为指定的文本解码。</summary>
+      <returns>表示解码数据的 <see cref="T:System.Byte" />。</returns>
+      <param name="text">要解码的文本。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Encoder.Base64UrlTextEncoder.Encode(System.Byte[])">
+      <summary>将数据转换为 Base64Url 格式的字符串。</summary>
+      <returns>已转换为 Base64Url 格式的数据字符串。</returns>
+      <param name="data">要转换的数据。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.Encoder.ITextEncoder">
+      <summary>表示文本编码器的接口。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Encoder.ITextEncoder.Decode(System.String)">
+      <summary>为指定的文本解码。</summary>
+      <returns>表示解码数据的 <see cref="T:System.Byte" />。</returns>
+      <param name="text">要解码的文本。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Encoder.ITextEncoder.Encode(System.Byte[])">
+      <summary>将数据转换为字符串。</summary>
+      <returns>转换的数据字符串。</returns>
+      <param name="data">要转换的数据。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.Encoder.TextEncodings">
+      <summary>表示文本编码。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.DataHandler.Encoder.TextEncodings.Base64">
+      <summary>获取 Base64 文本编码器。</summary>
+      <returns>Base64 文本编码器。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.DataHandler.Encoder.TextEncodings.Base64Url">
+      <summary>获取 Base64Url 文本编码器。</summary>
+      <returns>Base64Url 文本编码器。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.Serializer.DataSerializers">
+      <summary>提供数据序列化程序。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.DataHandler.Serializer.DataSerializers.Properties"></member>
+    <member name="P:Microsoft.Owin.Security.DataHandler.Serializer.DataSerializers.Ticket">
+      <summary>获取或设置票证数据序列化程序。</summary>
+      <returns>票证数据序列化程序。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.Serializer.IDataSerializer`1">
+      <summary>表示数据序列化程序的接口。</summary>
+      <typeparam name="TModel">数据模型的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.IDataSerializer`1.Deserialize(System.Byte[])">
+      <summary>反序列化指定的数据。</summary>
+      <param name="data">要反序列化的数据。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.IDataSerializer`1.Serialize(`0)">
+      <summary>使用给定的模型序列化数据。</summary>
+      <param name="model">数据模型。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.Serializer.PropertiesSerializer"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.PropertiesSerializer.#ctor"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.PropertiesSerializer.Deserialize(System.Byte[])"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.PropertiesSerializer.Read(System.IO.BinaryReader)"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.PropertiesSerializer.Serialize(Microsoft.Owin.Security.AuthenticationProperties)"></member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.PropertiesSerializer.Write(System.IO.BinaryWriter,Microsoft.Owin.Security.AuthenticationProperties)"></member>
+    <member name="T:Microsoft.Owin.Security.DataHandler.Serializer.TicketSerializer">
+      <summary>表示票证序列化程序。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.TicketSerializer.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.DataHandler.Serializer.TicketSerializer" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.TicketSerializer.Deserialize(System.Byte[])">
+      <summary>反序列化票证数据。</summary>
+      <returns>正在反序列化的数据。</returns>
+      <param name="data">要反序列化的数据。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.TicketSerializer.Read(System.IO.BinaryReader)">
+      <summary>从读取器中读取指定的数据。</summary>
+      <returns>正在读取的数据。</returns>
+      <param name="reader">要从中读取的读取器。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.TicketSerializer.Serialize(Microsoft.Owin.Security.AuthenticationTicket)">
+      <summary>使用给定的模型序列化数据。</summary>
+      <param name="model">数据模型。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataHandler.Serializer.TicketSerializer.Write(System.IO.BinaryWriter,Microsoft.Owin.Security.AuthenticationTicket)">
+      <summary>从指定的写入器写入数据。</summary>
+      <param name="writer">写入器。</param>
+      <param name="model">数据模型。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataProtection.AppBuilderExtensions">
+      <summary>应用程序生成器扩展。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.AppBuilderExtensions.CreateDataProtector(Owin.IAppBuilder,System.String[])"></member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.AppBuilderExtensions.GetDataProtectionProvider(Owin.IAppBuilder)">
+      <summary>检索应用程序的数据保护提供程序。</summary>
+      <returns>要获取的 <see cref="T:Microsoft.Owin.Security.DataProtection.IDataProtectionProvider" /> 对象。</returns>
+      <param name="app">应用程序生成器。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.AppBuilderExtensions.SetDataProtectionProvider(Owin.IAppBuilder,Microsoft.Owin.Security.DataProtection.IDataProtectionProvider)">
+      <summary>设置数据保护提供程序。</summary>
+      <param name="app">应用程序生成器。</param>
+      <param name="dataProtectionProvider">要设置的数据保护提供程序。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataProtection.DpapiDataProtectionProvider">
+      <summary>用于提供从数据保护 API 派生的数据保护服务。当应用程序未由 ASP.NET 托管，并且所有进程以相同的域标识运行时，这是最佳的数据保护选项。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.DpapiDataProtectionProvider.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.DataProtection.DpapiDataProtectionProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.DpapiDataProtectionProvider.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.DpapiDataProtectionProvider.Create(System.String[])">
+      <summary> 返回提供程序的 IDataProtection 的新实例。</summary>
+      <returns>数据保护服务的实例。</returns>
+      <param name="purposes">附加的熵，用于确保只针对正当目的取消保护受保护的数据。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataProtection.IDataProtectionProvider">
+      <summary> 用于创建 IDataProtection 实例的工厂。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.IDataProtectionProvider.Create(System.String[])">
+      <summary> 返回提供程序的 IDataProtection 的新实例。</summary>
+      <returns>数据保护服务的实例。</returns>
+      <param name="purposes">附加的熵，用于确保只针对正当目的取消保护受保护的数据。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.DataProtection.IDataProtector">
+      <summary> 用于保护和取消保护数据的服务。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.IDataProtector.Protect(System.Byte[])">
+      <summary> 调用该项可以保护用户数据。</summary>
+      <param name="userData">必须保护的原始数据。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.DataProtection.IDataProtector.Unprotect(System.Byte[])">
+      <summary> 调用该项可以取消保护用户数据。</summary>
+      <param name="protectedData">对相同的 IDataProtection 服务调用 Protect 后返回的字节数组。</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler">
+      <summary> 大多数身份验证中间件执行的基于请求的工作的基类。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.ApplyResponseChallengeAsync"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.ApplyResponseCoreAsync"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.ApplyResponseGrantAsync"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.AuthenticateAsync"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.AuthenticateCoreAsync"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.BaseInitializeAsync(Microsoft.Owin.Security.AuthenticationOptions,Microsoft.Owin.IOwinContext)"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.Context"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.GenerateCorrelationId(Microsoft.Owin.Security.AuthenticationProperties)"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.Helper"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.InitializeCoreAsync"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.InvokeAsync"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.Request"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.RequestPathBase"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.Response"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.TeardownCoreAsync"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.ValidateCorrelationId(Microsoft.Owin.Security.AuthenticationProperties,Microsoft.Owin.Logging.ILogger)"></member>
+    <member name="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler`1">
+      <summary>大多数身份验证中间件执行的基于请求的工作的基类。</summary>
+      <typeparam name="TOptions">选项的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler`1" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler`1.Options"></member>
+    <member name="T:Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1">
+      <summary>表示身份验证中间件。</summary>
+      <typeparam name="TOptions">身份验证选项的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.#ctor(Microsoft.Owin.OwinMiddleware,`0)">
+      <summary>初始化 <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1" /> 类的新实例。</summary>
+      <param name="next">下一个 OWIN 中间件。</param>
+      <param name="options">身份验证选项。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.CreateHandler">
+      <summary>创建身份验证处理程序。</summary>
+      <returns>创建的 <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.Invoke(Microsoft.Owin.IOwinContext)"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.Options">
+      <summary>获取或设置身份验证选项。</summary>
+      <returns>完成身份验证的任务。</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext.#ctor(Microsoft.Owin.IOwinContext,Microsoft.Owin.Security.ISecureDataFormat{Microsoft.Owin.Security.AuthenticationTicket},Microsoft.Owin.Security.AuthenticationTicket)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext.SerializeTicket"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext.SetToken(System.String)"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext.Ticket"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext.Token"></member>
+    <member name="T:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.#ctor"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.Create(Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.CreateAsync(Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext)"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.OnCreate"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.OnCreateAsync"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.OnReceive"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.OnReceiveAsync"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.Receive(Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenProvider.ReceiveAsync(Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext)"></member>
+    <member name="T:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext.#ctor(Microsoft.Owin.IOwinContext,Microsoft.Owin.Security.ISecureDataFormat{Microsoft.Owin.Security.AuthenticationTicket},System.String)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext.DeserializeTicket(System.String)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext.SetTicket(Microsoft.Owin.Security.AuthenticationTicket)"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext.Ticket"></member>
+    <member name="P:Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext.Token"></member>
+    <member name="T:Microsoft.Owin.Security.Infrastructure.IAuthenticationTokenProvider"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.IAuthenticationTokenProvider.Create(Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.IAuthenticationTokenProvider.CreateAsync(Microsoft.Owin.Security.Infrastructure.AuthenticationTokenCreateContext)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.IAuthenticationTokenProvider.Receive(Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.IAuthenticationTokenProvider.ReceiveAsync(Microsoft.Owin.Security.Infrastructure.AuthenticationTokenReceiveContext)"></member>
+    <member name="T:Microsoft.Owin.Security.Infrastructure.SecurityHelper">
+      <summary>在实现身份验证中间件时使用的帮助器代码。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.#ctor(Microsoft.Owin.IOwinContext)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.AddUserIdentity(System.Security.Principal.IIdentity)">
+      <summary>将一个附加的 ClaimsIdentity 添加到“server.User”环境键中的 ClaimsPrincipal。</summary>
+      <param name="identity">此帮助器的标识。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.Equals(Microsoft.Owin.Security.Infrastructure.SecurityHelper)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.Equals(System.Object)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.GetHashCode"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.LookupChallenge(System.String,Microsoft.Owin.Security.AuthenticationMode)">
+      <summary>查找特定身份验证中间件的响应质询详细信息。</summary>
+      <returns>为中间件的行为方式提供指示的信息。</returns>
+      <param name="authenticationType">要查找的身份验证类型。</param>
+      <param name="authenticationMode">中间件在运行时所处的身份验证模式。</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.LookupSignIn(System.String)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.LookupSignOut(System.String,Microsoft.Owin.Security.AuthenticationMode)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.op_Equality(Microsoft.Owin.Security.Infrastructure.SecurityHelper,Microsoft.Owin.Security.Infrastructure.SecurityHelper)"></member>
+    <member name="M:Microsoft.Owin.Security.Infrastructure.SecurityHelper.op_Inequality(Microsoft.Owin.Security.Infrastructure.SecurityHelper,Microsoft.Owin.Security.Infrastructure.SecurityHelper)"></member>
+    <member name="T:Microsoft.Owin.Security.Provider.BaseContext">
+      <summary>表示基上下文。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Provider.BaseContext.#ctor(Microsoft.Owin.IOwinContext)"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.BaseContext.OwinContext"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.BaseContext.Request"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.BaseContext.Response"></member>
+    <member name="T:Microsoft.Owin.Security.Provider.BaseContext`1">
+      <summary>Base class used for certain event contexts</summary>
+      <typeparam name="TOptions"></typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Provider.BaseContext`1.#ctor(Microsoft.Owin.IOwinContext,`0)"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.BaseContext`1.Options"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.BaseContext`1.OwinContext"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.BaseContext`1.Request"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.BaseContext`1.Response"></member>
+    <member name="T:Microsoft.Owin.Security.Provider.EndpointContext">
+      <summary>表示终结点上下文。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Provider.EndpointContext.#ctor(Microsoft.Owin.IOwinContext)"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.EndpointContext.IsRequestCompleted">
+      <summary>获取或设置一个值，该值指示此上下文的请求是否已完成。</summary>
+      <returns>如果此上下文的请求已完成，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Provider.EndpointContext.RequestCompleted">
+      <summary>指示上下文的已完成请求。</summary>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Provider.EndpointContext`1">
+      <summary>Base class used for certain event contexts</summary>
+      <typeparam name="TOptions"></typeparam>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Provider.EndpointContext`1.#ctor(Microsoft.Owin.IOwinContext,`0)">
+      <summary>Creates an instance of this context</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Provider.EndpointContext`1.IsRequestCompleted">
+      <summary>True if the request should not be processed further by other components.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Provider.EndpointContext`1.RequestCompleted">
+      <summary>Prevents the request from being processed further by other components. IsRequestCompleted becomes true after calling.</summary>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Provider.ReturnEndpointContext">
+      <summary>表示返回终结点上下文。</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Provider.ReturnEndpointContext.#ctor(Microsoft.Owin.IOwinContext,Microsoft.Owin.Security.AuthenticationTicket)"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.ReturnEndpointContext.Identity">
+      <summary>获取或设置此上下文的标识。</summary>
+      <returns>此上下文的标识。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Provider.ReturnEndpointContext.Properties"></member>
+    <member name="P:Microsoft.Owin.Security.Provider.ReturnEndpointContext.RedirectUri">
+      <summary>获取或设置返回此上下文时使用的 URI。</summary>
+      <returns>返回此上下文时使用的 URI。</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Provider.ReturnEndpointContext.SignInAsAuthenticationType">
+      <summary>获取或设置作为身份验证类型登录的上下文。</summary>
+      <returns>作为身份验证类型登录的上下文。</returns>
+    </member>
+  </members>
+</doc>

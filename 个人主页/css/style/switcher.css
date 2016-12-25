@@ -1,0 +1,138 @@
+.styler{
+    display: none;
+}
+
+
+
+.styler {
+    background-color: #ffffff;
+    left: 0;
+    position: fixed;
+    top: 50px;
+    width: 278px;
+    z-index: 9999;
+	box-shadow:0 -4px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.styler div {
+    padding: 0 8px 5px;
+}
+
+
+.styler h3 {
+    padding-left: 12px;
+    text-transform: none;
+	color:#666666;
+	font-size:13px;
+}
+
+
+.styler h2 {
+    background: #ffffff;
+    color: #333333;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 12px;
+	border-right:1px solid #efefef;
+	border-bottom:1px solid #efefef;
+	font-family: 'open_sansbold',Arial,sans-serif;
+	font-size:13px;
+}
+
+
+.styler a.toggle {
+    background: #ffffff;
+    display: block;
+    font-size: 22px;
+    height: 44px;
+    line-height: 44px;
+    position:absolute;
+    right: -44px;
+    text-align: center;
+    top: 0;
+    width: 44px;
+	color:#333333;
+	box-shadow:0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.list {
+    list-style: outside none none;
+    margin: 0 0 10px 10px;
+    overflow: hidden;
+}
+.list li {
+    float: left;
+    margin: 1px;
+}
+.list li a {
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+
+
+.reset {
+    margin: 0 0 15px 1px;
+}
+.reset a {
+
+    margin-left: 10px;
+
+}
+
+.clr-1 {background: #cd5353 ;}
+.clr-2 {background: #558e6a ;}
+.clr-3 {background: #00b4d9 ;}
+.clr-4 {background: #14c8c8 ;}
+.clr-5{background: #7369b9 ;}
+.clr-6 {background: #d0a068 ;}
+.clr-7{background: #ead22d ;}
+.clr-8 {background: #eb874f ;}
+.clr-9 {background: #fdc62a ;}
+.clr-10 {background: #ef3e96 ;}
+.clr-11 {background: #009473 ;}
+.clr-12 {background: #55606e ;}
+.clr-13 {background: #fe8178 ;}
+.clr-14 {background: #734854 ;}
+.clr-15{background: #113f59 ;}
+.clr-16 {background: #ffd42d ;}
+.clr-17{background: #a0ce4e ;}
+.clr-18 {background: #2997ab ;}
+.clr-19 {background: #4765a0 ;}
+.clr-20 {background: #e53f51 ;}
+.clr-21 {background: #065e52 ;}
+.clr-22 {background: #0487cc ;}
+.clr-23 {background: #cea525 ;}
+.clr-24 {background: #ff5b24 ;}
+.clr-25{background: #9c8061 ;}
+.clr-26 {background: #cf4075 ;}
+.clr-27{background: #d50e46 ;}
+.clr-28 {background: #b565a7 ;}
+.clr-29 {background: #c3512f ;}
+.clr-30 {background: #9661ab ;}
+.clr-31 {background: #82b541 ;}
+.clr-32 {background: #9197a3 ;}
+.clr-33 {background: #3b5998 ;}
+
+
+
+
+
+
+
+.styler a.toggle i {
+	display:block;
+  -webkit-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
+
+}
+
+
+
+
+
