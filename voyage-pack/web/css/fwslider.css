@@ -1,0 +1,214 @@
+/* ------------------------------- 3. Slider Styles ------------------------------- */
+
+#fwslider {
+    position: relative;
+    width:100%;
+}
+
+#fwslider .slide {
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+    width:100%;
+}
+
+#fwslider .slide img {
+    width:100%;
+}
+
+#fwslider .slidePrev {
+   
+   
+    position: absolute;
+    top:50%;
+    left:-50px;
+    
+    z-index: 10;
+}
+
+#fwslider .slidePrev span {
+	background-image: url("../images/sliderarrows.png");
+	width: 60px;
+	height: 60px;
+	float: left;
+	background-position: -60px 0px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#fwslider .slideNext {
+   
+  
+    position: absolute;
+    top:50%;
+    right:-50px;
+   
+    z-index: 10;
+}
+
+#fwslider .slideNext span {
+ 	 background-image: url("../images/sliderarrows.png");
+	width: 60px;
+	height: 60px;
+	float: left;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#fwslider .timers {
+    height:4px;
+    position: absolute;
+    bottom:15px;
+    right:0;
+    z-index: 3;
+}
+.slide-btns{
+	margin-top: 0.5em;
+}
+.slide-btns ul li{
+	display:inline-block;
+	margin-right: 1em;
+}
+.slide-btns ul li a{
+	color: #FFF;
+	font-size: 0.72em;
+	text-transform: uppercase;
+	border:solid 2px #FFF;
+	border-radius: 5px;
+	padding: 0.8em 1.2em;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	display: block;
+}
+.slide-btns ul li a:hover{
+	background:#1DD2AF;
+	border:solid 2px #1DD2AF;
+}
+#fwslider .timer {
+    height:4px;
+    width:40px;
+    background-color: #fff;
+    float:left;
+    margin-right: 10px;
+}
+
+#fwslider .progress {
+    height:4px;
+    width:0%;
+    background-color:#2C3E50;
+    float:left;
+}
+
+#fwslider .slide_content {
+    top:0;
+    left:0;
+    position: absolute;
+    width:100%;
+    height:100%;
+    min-height:650px;
+}
+
+#fwslider .slide_content_wrap { /* Slider Text Content Container Style */
+    max-width:1280px;
+    margin: 13.5% auto 0;
+}
+
+#fwslider .title {  /* Slider Title Style */
+	text-transform: capitalize;
+	color: #fff;
+	font-size:3em;
+	padding:5px 20px 0;
+	font-style: normal;
+	font-weight: 600;
+	text-transform:uppercase;
+	border:none;
+	text-align:center;
+}
+
+#fwslider .description { /* Slider Description Style */
+    opacity: 0;
+    color:#ffffff;
+    font-size: 1.5em;
+    padding:0px 0 1em;
+    clear:both;
+   	text-align:center;
+}
+/* ------------------------------- 4. Media Query Max Width 1300, Min Width 720 ------------------------------- */
+@media only screen and (min-width:720px) and (max-width: 1300px) {
+
+    #fwslider .slide_content_wrap { margin-top: 12%;}
+    #fwslider .title { font-size:2.5em; }
+     #fwslider .description { /*-- font-size:12px;--*/font-size:1.3em;}
+
+}
+
+/* ------------------------------- 5. Media Query Max Width 719 ------------------------------- */
+
+@media only screen and (max-width:719px) {
+
+    #fwslider .slide_content_wrap { display:block; }
+    #fwslider .timers { display:none; }
+    #fwslider .slide_content {cursor: pointer;}
+    #fwslider .slide_content_wrap {
+	max-width: 1280px;
+	margin: 11.5% auto 0;
+	}
+
+}
+@media only screen and (max-width:768px) and (min-width:640px){
+	 #fwslider .title { font-size:2em; }
+     #fwslider .description { /*-- font-size:12px;--*/font-size:1em;}
+}
+@media only screen and (max-width:640px) and (min-width:480px){
+	 #fwslider .title { font-size:1.8em; }
+     #fwslider .description { /*-- font-size:12px;--*/font-size: 0.875em;
+padding: 0.5em 0 0.2em;}
+}
+@media only screen and (max-width:480px) and (min-width:320px){
+	 #fwslider .title { font-size:1.8em; }
+     #fwslider .description { 
+     	font-size: 0.875em;
+		padding: 0.5em 0 0.2em;
+		width: 70%;
+		margin: 0 auto;
+		}
+	#fwslider .slide_content_wrap {
+	max-width: 1280px;
+	margin: 7.5% auto 0;
+	}
+}
+@media only screen and (max-width:320px) and (min-width:240px){
+	 #fwslider .title { font-size: 1.2em; }
+     #fwslider .description { 
+     	font-size: 0.8em;
+		padding: 0.5em 0 0.2em;
+		width: 90%;
+		margin: 0 auto;
+		}
+	#fwslider .slide_content_wrap {
+	max-width: 1280px;
+	margin: 2.5% auto 0;
+	}
+	#fwslider .slideNext span,#fwslider .slidePrev span{
+		display:none;
+	}
+	.slide-btns ul li a {
+		color: #FFF;
+		font-size: 0.72em;
+		text-transform: uppercase;
+		border: solid 1px #FFF;
+		padding: 0.7em 0.8em;
+		transition: 0.5s all;
+		-webkit-transition: 0.5s all;
+		-moz-transition: 0.5s all;
+		-o-transition: 0.5s all;
+		display: block;
+	}
+	.sb-search-input {
+			font-size: 12px;
+	}
+}

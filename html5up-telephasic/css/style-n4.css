@@ -1,0 +1,162 @@
+/*
+	Telephasic 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+		line-height: 1.5em;
+		font-size: 16pt;
+	}
+
+	span.extra
+	{
+		display: inline;
+	}
+
+	.features
+	{
+		margin-bottom: 0;
+	}
+
+	.actions.major
+	{
+		padding-top: 2em;
+	}
+
+	/* Sections/Articles */
+	
+		section,
+		article,
+		.row > section,
+		.row > article
+		{
+			margin-bottom: 3em;
+		}
+
+		section:last-child,
+		article:last-child,
+		.row > section:last-child,
+		.row > article:last-child
+		{
+			margin-bottom: 0;
+		}
+
+	/* Lists */
+
+		ul.menu
+		{
+			text-align: center;
+		}
+		
+			ul.menu li
+			{
+				display: block;
+				border: 0;
+				padding: 0;
+				margin: 0;
+				line-height: 2em;
+			}
+			
+			ul.menu li:first-child
+			{
+				border-top: 0;
+			}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#nav
+	{
+		font-size: 0.9em;
+	}
+
+		#nav > ul
+		{
+		}
+
+			#nav > ul > li
+			{
+			}
+
+				#nav > ul > li > span,
+				#nav > ul > li > a
+				{
+					padding: 0.25em 0.5em 0.25em 0.5em;
+				}
+
+/*********************************************************************************/
+/* Hero                                                                          */
+/*********************************************************************************/
+
+	#hero
+	{
+	}
+	
+		#hero h2
+		{
+			font-size: 2.5em;
+		}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+		padding-bottom: 0;
+	}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	#content
+	{
+		margin-bottom: 3em;
+	}
+
+	.right-sidebar #content
+	{
+		padding-right: 0;
+	}
+
+	.left-sidebar #content
+	{
+		padding-left: 0;
+	}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	#sidebar
+	{
+		margin-bottom: 3em;
+	}
+	
+		#sidebar section
+		{
+			border-top: 0;
+			margin-top: 0;
+			padding-top: 1em;
+		}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+	}
+		
+		#footer header.major
+		{
+			margin-bottom: 1.5em;
+		}

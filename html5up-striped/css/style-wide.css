@@ -1,0 +1,162 @@
+/*
+	Striped 2.5 by HTML5 Up!
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+		min-width: 1200px;
+	}
+	
+	input, textarea
+	{
+		font-size: 11pt;
+	}
+
+	body
+	{
+		font-size: 12pt;
+	}
+
+/*********************************************************************************/
+/* Section/Article Types                                                         */
+/*********************************************************************************/
+
+	.is-post
+	{
+	}
+	
+		.is-post h2
+		{
+			font-size: 3.25em;
+			line-height: 1.25em;
+		}
+
+		.is-post header
+		{
+			padding: 2.75em 0 0 0;
+			margin: 0 0 3em 0;
+		}
+
+		.is-post .byline
+		{
+			font-size: 2.25em;
+			line-height: 1.5em;
+			position: relative;
+			top: -0.65em;
+			margin-bottom: -0.65em;
+		}
+
+		.is-post .info
+		{
+			position: absolute;
+			width: 5.5em;
+			overflow: hidden;
+			background-color: #fff;
+			left: -10.5em;
+			top: 0;
+			padding: 1.5em 1em 1.5em 1em;
+			border-top-left-radius: 0.4em;
+			border-bottom-left-radius: 0.4em;
+			box-shadow: 0.25em 0 0 0 #fbfbfb, 0 0 0.25em 0em rgba(0,0,0,0.25);
+		}
+
+			.is-post .info:after
+			{
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url('images/bg2.png');
+				opacity: 0.5;
+				z-index: 0;
+			}
+
+			.is-post .info .date
+			{
+				position: relative;
+				z-index: 1;
+				font-family: 'Open Sans Condensed', sans-serif;
+				font-weight: 400;
+				text-align: center;
+				display: block;
+				font-size: 1.5em;
+				color: #999;
+				border-bottom: solid 1px #ddd;
+				padding: 0 0 1em 0;
+				margin: 0 0 0.75em 0;
+			}
+
+				.is-post .info .date .year,
+				.is-post .info .date .month span
+				{
+					display: none;
+				}
+			
+				.is-post .info .date .day
+				{
+					display: block;
+					margin: 0.25em 0 0 0;
+					font-size: 1.5em;
+					font-weight: 700;
+					color: #1b252a;
+				}
+		
+			.is-post .info .stats
+			{
+				position: relative;
+				z-index: 1;
+			}
+			
+				.is-post .info .stats li
+				{
+					margin: 0.35em 0 0 0;
+				}
+				
+				.is-post .info .stats li a
+				{
+					position: relative;
+					display: block;
+					text-align: right;
+					padding: 0 0.5em 0 0.5em;
+				}
+				
+					.is-post .info .stats li a:before
+					{
+						position: absolute;
+						left: 0;
+						top: 50%;
+						margin-top: -0.5em;
+						font-size: 1.35em;
+						width: 1.5em;
+						text-align: center;
+						opacity: 0.35;
+					}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+		
+	#content
+	{
+		padding: 3em 5em 8em 5em;
+	}
+
+		body.left-sidebar #content
+		{
+			margin-left: 21em; /* = sidebar width + 7 */
+		}
+		
+		body.right-sidebar #content
+		{
+			margin-right: 14em; /* = sidebar width */
+			margin-left: 7em;
+		}

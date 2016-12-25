@@ -1,0 +1,138 @@
+/*
+	Telephasic 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	header
+	{
+	}
+	
+		header br
+		{
+			display: none;
+		}
+
+	/* Buttons */
+		
+		.button
+		{
+			padding-left: 1.25em;
+			padding-right: 1.25em;
+		}
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	.wrapper
+	{
+		padding: 4em 2em 4em 2em;
+	}
+
+	#header-wrapper
+	{
+		padding: 5em 0 1em 0;
+	}
+	
+		.homepage #header-wrapper
+		{
+			padding: 5em 0 4em 0;
+		}
+	
+	#promo-wrapper
+	{
+		padding: 2em;
+	}
+
+	#footer-wrapper
+	{
+		padding: 4em 2em 4em 2em;
+	}
+	
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#nav
+	{
+		position: relative;
+		margin: 0.5em 0 0 0;
+		line-height: 2.25em;
+		height: 2.25em;
+	}
+
+		#nav > ul
+		{
+		}
+
+			#nav > ul > li,
+			#nav > ul > li.break
+			{
+				margin-left: 0;
+			}
+			
+	.dropotron.level-0
+	{
+		margin-top: 1.1em;
+	}
+
+/*********************************************************************************/
+/* Hero                                                                          */
+/*********************************************************************************/
+
+	#hero
+	{
+		padding: 3.5em 4em 0 4em;
+	}
+	
+		#hero h2
+		{
+			font-size: 2.75em;
+		}
+		
+		#hero p
+		{
+		}
+		
+			#hero p br
+			{
+				display: none;
+			}
+
+/*********************************************************************************/
+/* Promo                                                                         */
+/*********************************************************************************/
+
+	#promo
+	{
+		padding: 1.75em 2.5em 1.75em 2.5em;
+		display: inline-block;
+	}
+	
+		#promo .button
+		{
+			font-size: 1.25em;
+		}
+		
+		#promo h2
+		{
+			display: block;
+			margin: 0 0 1em 0;
+			font-size: 1.5em;
+		}
+		
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		padding-top: 2em;
+		margin-top: 3em;
+	}

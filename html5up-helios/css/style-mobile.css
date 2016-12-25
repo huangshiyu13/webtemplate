@@ -1,0 +1,316 @@
+/*
+	Helios 1.5 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		font-size: 12.5pt;
+		line-height: 1.5em;
+	}
+
+	h2
+	{
+		font-size: 1.75em;
+	}
+	
+	h3
+	{
+		font-size: 1.25em;
+	}
+	
+	.byline
+	{
+		font-size: 1.25em;
+	}
+
+	ul.icons
+	{
+		font-size: 1em;
+		padding: 0.35em 0.5em 0.35em 0.5em;
+	}
+
+		ul.icons li
+		{
+		}
+
+			ul.icons li a
+			{
+				width: 2.25em;
+			}
+
+	hr
+	{
+		top: 3em;
+		margin-bottom: 6em;
+	}
+
+	section,
+	article,
+	.row > section,
+	.row > article
+	{
+		margin-bottom: 2em;
+	}
+	
+	section:last-child,
+	article:last-child
+	{
+		margin-bottom: 0;
+	}
+
+	/* Images */
+
+		.image
+		{
+		}
+
+			.image.featured
+			{
+				margin: 0 0 2em 0;
+			}
+			
+			.image.left
+			{
+				margin: 0 1em 1em 0;
+			}
+			
+			.image.centered
+			{
+				margin: 0 0 1em 0;
+			}
+
+	/* Lists */
+
+		ul.menu
+		{
+			height: auto;
+			text-align: center;
+		}
+		
+			ul.menu li
+			{
+				display: block;
+				border: 0;
+				padding: 0.75em 0 0 0;
+				margin: 0;
+			}
+			
+			ul.menu li:first-child
+			{
+				padding-top: 0;
+			}
+
+/*********************************************************************************/
+/* UI                                                                            */
+/*********************************************************************************/
+
+	#navButton
+	{
+	}
+
+		#navButton .toggle
+		{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+			#navButton .toggle:before
+			{
+				content: '';
+				display: block;
+				width: 80px;
+				height: 30px;
+				position: absolute;
+				left: 50%;
+				margin-left: -40px;
+				background: url('images/toggle.svg') center center no-repeat, rgba(132,128,136,0.75);
+				border-top: 0;
+				border-radius: 0 0 0.35em 0.35em;
+			}
+
+	#navPanel
+	{
+		position: relative;
+		background: #1f1920;
+		box-shadow: inset 0px -2px 5px 0px rgba(0,0,0,0.25);
+		font-size: 1em;
+	}
+
+		#navPanel:before
+		{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url('images/overlay.png');
+			background-size: 128px 128px;
+		}
+
+		#navPanel .link
+		{
+			position: relative;
+			z-index: 1;
+			display: block;
+			text-decoration: none;
+			padding: 0.5em;
+			color: #ddd;
+			border: 0;
+			border-top: dotted 1px rgba(255,255,255,0.05);
+		}
+		
+			#navPanel .link:first-child
+			{
+				border-top: 0;
+			}
+		
+			#navPanel .link.depth-0
+			{
+				color: #fff;
+				font-weight: 600;
+			}
+
+			#navPanel .indent-1 { display: inline-block; width: 1em; }
+			#navPanel .indent-2 { display: inline-block; width: 2em; }
+			#navPanel .indent-3 { display: inline-block; width: 3em; }
+			#navPanel .indent-4 { display: inline-block; width: 4em; }
+			#navPanel .indent-5 { display: inline-block; width: 5em; }
+			#navPanel .depth-0 { color: #fff; }
+
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+	.wrapper
+	{
+		padding: 3em 1em 3em 1em;
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		padding-bottom: 0;
+		background-attachment: scroll;
+	}
+
+		#header .inner
+		{
+			padding-top: 1.5em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+		#header h1
+		{
+			font-size: 2.5em;
+		}
+		
+			.homepage #header h1
+			{
+				font-size: 2.5em;
+			}
+		
+		#header .byline
+		{
+			font-size: 1em;
+		}
+
+		#header hr
+		{
+			top: 1em;
+			margin-bottom: 2.5em;
+		}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	#nav
+	{
+		display: none;
+	}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		padding: 3em 2em 3em 2em;
+	}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	#sidebar
+	{
+	}
+	
+		#sidebar > hr:first-of-type
+		{
+			display: block;
+		}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+	}
+	
+		#main > header
+		{
+			text-align: center;
+		}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	
+/*********************************************************************************/
+/* Carousel                                                                      */
+/*********************************************************************************/
+
+	.carousel
+	{
+		padding: 0.5em 0 0.5em 0;
+	}
+
+		.carousel .reel
+		{
+			padding: 0 0.5em 0 0.5em;
+		}
+	
+		.carousel article
+		{
+			width: 14em;
+			padding-bottom: 2em;
+			margin: 0 0.5em 0 0;
+		}
+
+			.carousel article .image
+			{
+				margin-bottom: 2em;
+			}

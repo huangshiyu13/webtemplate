@@ -1,0 +1,213 @@
+/*
+	Striped 2.5 by HTML5 Up!
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	html
+	{
+	}
+
+	input, textarea
+	{
+	}
+
+	body
+	{
+		line-height: 1.75em;
+		height: 100%;
+	}
+	
+	h2
+	{
+		font-size: 1.2em;
+	}
+
+	h3, h4, h5, h6
+	{
+		font-size: 1em;
+	}
+
+	.button
+	{
+		display: inline-block;
+		padding: 0.5em 2em 0.5em 2em;
+	}
+	
+		.button-small
+		{
+			font-size: 0.85em;
+			padding: 0.35em 1.5em 0.35em 1.5em;
+		}
+	
+		.button-big
+		{
+			font-size: 1.25em;
+			padding: 0.75em 2em 0.75em 2em;
+		}
+	
+		.button-huge
+		{
+			font-size: 1.5em;
+			padding: 0.75em 2em 0.75em 2em;
+		}
+
+	.pager
+	{
+		padding: 3em 0 0 0;
+	}
+
+		.pager .pages
+		{
+		}
+
+		.pager .previous
+		{
+			margin-right: 0.6em;
+		}
+
+		.pager .next
+		{
+			margin-left: 0.2em;
+		}
+
+		.pager .pages a
+		{
+			width: 2.75em;
+			height: 2.75em;
+			line-height: 2.75em;
+		}
+		
+		.pager .button
+		{
+			height: 2.75em;
+			padding-top: 0;
+			padding-bottom: 0;
+			line-height: 2.75em;
+		}
+
+/*********************************************************************************/
+/* Section/Article Types                                                         */
+/*********************************************************************************/
+
+	.is-post
+	{
+	}
+
+		.is-post .info
+		{
+		}
+
+			.is-post .info .stats
+			{
+			}
+			
+				.is-post .info .stats li a
+				{
+					border-radius: 0.4em;
+					opacity: 0.5;
+					-moz-transition: opacity .25s ease-in-out, background-color .25s ease-in-out;
+					-webkit-transition: opacity .25s ease-in-out, background-color .25s ease-in-out;
+					-o-transition: opacity .25s ease-in-out, background-color .25s ease-in-out;
+					-ms-transition: opacity .25s ease-in-out, background-color .25s ease-in-out;
+					transition: opacity .25s ease-in-out, background-color .25s ease-in-out;
+				}
+
+					.is-post .info .stats li:hover a
+					{
+						background-color: #f4f4f4;
+						opacity: 1.0;
+					}
+		
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+	#logo
+	{
+		background-color: #c94663;
+		background-image: url('images/bg1.png');
+		padding: 1.75em 0.5em 1.75em 0.5em;
+		border-radius: 0.4em;
+		text-align: center;
+		box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.15), 0 0.025em 0.15em 0em rgba(0,0,0,0.25);
+	}
+
+		#logo h1
+		{
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-weight: 700;
+			color: #fff;
+			font-size: 2em;
+			letter-spacing: 0.1em;
+		}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+		
+	#content
+	{
+		box-shadow: 0 0 0.25em 0em rgba(0,0,0,0.25);
+	}
+
+	#content-inner
+	{
+		/*
+			This sets an upper limit on your page content to prevent it
+			from looking insane on really wide displays. It's currently set
+			to the width of the sample post images, but you can change it to
+			whatever you like (or remove it entirely).
+		*/
+		max-width: 1038px;
+	}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+		
+	#sidebar
+	{
+		position: absolute;
+		top: 0;
+		padding: 3em 1.35em 1em 1.15em;
+		width: 14em; /* = whatever you want */
+		background: #364050 url('images/bg1.png');
+		box-shadow: inset -0.1em 0em 0.35em 0em rgba(0,0,0,0.15);
+	}
+
+		body.left-sidebar #sidebar
+		{
+			left: 0;
+		}
+	
+		body.right-sidebar #sidebar
+		{
+			right: 0;
+		}
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		margin: 2em 0 0 0;
+		text-align: center;
+	}
+
+		#copyright p
+		{
+			font-size: 0.8em;
+			line-height: 2em;
+		}
+	
+		#copyright:before
+		{
+			height: 0.5em;
+			margin: 0 0 2em 0;
+		}

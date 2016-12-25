@@ -1,0 +1,32 @@
+/*
+	Telephasic 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+	}
+
+		#footer ul.divided
+		{
+			margin: 0;
+		}
+
+			#footer ul.divided li:first-child
+			{
+				border-top: solid 1px #d2d7dc;
+				padding-top: 2em;
+				margin-top: 1em;
+			}
+
+			#footer ul.divided:first-child li:first-child
+			{
+				border-top: 0;
+				padding-top: 0;
+				margin-top: 0;
+			}

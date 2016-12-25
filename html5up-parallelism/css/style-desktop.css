@@ -1,0 +1,264 @@
+/*
+	Parallelism 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	html
+	{
+		height: 100%;
+	}
+
+	body
+	{
+		padding: 0;
+		font-size: 12pt;
+		line-height: 1.75em;
+		height: 100%;
+		min-height: 450px;
+		min-width: 1000px;
+	}
+
+		body:before
+		{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75));
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75));
+			background: -o-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75));
+			background: -ms-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75));
+			background: linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75));
+		}
+
+	ul.contact
+	{
+	}
+	
+		ul.contact li
+		{
+			margin-left: 1em;
+		}
+
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+	#wrapper
+	{
+		height: 100%;
+		overflow: hidden;
+		-webkit-transition: -webkit-filter 0.25s ease-in-out;
+	}
+	
+		#wrapper.overlayed
+		{
+			-webkit-filter: blur(3px);
+		}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+		width: 100%;
+		position: absolute;
+	}
+
+/*********************************************************************************/
+/* Reel                                                                          */
+/*********************************************************************************/
+
+	#reel 
+	{
+		position: relative;
+	}
+
+		#reel .item
+		{
+			display: block;
+			float: left;
+			position: relative;
+			overflow: hidden;
+		}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		padding: 3.25em 2em 0 2em;
+		min-height: 212px;
+	}
+
+		#header h1
+		{
+			font-size: 2.5em;
+			margin: 0 0 0.5em 0;
+		}
+		
+		#header p
+		{
+			font-size: 1.4em;
+			line-height: 1.25em;
+		}
+		
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+	}
+	
+		#footer h2
+		{
+			font-size: 2.25em;
+			margin: 0 0 1em 0;
+		}
+		
+		#footer .left
+		{
+			padding: 2em;
+			text-align: left;
+		}
+		
+		#footer .right
+		{
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 2em;
+			text-align: right;
+		}
+		
+/*********************************************************************************/
+/* Popup                                                                         */
+/*********************************************************************************/
+
+	.poptrox-popup
+	{
+		background: #1a1f2c;
+		background: rgba(18,21,29,0.9);
+		box-shadow: 0px 0px 0px 20px #fff, 0px 10px 60px 10px rgba(8,11,19,0.55);
+	}
+	
+		.poptrox-popup .loader
+		{
+			display: block;
+			width: 48px;
+			height: 48px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -24px 0 0 -24px;
+			background: url('images/loader.gif');
+			opacity: 0.25;
+		}
+		
+		.poptrox-popup .caption
+		{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: #1a1f2c;
+			background: rgba(18,21,29,0.85);
+			display: block;
+			width: 100%;
+			line-height: 75px;
+			text-align: center;
+			font-size: 1.25em;
+			color: #fff;
+		}
+		
+		.poptrox-popup .nav-next,
+		.poptrox-popup .nav-previous,
+		.poptrox-popup .closer
+		{
+			text-decoration: none;
+			font-weight: normal;
+			font-style: normal;
+			-moz-transition: opacity 0.25s ease-in-out;
+			-webkit-transition: opacity 0.25s ease-in-out;
+			-o-transition: opacity 0.25s ease-in-out;
+			-ms-transition: opacity 0.25s ease-in-out;
+			transition: opacity 0.25s ease-in-out;
+			opacity: 0.35;
+		}
+
+			.poptrox-popup .nav-next:hover,
+			.poptrox-popup .nav-previous:hover,
+			.poptrox-popup .closer:hover
+			{
+				opacity: 1.0;
+			}
+		
+		.poptrox-popup .nav-next,
+		.poptrox-popup .nav-previous
+		{
+			width: 150px;
+			height: 75px;
+			position: absolute;
+			bottom: 0;
+			cursor: pointer;
+			font-size: 3em;
+			line-height: 75px;
+		}
+		
+		.poptrox-popup .nav-next
+		{
+			right: 0;
+			text-align: right;
+			padding-right: 30px;
+		}
+
+			.poptrox-popup .nav-next:before
+			{
+				content: "\003e";
+			}
+		
+		.poptrox-popup .nav-previous
+		{
+			left: 0;
+			text-align: left;
+			padding-left: 30px;
+		}
+
+			.poptrox-popup .nav-previous:before
+			{
+				content: "\003c";
+			}
+		
+		.poptrox-popup .closer
+		{
+			width: 35px;
+			height: 35px;
+			font-size: 2em;
+			line-height: 35px;
+			text-align: center;
+			position: absolute;
+			top: -70px;
+			right: -70px;
+			cursor: pointer;
+			border-radius: 40px;
+			box-shadow: 0px 0px 0px 1px #fff;
+		}
+		
+			.poptrox-popup .closer:before
+			{
+				content: "\00d7";
+			}

@@ -1,0 +1,411 @@
+/*
+	TXT 2.5 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+		line-height: 1.75em;
+		font-size: 10pt;
+		letter-spacing: 0;
+	}
+
+	h2, h3, h4, h5, h6
+	{
+		font-size: 1.5em;
+		margin: 0 0 0.5em 0;
+	}
+
+	h2.major
+	{
+		text-align: left;
+		margin: 0.775em 0 0.75em 0;
+	}
+
+		h2.major span
+		{
+			top: -0.775em;
+			padding: 0 1em 0 0;
+		}
+
+	h3
+	{
+		font-size: 1.25em;
+	}
+
+	section,
+	article
+	{
+		clear: both;
+		margin: 0 0 2.5em 0 !important;
+	}
+	
+	.byline
+	{
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+
+	.button
+	{
+		font-size: 1.5em;
+		width: 100%;
+		padding: 0.75em 0 0.75em 0;
+		margin-top: 0.5em;
+		text-align: center;
+	}
+
+	ul.special
+	{
+	}
+	
+		ul.special li
+		{
+			margin: 0.1em;
+		}
+
+			ul.special li:hover
+			{
+				top: 0;
+			}
+
+			ul.special a
+			{
+				width: 9.5em;
+				height: 9.5em;
+				border-radius: 4.75em;
+			}
+			
+				ul.special a:before
+				{
+					font-size: 64px;
+				}
+
+	ul.contact
+	{
+	}
+	
+		ul.contact li
+		{
+			margin: 0 0.15em 0.35em 0;
+			top: 0 !important;
+		}
+
+/*********************************************************************************/
+/* Section + Article Types                                                       */
+/*********************************************************************************/
+
+	.is-highlight
+	{
+	}
+	
+		.is-highlight .special
+		{
+		}
+
+		.is-highlight h2
+		{
+			font-size: 2.25em;
+			line-height: 1.25em;
+			margin: 0 0 0.5em 0;
+		}
+
+		.is-highlight .byline
+		{
+			margin: 0 0 0.75em 0;
+		}
+		
+		.is-highlight br
+		{
+			display: none;
+		}
+
+	.is-post-summary
+	{
+		margin: 0 !important;
+	}
+	
+		.is-post-summary h3
+		{
+			font-size: 1.25em;
+		}
+
+	.is-post
+	{
+	}
+
+		.is-post h3
+		{
+			font-size: 2.25em;
+			line-height: 1.25em;
+			margin: 0 0 0.5em 0;
+		}
+
+		.is-post .byline
+		{
+			margin: 0 0 0.75em 0;
+		}
+		
+		.is-post ul.meta
+		{
+			margin: 0 0 0.5em 0;
+		}
+
+		.is-post header
+		{
+			margin: 0 0 3em 0;
+		}
+
+	.is-page-content
+	{
+	}
+
+		.is-page-content h2
+		{
+			font-size: 2.25em;
+			line-height: 1.25em;
+			margin: 0 0 0.5em 0;
+		}
+
+		.is-page-content .byline
+		{
+			margin: 0 0 0.75em 0;
+		}
+		
+		.is-page-content ul.meta
+		{
+			margin: 0 0 0.5em 0;
+		}
+
+		.is-page-content header
+		{
+			margin: 0 0 3em 0;
+		}
+
+/*********************************************************************************/
+/* Sidebar + Content                                                             */
+/*********************************************************************************/
+
+	.sidebar
+	{
+		border-top: solid 2px #e7eae8;
+		padding-top: 5em;
+		margin-top: 5em;
+
+		border-bottom: solid 2px #e7eae8;
+		padding-bottom: 5em;
+	}
+	
+		.sidebar > section
+		{
+			margin: 0 0 5em 0 !important;
+		}
+	
+		.sidebar > section:last-child
+		{
+			margin: 0 !important;
+		}
+	
+	.content
+	{
+		padding-top: 3em;
+	}
+
+		.homepage .content
+		{
+			padding-top: 0;
+		}
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	#banner-wrapper
+	{
+		padding: 12em 0 8em 0;
+	}
+	
+	#main-wrapper
+	{
+		border-top-width: 0px;
+		border-bottom-width: 5px;
+	}
+
+		.homepage #main-wrapper
+		{
+			border-top-width: 15px;
+		}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		display: none;
+	}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	#nav
+	{
+		display: none;
+	}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		padding: 3em 20px 3em 20px;
+		margin: 0 !important;
+	}
+
+		#banner h2
+		{
+			font-size: 2.25em;
+			line-height: 1.25em;
+			margin: 0 0 0.5em 0;
+		}
+
+		#banner .byline
+		{
+			margin: 0 0 0.5em 0;
+		}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+		padding: 1em 20px 1em 20px;
+	}
+
+		#main > .row
+		{
+			padding: 2em 0 2em 0;
+		}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		padding: 4em 20px 2em 20px;
+	}
+	
+		#footer > .row
+		{
+			padding: 1em 0 1em 0;
+		}
+
+/*********************************************************************************/
+/* Mobile UI                                                                     */
+/*********************************************************************************/
+
+	#titleBar
+	{
+		background: rgba(21, 38, 23, 0.8);
+	}
+
+		#titleBar:after
+		{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url('images/overlay.png');
+			opacity: 0.15;
+		}
+
+		#titleBar .title
+		{
+			display: block;
+			position: relative;
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 1.25em;
+			line-height: 44px;
+			color: #fff;
+			z-index: 1000;
+			text-align: center;
+		}
+
+		#titleBar .toggle
+		{
+			position: absolute;
+			left: 0;
+			top: 0;
+			text-indent: -9999px;
+			background: #e3daa8 url('images/mobileUI-site-nav-opener-bg.svg') 8px 14px no-repeat;
+			width: 44px;
+			height: 44px;
+			z-index: 1001;
+		}
+
+			#titleBar .toggle:active
+			{
+				background-color: #ebe3b2;
+			}
+
+	#navPanel
+	{
+		background: -moz-linear-gradient(top, #252c27, #000);
+		background: -webkit-linear-gradient(top, #252c27, #000);
+		background: -o-linear-gradient(top, #252c27, #000);
+		background: -ms-linear-gradient(top, #252c27, #000);
+		background: linear-gradient(top, #252c27, #000);
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 1.25em;
+		box-shadow: inset -3px 0px 10px 0px rgba(0,0,0,0.25);
+	}
+
+		#navPanel nav
+		{
+			position: relative;
+			z-index: 1000;
+		}
+
+		#navPanel:after
+		{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url('images/overlay.png');
+			opacity: 0.25;
+		}
+
+		#navPanel .link
+		{
+			display: block;
+			color: inherit;
+			text-decoration: none;
+			height: 44px;
+			line-height: 44px;
+			padding: 0 1em 0 1em;
+			color: #fff;
+			border-top: solid 2px rgba(87, 93, 89, 0.15);
+		}
+		
+		#navPanel .link:first-child
+		{
+			border-top: 0;
+		}

@@ -1,0 +1,35 @@
+/*
+	Helios 1.5 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		font-size: 14pt;
+		line-height: 1.75em;
+	}
+	
+/*********************************************************************************/
+/* Carousel                                                                      */
+/*********************************************************************************/
+
+	.carousel
+	{
+		padding: 1.5em 0 1.5em 0;
+	}
+	
+		.carousel .reel
+		{
+			padding: 0 1.5em 0 1.5em;
+		}
+
+		.carousel article
+		{
+			width: 18em;
+			margin: 0 1.25em 0 0;
+		}

@@ -1,0 +1,115 @@
+/*
+	Striped 2.5 by HTML5 Up!
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+		min-width: 1000px;
+	}
+	
+	input, textarea
+	{
+		font-size: 10.5pt;
+	}
+
+	body
+	{
+		font-size: 11pt;
+	}
+
+/*********************************************************************************/
+/* Section/Article Types                                                         */
+/*********************************************************************************/
+
+	.is-post
+	{
+	}
+
+		.is-post h2
+		{
+			font-size: 3.25em;
+			line-height: 1.25em;
+		}
+
+		.is-post header
+		{
+			padding: 1.5em 0 0 0;
+			margin: 0 0 3em 0;
+		}
+
+		.is-post .byline
+		{
+			font-size: 1.75em;
+			line-height: 1.5em;
+			position: relative;
+			top: -0.75em;
+			margin-bottom: -0.75em;
+		}
+
+		.is-post .info
+		{
+			width: 100%;
+			padding: 1em 0 0 0;
+			position: relative;
+			top: -2em;
+		}
+
+			.is-post .info .date
+			{
+				display: inline;
+			}
+
+			.is-post .info .stats
+			{
+				display: inline;
+				border-left: solid 1px #ddd;
+				margin-left: 1.15em;
+				padding-left: 0.25em;
+			}
+
+				.is-post .info .stats li
+				{
+					display: inline-block;
+					margin-left: 0.25em;
+				}
+
+					.is-post .info .stats li a
+					{
+						display: inline-block;
+						padding-right: 0.5em;
+					}
+					
+						.is-post .info .stats li a:before
+						{
+							position: relative;
+							width: 1.75em;
+							text-align: center;
+							margin-right: 0.25em;
+							opacity: 0.35;
+							top: 0.1em;
+						}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+		
+	#content
+	{
+		padding: 2em 3em 6em 3em;
+	}
+
+		body.left-sidebar #content
+		{
+			margin-left: 14em; /* = sidebar width */
+		}
+		
+		body.right-sidebar #content
+		{
+			margin-right: 14em; /* = sidebar width */
+		}

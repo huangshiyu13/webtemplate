@@ -1,0 +1,248 @@
+.main_box{
+	/* Important parameters of style start */
+	position: relative;
+	overflow: hidden;
+	/* Important parameters of style end */
+}
+.main_box > ../images{
+	display: block;
+	z-index: 10;
+}
+.main_box > a{
+	text-decoration: none;
+}
+.popup{
+
+	/* Important parameters of style start */
+	display: none;
+	text-align: center;
+	position: absolute;
+	z-index: 40;
+	/* Important parameters of style end */
+	height: 70px;
+	width: 70px;
+	background: #753ffe url(../images/up.png) no-repeat center center;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Firefox */
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Safari and Chrome */
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=120, color=#000000, strength=2);
+}
+.popup2{
+
+	/* Important parameters of style start */
+	display: none;
+	text-align: center;
+	position: absolute;
+	z-index: 40;
+	/* Important parameters of style end */
+	height: 70px;
+	width: 70px;
+	background: #fe3f3f url(../images/down.png) no-repeat center center;
+}
+.r_board{
+
+	/* Important parameters of style start */
+	display: none;
+	text-align: center;
+	position: absolute;
+	z-index: 40;
+	/* Important parameters of style end */
+	height: 60px;
+	width: 200px;
+	background: #2BBFBD;
+}
+.overlayPop{
+
+	/* Important parameters of style start */
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	margin: 0;
+	/* Important parameters of style end */	
+
+	background: #000;
+}
+
+/* Text Content */
+
+.overlayText{
+
+	/* Important parameters of style start */
+	position: absolute;
+	overflow: hidden;
+	display: none;
+	z-index: 20;
+	margin: 0;
+	/* Important parameters of style end */	
+
+	background: #000;
+	color: white;
+
+}
+.overlayRubTop{
+	/* Important parameters of style start */
+	position: absolute;
+	overflow: hidden;
+	z-index: 20;
+	margin: 0;
+	border: 0 none;
+	/* Important parameters of style end */
+	background: #000;
+}
+.overlayRubBottom{
+	/* Important parameters of style start */
+	position: absolute;
+	overflow: hidden;
+	z-index: 20;
+	margin: 0;
+	border: 0 none;
+	/* Important parameters of style end */	
+	background: #000;
+}
+
+.textBox{
+
+	/* Important parameters of style start */
+	position: absolute;
+	float: left;
+	z-index: 30;
+	margin: 0;
+	padding: 0;
+	/* Important parameters of style end */	
+}
+
+.textTitle {
+
+	/* Important parameters of style start */
+	position: absolute;
+	float: left;
+	z-index: 30;
+	margin: 0;
+	/* Important parameters of style end */	
+	margin-left: 10px;
+	padding: 5px;
+	font-weight: bold;
+}
+.user_style4 .popup {
+	border-radius: 85px;
+	height: 50px;
+	width: 50px;
+	background:  url(../images/arrow.png) no-repeat center center #fff;
+}
+.user_style4 .popup2 {
+	border-radius: 85px;
+	height: 50px;
+	width: 50px;
+	background: url(../images/microphone.png) no-repeat center center #FFF;
+}
+.user_style12 .popup{
+	width: 300px;
+	height: 140px;
+	padding: 10px;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0, 0.7);
+	color: #fff;
+	text-align: left;
+
+}
+.user_style13 .popup{
+	width: 220px;
+	height: 160px;
+	padding: 10px;
+	background:  url(img/phone.png) no-repeat center center;
+	color: #fff;
+	text-align: left;
+	-moz-box-shadow: none; /* Firefox */
+    -webkit-box-shadow: none; /* Safari and Chrome */
+    box-shadow: none;
+    filter: progid: none;
+
+}
+
+.user_style5 .textTitle{
+	background: #fff;
+	color: #000;
+	font-size: 26px;
+	margin-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.user_style6 .textTitle{
+	background: #1d9beb;
+	color: #fff;
+	font-size: 26px;
+	padding: 70px 20px 20px 20px;
+}
+.user_style7 .textTitle{
+	background: #ff237a;
+	color: #fff;
+	font-size: 22px;
+}
+
+.user_style11 .textTitle{
+	background: #c71deb;
+	color: #fff;
+	font-size: 38px;
+	border-radius: 90px;
+	margin-top: 50px;
+	margin-left: 50px;
+	height: 90px;
+	width: 90px;
+	line-height: 90px;
+	text-align: center;
+}
+
+
+.user_style5 .textBox {
+	background: rgb(63,31,65);
+	background: rgba(63,31,65, 0.7);
+	color: #d9c3db;
+	margin-bottom: 30px;
+	font-size: 14px;
+	opacity: 0.8;
+}
+.user_style5 a{
+	color: #f5e7f6;
+}
+.user_style6 .textBox {
+	background: #fff;
+	color: #000;
+	margin-bottom: 30px;
+}
+.user_style7 .textBox {
+	background: #26a4fb;
+	color: #fff;
+
+}
+.user_style11 .textBox {
+	background: #5B9E00;
+	color: #fff;
+
+}
+
+
+.user_style8 .r_board{
+	line-height: 60px;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 4px;
+	background: #8f59ff;
+}
+.user_style9 .r_board{
+	line-height: 90px;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 90px;
+	height: 90px;
+	width: 90px;
+	background: #b2f749 url(img/arrow.png) no-repeat center center;
+}
+.user_style10 .r_board{
+	line-height: 80px;
+	color: #fff;
+	font-size: 30px;
+	height: 80px;
+	width: 80px;
+	background: #fa1d56;
+}

@@ -1,0 +1,296 @@
+/*
+	Overflow 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	*
+	{
+		text-shadow: none !important;
+	}
+
+	body,input,textarea,select
+	{
+		line-height: 1.5em;
+		font-size: 12pt;
+		letter-spacing: 0;
+	}
+
+	h2, h3, h4, h5, h6
+	{
+		font-size: 1em;
+	}
+	
+	h2
+	{
+		font-size: 1.25em;
+		letter-spacing: 4px;
+	}
+
+	/* Lists */
+
+		ul.default
+		{
+		}
+		
+			ul.default li
+			{
+				padding-left: 0.5em;
+			}		
+
+		ul.icons
+		{
+		}	
+		
+			ul.icons li
+			{
+			}
+			
+				ul.icons a
+				{
+					width: 2em;
+					height: 2em;
+					line-height: 2em;
+				}
+
+		ul.menu
+		{
+		}
+		
+			ul.menu li
+			{
+				display: block;
+				padding: 0;
+				border: 0;
+				margin: 1em 0 0 0;
+			}
+			
+			ul.menu li:first-child
+			{
+				margin-top: 0;
+			}
+
+		ul.actions
+		{
+		}
+		
+			ul.actions li
+			{
+				display: block;
+				margin: 1em 0 0 0;
+			}
+			
+			ul.actions li:first-child
+			{
+				margin-top: 0;
+			}
+
+		ol.default
+		{
+		}
+
+			ol.default li
+			{
+				padding-left: 0.25em;
+			}
+
+	/* Buttons */
+		
+		.button
+		{
+			padding: 0.75em 0 0.75em 0;
+			width: 100%;
+			max-width: 320px;
+		}
+
+	/* Box */
+
+		.box
+		{
+			margin-top: 4.5em;
+		}
+
+			.box:after
+			{
+				top: -4.5em;
+				height: 4.5em;
+			}
+		
+			.box:before
+			{
+				width: 45px;
+				height: 33px;
+				top: -2.25em;
+				margin-left: -22.5px;
+				margin-top: -16.5px;
+				background-size: 45px 33px;
+			}
+
+			.box.style1
+			{
+				padding: 0;
+				text-align: center;
+			}
+			
+				.box.style1 .image
+				{
+					position: relative !important;
+					left: 0 !important;
+					width: 100% !important;
+					height: auto !important;
+				}
+
+					.box.style1 .image img
+					{
+						position: relative;
+						height: auto;
+						width: 100%;
+					}
+
+				.box.style1 .inner
+				{
+					margin: 0 !important;
+					padding: 2em 1.25em 2em 1.25em !important;
+				}
+
+			.box.style2
+			{
+			}
+			
+				.box.style2 .inner
+				{
+				}
+
+					.box.style2 .inner .row
+					{
+					}
+					
+						.box.style2 .inner .row:before
+						{
+							display: none;
+						}
+
+					.box.style2 .inner .image
+					{
+						padding: 0;
+						max-width: 250px;
+						margin: 0 auto 20px auto;
+					}
+
+			.box.style3
+			{
+				padding: 2em 1.25em 2em 1.25em;
+			}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		padding: 6em 0 6em 0;
+	}
+
+		#header header
+		{
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+		
+			#header header h1
+			{
+				font-size: 1.75em;
+				letter-spacing: 6px;
+			}
+
+		#header footer
+		{
+			bottom: 4.5em;
+			padding: 0 2em 0 2em;
+		}
+
+			#header footer:after
+			{
+				bottom: -4.5em;
+				left: 50%;
+				height: 4.5em;
+			}
+		
+			#header footer:before
+			{
+				width: 45px;
+				height: 33px;
+				bottom: -2.25em;
+				margin-left: -22.5px;
+				margin-bottom: -16.5px;
+				background-size: 45px 33px;
+			}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		padding: 3em 2em 3em 2em;
+		background-size: auto 150%;
+	}
+
+		#banner header
+		{
+			margin: 0 0 1em 0;
+		}
+		
+			#banner header h2
+			{
+				font-size: 1.5em;
+				letter-spacing: 6px;
+			}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+	
+	#footer
+	{
+	}
+
+		#footer .icons
+		{
+			padding: 0.5em 1.25em 0.5em 1.25em;
+		}
+		
+		#footer .copyright
+		{
+			font-size: 1em;
+			margin: 0 0 4em 0;
+		}
+
+/*********************************************************************************/
+/* Poptrox                                                                       */
+/*********************************************************************************/
+
+	.poptrox-popup
+	{
+	}
+	
+		.poptrox-popup .nav-next,
+		.poptrox-popup .nav-previous
+		{
+			opacity: 1.0;
+		}
+
+			.poptrox-popup .nav-next:before,
+			.poptrox-popup .nav-previous:before
+			{
+				display: none;
+			}
+		
+		.poptrox-popup .closer
+		{
+			opacity: 0.5;
+		}

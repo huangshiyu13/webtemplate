@@ -1,0 +1,105 @@
+/*
+	Overflow 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+		background: #203936 url('../images/bg-alt.jpg') top center no-repeat;
+		background-size: 100% auto;
+	}
+
+	body,input,textarea,select
+	{
+		font-size: 14pt;
+	}
+
+	h1,h2,h3,h4,h5,h6
+	{
+		line-height: 1.5em;
+	}
+
+	header
+	{
+	}
+	
+		header p
+		{
+			margin: 0.25em 0 0 0;
+			padding: 0 0 0.5em 0;
+		}
+
+	/* Box */
+
+		.box
+		{
+			position: relative;
+		}
+		
+			.box section
+			{
+				margin: 0 0 2em 0;
+			}
+			
+			.box.style1
+			{
+				padding: 2.5em 2em 2.5em 2em;
+			}
+
+				.box.style1.right
+				{
+				}
+					
+					.box.style1.right .inner
+					{
+						padding-left: 2em;
+					}
+				
+				.box.style1.left
+				{
+				}
+					
+					.box.style1.left .inner
+					{
+						padding-right: 2em;
+					}
+
+			.box.style2
+			{
+			}
+
+				.box.style2 header
+				{
+					padding: 2em;
+				}
+
+				.box.style2 .inner
+				{
+					position: relative;
+					padding: 30px 0 0 0;
+				}
+
+			.box.style3
+			{
+				padding: 2.5em 2em 2.5em 2em;
+			}
+			
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		padding: 3.5em;
+		background-size: 200% auto;
+	}
+
+		#banner br
+		{
+			display: none;
+		}

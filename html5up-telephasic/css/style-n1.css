@@ -1,0 +1,362 @@
+/*
+	Telephasic 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		line-height: 1.75em;
+		font-size: 15pt;
+	}
+
+	header
+	{
+		margin-bottom: 1.5em;
+	}
+
+		header > span
+		{
+			padding: 0.75em 0 1em 0;
+			font-size: 1.5em;
+			line-height: 1.5em;
+		}
+
+	h2
+	{
+		font-size: 2em;
+		line-height: 1.25em;
+	}
+
+	h3
+	{
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#logo
+	{
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 50%;
+		width: 15em;
+		margin-left: -7.5em;
+		height: 4em;
+	}
+	
+		#logo a
+		{
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: 4em;
+			background: rgba(255,255,255,0.15);
+			border: 0;
+			border: solid 1px rgba(255,255,255,0.75);
+			border-top: 0;
+			border-radius: 0 0 0.35em 0.35em;
+			color: #fff;
+			display: inline-block;
+			font-weight: 600;
+			letter-spacing: 3px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+	#nav
+	{
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 4em;
+		line-height: 4em;
+	}
+
+		#nav > ul
+		{
+			margin: 0;
+		}
+
+			#nav > ul > li > ul
+			{
+				display: none;
+			}
+		
+			#nav > ul > li
+			{
+				display: inline-block;
+				margin-left: 1em;
+			}
+			
+				#nav > ul > li > span,
+				#nav > ul > li > a
+				{
+					color: #fff;
+					text-decoration: none;
+					outline: 0;
+					border: 0;
+					border: solid 1px rgba(255,255,255,0);
+					border-radius: 0.35em;
+					padding: 0.3em 1em 0.3em 1em;
+					-moz-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+					-webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+					-o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+					-ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+					transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+				}
+
+			#nav > ul > li.active > span,
+			#nav > ul > li.active > a
+			{
+				border-color: rgba(255,255,255,0.75);
+				background-color: rgba(255,255,255,0.15);
+				color: #fff;
+			}
+
+			#nav > ul > li:first-child
+			{
+				margin-left: 0;
+			}
+
+			#nav > ul > li.break
+			{
+				margin-left: 20em;
+			}
+			
+	.dropotron
+	{
+		text-align: left;
+		line-height: 2em;
+		border-radius: 0.35em;
+		min-width: 12em;
+		background: #fff;
+		line-height: 1em;
+		padding: 0.85em 0 0.85em 0;
+		box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
+		margin-top: -0.8em;
+	}
+
+		.dropotron a,
+		.dropotron span
+		{
+			display: block;
+			padding: 0.65em 1em 0.65em 1em;
+			border-top: solid 1px #e8e8e8;
+			border-bottom: 0;
+		}
+		
+		.dropotron li:first-child > a,
+		.dropotron li:first-child > span
+		{
+			border-top: 0;
+		}
+	
+		.dropotron li.active > a,
+		.dropotron li.active > span
+		{
+			color: #f35858;
+		}
+	
+	.dropotron.level-0
+	{
+		font-size: 0.9em;
+		margin-top: 0;
+	}
+
+		.dropotron.level-0:before
+		{
+			content: '';
+			position: absolute;
+			top: -1em;
+			width: 1em;
+			height: 1em;
+			border-bottom: solid 0.5em #fff;
+			border-left: solid 0.5em rgba(255,255,255,0);
+			border-right: solid 0.5em rgba(255,255,255,0);
+		}
+
+		.dropotron.level-0.center:before
+		{
+			left: 50%;
+			margin-left: -0.5em;
+		}
+
+		.dropotron.level-0.left:before
+		{
+			left: 1em;
+		}
+
+		.dropotron.level-0.right:before
+		{
+			right: 1em;
+		}
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	.wrapper
+	{
+		padding: 6em 0 6em 0;
+	}
+
+	#header-wrapper
+	{
+		padding: 4em 0 2em 0;
+		
+		/*
+			If you're using your own background image here, change this to:
+
+			background-size: cover;
+		*/
+		
+		background-size: 100% 620%;
+	}
+	
+		.homepage #header-wrapper
+		{
+			padding: 10em 0 6em 0;
+
+			/*
+				If you're using your own background image here, change this to:
+
+				background-size: cover;
+			*/
+
+			background-size: 100% 100%;
+		}
+	
+	#promo-wrapper
+	{
+		padding: 6em 0 6em 0;
+	}
+	
+	#footer-wrapper
+	{
+		padding: 6em 0 6em 0;
+	}
+
+/*********************************************************************************/
+/* Hero                                                                          */
+/*********************************************************************************/
+
+	#hero
+	{
+	}
+	
+		#hero h2
+		{
+			font-size: 3em;
+		}
+		
+		#hero p
+		{
+			font-size: 1.5em;
+			line-height: 1.5em;
+		}
+		
+		#hero .button
+		{
+			font-size: 1.25em;
+		}
+		
+/*********************************************************************************/
+/* Promo                                                                         */
+/*********************************************************************************/
+
+	#promo
+	{
+		padding: 1.75em 2.5em 1.75em 2.5em;
+		display: inline-block;
+	}
+	
+		#promo .button
+		{
+			font-size: 1.25em;
+		}
+		
+		#promo h2
+		{
+			display: inline-block;
+			margin-right: 1em;
+			font-size: 1.75em;
+		}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+		padding-bottom: 4em;
+	}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	.right-sidebar #content
+	{
+		padding-right: 2em;
+	}
+
+	.left-sidebar #content
+	{
+		padding-left: 2em;
+	}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	#sidebar
+	{
+	}
+	
+		#sidebar section
+		{
+			border-top: solid 1px #d2d7dc;
+			margin-top: 3em;
+			padding-top: 3em;
+		}
+
+		#sidebar section:first-child
+		{
+			border-top: 0;
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+	}
+		
+		#footer header.major
+		{
+			margin-bottom: 3em;
+		}
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		padding-top: 4em;
+		margin-top: 6em;
+	}

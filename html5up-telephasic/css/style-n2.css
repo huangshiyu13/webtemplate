@@ -1,0 +1,63 @@
+/*
+	Telephasic 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+		line-height: 1.5em;
+		font-size: 14pt;
+	}
+	
+	span.extra
+	{
+		display: none;
+	}
+	
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	.wrapper
+	{
+		padding: 5em 0 5em 0;
+	}
+
+	#header-wrapper
+	{
+		padding: 2em 0 em 0;
+	}
+
+		.homepage #header-wrapper
+		{
+			padding: 8em 0 4em 0;
+		}
+		
+	#promo-wrapper
+	{
+		padding: 5em 0 5em 0;
+	}
+	
+	#footer-wrapper
+	{
+		padding: 5em 0 5em 0;
+	}
+	
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	.right-sidebar #content
+	{
+		padding-right: 1em;
+	}
+
+	.left-sidebar #content
+	{
+		padding-left: 1em;
+	}
