@@ -1,0 +1,64 @@
+<div class="middle-section-grid">
+					<div class="date text-center">
+						<h5>Jul 2013</h5>
+						<p>to</p>
+						<h5>Present</h5>
+						<label class="span1"></label>
+					</div>
+					<div class="event">
+						<h4>Undergraduate, <span> Tsinghua University</span></h4>
+						<p>CST</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="middle-section-grid">
+					<div class="date text-center">
+						<h5>Jun 2012</h5>
+						<p>to</p>
+						<h5>Jun 2009</h5>
+						<label class="span2"></label>
+					</div>
+					<div class="event">
+						<h4>Team Lead Graphics, <span> i2c Inc</span></h4>
+						<p>Worked closely with designers & developers to ensure all on-going work was completed according to the requirements using latest design trends and best coding practices.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="middle-section-grid">
+					<div class="date text-center">
+						<h5>Jun 2009</h5>
+						<p>to</p>
+						<h5>Nov 2007</h5>
+						<label class="span3"></label>
+					</div>
+					<div class="event">
+						<h4>Sr. Graphic Designer, <span> i2c Inc</span></h4>
+						<p>Worked on web design, front-end development, print campaigns, video editing and flash animations for online and offline modes.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="middle-section-grid">
+					<div class="date text-center">
+						<h5>Nov 2007</h5>
+						<p>to</p>
+						<h5>Aug 2006</h5>
+						<label class="span4"></label>
+					</div>
+					<div class="event">
+						<h4>Sr. Graphic Designer, <span>  e-commerce 123</span></h4>
+						<p>Transformed complex, high quality PSD designs into hand-coded standards compliant with CSS/XHTML. Worked directly with clients to update and maintain their websites.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="middle-section-grid">
+					<div class="date text-center">
+						<h5>Aug 2006</h5>
+						<p>to</p>
+						<h5>Mar 2004</h5>
+					</div>
+					<div class="event span_66">
+						<h4>Graphic Designer, <span>  Acacia Creations</span></h4>
+						<p>Worked on corporate identity, flash animated & HTML based web design & development.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.search {
+
+    padding: 0px;
+
+}
+
+div.search input[type=text] {
+
+    padding: 0px 20px;
+    padding-top: 10px;
+    height: 15px;
+    width: 340px;
+
+}
+
+div.search input[type=submit] {
+
+    height: 45px;
+
+}
+
+div.not-found-text {
+
+    top: 65px;
+
+}
+
+div.planet {
+
+    z-index: -1;
+
+}
+
+div.dog {
+
+    z-index: 1000;
+
+}
+
+div.dog-bubble {
+
+    filter: alpha(opacity=0); /* IE6+ */
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); /* IE6+ */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+    padding-top: 35px;
+
+}

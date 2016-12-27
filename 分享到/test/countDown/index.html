@@ -1,0 +1,15 @@
+
+<body>
+<script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+<script src="./jquery.countdown.min.js" type="text/javascript" charset="utf-8"></script>
+
+<span class="papersubmissiondeadline-countdown">08 weeks 05 days 17:24:10</span>
+
+<script type="text/javascript">
+    var countdownDate = "2017/02/24 23:59:00 UTC";
+  $('.papersubmissiondeadline-countdown').countdown(countdownDate, function(event) {
+    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));
+    
+  });
+</script>
+</body>

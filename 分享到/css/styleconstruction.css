@@ -1,0 +1,63 @@
+
+body {
+    background-size: 100% 100%;
+    background: url('../images/bg.png') repeat-x;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+.main {
+    background: lightgray;
+    box-shadow: 0px 0px 10px #5f5f5f;
+    -webkit-box-shadow: 0px 0px 10px #5f5f5f;
+    -moz-box-shadow: 0px 0px 10px #5f5f5f;
+    -o-box-shadow: 0px 0px 10px #5f5f5f;
+    text-align: center;
+    padding: 40px;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+.icons {
+    float: right;
+    width: 40.33%;
+}
+
+.icons ul li {
+    display: inline;
+}
+
+.icons ul li a {
+    display: inline-block;
+}
+
+.icons ul li a img {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.icons ul li a img:hover, .icons1 ul li a img:hover {
+    opacity: 0.8;
+}
+
+.icons p {
+    color: rgb(240, 144, 0);
+    line-height: 1.4em;
+    font-size: 1.4em;
+    margin-right: 2.33%;
+    text-transform: capitalize;
+}
+
