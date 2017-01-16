@@ -1,0 +1,46 @@
+﻿
+/*top*/
+#scrollTop,
+#scrollTop .level-2 {
+    background: url(rocket_up.png) no-repeat 0 0;
+}
+
+#scrollTop div {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 149px;
+    margin: 0;
+    padding: 0
+}
+
+#scrollTop .level-2 {
+    background-position: -149px 0;
+    display: none;
+    height: 180px;
+    opacity: 0;
+    z-index: 1
+}
+
+#scrollTop .level-3 {
+    background: none;
+    cursor: pointer;
+    display: block;
+    height: 180px;
+    z-index: 2
+}
+
+#scrollTop {
+    cursor: pointer;
+    display: block;
+    height: 180px;
+    overflow: hidden;
+    position: fixed;
+    right: -42px;
+    top: 80%;
+    width: 149px;
+    z-index: 11;
+    margin: -124px 0 0;
+    padding: 0
+}

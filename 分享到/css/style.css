@@ -1,0 +1,1536 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+}
+
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+input[type="button"], input[type="submit"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    margin: 0;
+}
+
+/*-----start-header----*/
+.top-strip {
+    background: #000;
+    padding: 1em;
+}
+
+.header {
+    padding: 4em 0;
+}
+
+.user {
+    float: left;
+}
+
+.user a {
+    display: block;
+}
+
+.social-icons {
+    float: right;
+    margin-top: 1.8em;
+}
+
+.social-icons i {
+    width: 45px;
+    height: 45px;
+    background: url('../images/img-sprite.png') no-repeat 0px 0px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+i.facebook {
+    background-position: 0px 0px;
+}
+
+i.facebook:hover {
+    background-position: 0px -45px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+i.twitter {
+    background-position: -45px 0px;
+}
+
+i.twitter:hover {
+    background-position: -45px -45px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+i.linkedin {
+    background-position: -90px 0px;
+}
+
+i.linkedin:hover {
+    background-position: -90px -45px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+i.skype {
+    background-position: -135px 0px;
+}
+
+i.skype:hover {
+    background-position: -135px -45px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+i.dribble {
+    background-position: -180px 0px;
+}
+
+i.dribble:hover {
+    background-position: -180px -45px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+i.location {
+    width: 30px;
+    height: 30px;
+    background: url('../images/img-sprite.png') no-repeat -225px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+i.love {
+    width: 30px;
+    height: 30px;
+    background: url('../images/img-sprite.png') no-repeat -255px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+i.msg {
+    width: 30px;
+    height: 30px;
+    background: url('../images/img-sprite.png') no-repeat -285px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+i.phone {
+    width: 30px;
+    height: 30px;
+    background: url('../images/img-sprite.png') no-repeat -315px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+i.sites {
+    width: 30px;
+    height: 30px;
+    background: url('../images/img-sprite.png') no-repeat -345px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.about_user {
+    padding: 1.5em 0;
+    margin: 4em 0;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.about_user ul.place {
+    width: 19%;
+    float: left;
+}
+
+.about_user ul.status {
+    width: 14%;
+    float: left;
+}
+
+.about_user ul.message {
+    width: 26%;
+    float: left;
+}
+
+.about_user ul.call {
+    width: 23%;
+    float: left;
+}
+
+.about_user ul.sites {
+    width: 18%;
+    float: left;
+}
+
+.about_user ul li {
+    display: inline-block;
+    color: #999999;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.about_user ul li a {
+    color: #999999;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.about_user ul li a:hover {
+    color: #45a09b;
+}
+
+.text p {
+    color: #999999;
+    font-size: 2.6em;
+    font-weight: 300;
+    line-height: 1.8em;
+}
+
+.text p a {
+    color: #45a09b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.top-grid {
+    padding: 6em 0;
+    background: #000000
+}
+
+.top-grid h3 {
+    color: #fff;
+    font-size: 2.1em;
+    font-weight: 700;
+    margin-bottom: 1.1em;
+}
+
+.top-grid p {
+    color: #cccccc;
+    font-size: 1.9em;
+    font-weight: 300;
+    padding: 1.1em 0;
+    border-bottom: 1px solid #3b3b3b;
+}
+
+.top-left-grid p.skill1, .top-left-grid p.skill2, .top-left-grid p.skill3, .top-left-grid p.skill4, .top-left-grid p.skill5,
+.top-right-grid p.skill6, .top-right-grid p.skill7, .top-right-grid p.skill8, .top-right-grid p.skill9, .top-right-grid p.skill10 {
+    position: relative;
+}
+
+.top-left-grid {
+    padding: 0 30px 0 0;
+}
+
+.top-right-grid {
+    padding: 0 0 0 30px;
+}
+
+.top-left-grid label.color1 {
+    width: 455px;
+    height: 4px;
+    background: #34a09f;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-left-grid label.color2 {
+    width: 460px;
+    height: 4px;
+    background: #b74488;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-left-grid label.color3 {
+    width: 390px;
+    height: 4px;
+    background: #d58855;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-left-grid label.color4 {
+    width: 280px;
+    height: 4px;
+    background: #8fa065;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-left-grid label.color5 {
+    width: 340px;
+    height: 4px;
+    background: #7848c0;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-right-grid label.color6 {
+    width: 440px;
+    height: 4px;
+    background: #6083f0;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-right-grid label.color7 {
+    width: 300px;
+    height: 4px;
+    background: #b79c20;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-right-grid label.color8 {
+    width: 380px;
+    height: 4px;
+    background: #45a09b;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-right-grid label.color9 {
+    width: 300px;
+    height: 4px;
+    background: #f76040;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.top-right-grid label.color10 {
+    width: 380px;
+    height: 4px;
+    background: #d8d8d8;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.middle-grid {
+    padding: 6em 0;
+    background: #45a09b;
+}
+
+.middle-grid h3 {
+    color: #fff;
+    font-size: 2.3em;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+.date {
+    float: left;
+    width: 13%;
+    margin-right: 3%;
+    background: #fff;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+    padding: 1.6em 0;
+    position: relative;
+}
+
+label.span1 {
+    width: 4px;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    top: 141px;
+    left: 70px;
+}
+
+label.span2 {
+    width: 4px;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    top: 141px;
+    left: 70px;
+}
+
+label.span3 {
+    width: 4px;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    top: 141px;
+    left: 70px;
+}
+
+label.span4 {
+    width: 4px;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    top: 141px;
+    left: 70px;
+}
+
+.event {
+    float: left;
+    width: 84%;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 3em;
+}
+
+.date h5 {
+    color: #45a09b;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.date p {
+    color: #45a09b;
+    font-size: 1.4em;
+    font-weight: 300;
+    margin: 0.5em;
+}
+
+.event h4 {
+    color: #fff;
+    font-size: 2.3em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.event h4 span {
+    font-weight: 300;
+}
+
+.event p {
+    color: #fff;
+    font-size: 1.47em;
+    font-weight: 300;
+    line-height: 2.2em;
+}
+
+.middle-section-grid {
+    margin-top: 4em;
+}
+
+.span_66 {
+    border: none;
+}
+
+.bottom-grid {
+    padding: 7em 0;
+    border-bottom: 1px solid #000;
+}
+
+.bottom-grid h3 {
+    color: #000;
+    font-size: 2.3em;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+.bottom-grid-left {
+    padding: 0 30px 0 0;
+}
+
+.bottom-grid-right {
+    padding: 0 0 0 30px;
+}
+
+.year {
+    float: left;
+    width: 17%;
+    margin-right: 5%;
+    background: #ef5651;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+    padding: 1.6em 0;
+}
+
+.year2 {
+    background: #efb251;
+}
+
+.year h5 {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.qualification {
+    float: left;
+    width: 77%;
+}
+
+.qualification h4 {
+    color: #000000;
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+
+.qualification p {
+    color: #999999;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.grids {
+    margin-top: 4.5em;
+}
+
+.footer {
+    padding: 3em 0;
+}
+
+.copyrights p {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.copyrights p a {
+    color: #ef5651;
+}
+
+/*-- responsive-design starts-here --*/
+
+@media screen and (max-width: 1366px) {
+    .about_user {
+        padding: 1.3em 0;
+        margin: 3.2em 0;
+    }
+
+    .text p {
+        font-size: 2.5em;
+    }
+
+    .header {
+        padding: 4em 0;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .bottom-grid {
+        padding: 6em 0;
+    }
+
+    .about_user ul li {
+        font-size: 1.3em;
+    }
+
+    .text p {
+        font-size: 2.4em;
+        line-height: 1.7em;
+    }
+
+    .user img {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    i.love, i.location, i.msg, i.sites {
+        margin-right: 1px;
+    }
+
+    .about_user ul li {
+        font-size: 1.2em;
+    }
+
+    .user img {
+        width: 80%;
+    }
+
+    .social-icons {
+        margin-top: 1.5em;
+    }
+
+    .about_user {
+        padding: 1em 0;
+        margin: 3em 0;
+    }
+
+    .text p {
+        font-size: 2.2em;
+        line-height: 1.6em;
+    }
+
+    .header {
+        padding: 3em 0 3.5em 0;
+    }
+
+    .social-icons i {
+        width: 35px;
+        height: 35px;
+        background: url('../images/img-sprite.png') no-repeat 0px 0px;
+        background-size: 300px;
+    }
+
+    i.facebook:hover {
+        background-position: 0px -35px;
+    }
+
+    i.twitter {
+        background-position: -35px 0px;
+    }
+
+    i.twitter:hover {
+        background-position: -35px -35px;
+    }
+
+    i.linkedin {
+        background-position: -70px 0px;
+    }
+
+    i.linkedin:hover {
+        background-position: -70px -35px;
+    }
+
+    i.skype {
+        background-position: -105px 0px;
+    }
+
+    i.skype:hover {
+        background-position: -105px -35px;
+    }
+
+    i.dribble {
+        background-position: -140px 0px;
+    }
+
+    i.dribble:hover {
+        background-position: -140px -35px;
+    }
+
+    .top-grid h3 {
+        font-size: 1.85em;
+        margin-bottom: 0.85em;
+    }
+
+    .top-grid p {
+        font-size: 1.7em;
+        padding: 1em 0;
+    }
+
+    .top-left-grid label.color1, .top-right-grid label.color6 {
+        width: 400px;
+        height: 3px;
+    }
+
+    .top-left-grid label.color2 {
+        width: 405px;
+        height: 3px;
+    }
+
+    .top-left-grid label.color3 {
+        width: 335px;
+        height: 3px;
+    }
+
+    .top-left-grid label.color4 {
+        width: 250px;
+        height: 3px;
+    }
+
+    .top-left-grid label.color5 {
+        width: 285px;
+        height: 3px;
+    }
+
+    .top-right-grid label.color7, .top-right-grid label.color9 {
+        width: 240px;
+        height: 3px;
+    }
+
+    .top-right-grid label.color8, .top-right-grid label.color10 {
+        width: 320px;
+        height: 3px;
+    }
+
+    .top-grid {
+        padding: 5em 0;
+    }
+
+    .middle-grid {
+        padding: 5em 0;
+    }
+
+    .date h5 {
+        font-size: 1.6em;
+    }
+
+    .event h4 {
+        font-size: 2.1em;
+        margin-bottom: 0.4em;
+    }
+
+    .event p {
+        font-size: 1.3em;
+        line-height: 2em;
+    }
+
+    .date {
+        padding: 1.4em 0;
+    }
+
+    label.span1 {
+        width: 4px;
+        height: 115px;
+        top: 135px;
+        left: 58px;
+    }
+
+    label.span2 {
+        width: 4px;
+        height: 100px;
+        top: 129px;
+        left: 58px;
+    }
+
+    label.span3 {
+        top: 133px;
+        left: 58px;
+    }
+
+    label.span4 {
+        top: 131px;
+        left: 58px;
+    }
+
+    .bottom-grid {
+        padding: 5em 0;
+    }
+
+    .grids {
+        margin-top: 3.5em;
+    }
+
+    .qualification h4 {
+        font-size: 1.85em;
+    }
+
+    .qualification p {
+        font-size: 1.16em;
+    }
+
+    .about_user {
+        padding: 1em 0;
+        margin: 2.5em 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        padding: 2em 0;
+    }
+
+    .bottom-grid h3 {
+        margin-bottom: 1em;
+    }
+
+    .bottom-grid-right {
+        padding: 0 15px;
+        margin-top: 3em;
+    }
+
+    .bottom-grid-left {
+        padding: 0 15px;
+    }
+
+    .bottom-grid {
+        padding: 4em 0;
+    }
+
+    .qualification p {
+        font-size: 1.35em;
+    }
+
+    .date {
+        width: 16%;
+    }
+
+    .event {
+        width: 81%;
+        padding-bottom: 2em;
+    }
+
+    .middle-grid {
+        padding: 4em 0;
+    }
+
+    .middle-section-grid {
+        margin-top: 3em;
+    }
+
+    .event p {
+        font-size: 1.2em;
+        line-height: 1.8em;
+    }
+
+    .event h4 {
+        font-size: 1.9em;
+    }
+
+    .date h5 {
+        font-size: 1.5em;
+    }
+
+    .date p {
+        font-size: 1.35em;
+        margin: 0.4em 0;
+    }
+
+    label.span1 {
+        top: 118px;
+    }
+
+    label.span2 {
+        top: 119px;
+    }
+
+    label.span3 {
+        top: 100px;
+    }
+
+    label.span4 {
+        top: 110px;
+    }
+
+    .top-right-grid {
+        padding: 0 15px;
+        margin-top: 4em;
+    }
+
+    .top-left-grid {
+        padding: 0 15px;
+    }
+
+    .top-grid h3 {
+        font-size: 1.9em;
+        margin-bottom: 0.5em;
+    }
+
+    .top-grid {
+        padding: 4em 0;
+    }
+
+    .top-left-grid label.color1, .top-right-grid label.color6 {
+        width: 580px;
+        height: 3px;
+    }
+
+    .top-left-grid label.color2 {
+        width: 600px;
+    }
+
+    .top-left-grid label.color3 {
+        width: 450px;
+    }
+
+    .top-left-grid label.color5 {
+        width: 390px;
+    }
+
+    .top-left-grid label.color4 {
+        width: 300px;
+    }
+
+    .top-right-grid label.color7, .top-right-grid label.color9 {
+        width: 330px;
+    }
+
+    .top-right-grid label.color8, .top-right-grid label.color10 {
+        width: 430px;
+    }
+
+    .text p {
+        font-size: 1.6em;
+    }
+
+    .user img {
+        width: 75%;
+    }
+
+    .social-icons i {
+        margin-right: 2px;
+    }
+
+    .about_user ul.sites {
+        display: none;
+    }
+
+    .about_user ul li {
+        font-size: 1.1em;
+    }
+
+    .about_user ul.place {
+        width: 24%;
+    }
+
+    .about_user ul.status {
+        width: 17%;
+    }
+
+    .about_user ul.message {
+        width: 33%;
+    }
+
+    .about_user ul.call {
+        width: 26%;
+    }
+
+    .about_user {
+        padding: 0.8em 0;
+        margin: 1.8em 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .middle-grid h3 {
+        margin-bottom: 1.5em;
+    }
+
+    .header {
+        padding: 2em 0 2.5em 0;
+    }
+
+    .social-icons {
+        margin-top: 1.3em;
+    }
+
+    .event h4 {
+        font-size: 1.8em;
+    }
+
+    .top-grid p {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .top-strip {
+        padding: 0.8em;
+    }
+
+    .top-grid h3 {
+        font-size: 1.7em;
+        margin-bottom: 0.4em;
+    }
+
+    .top-grid p {
+        font-size: 1.5em;
+        padding: 0.9em 0;
+    }
+
+    .top-left-grid label.color1, .top-right-grid label.color6 {
+        width: 470px;
+        height: 2px;
+    }
+
+    .top-left-grid label.color2 {
+        width: 490px;
+        height: 2px;
+    }
+
+    .top-left-grid label.color3 {
+        width: 375px;
+        height: 2px;
+    }
+
+    .top-left-grid label.color4 {
+        width: 250px;
+        height: 2px;
+    }
+
+    .top-left-grid label.color5 {
+        width: 310px;
+        height: 2px;
+    }
+
+    .top-right-grid label.color7, .top-right-grid label.color9 {
+        width: 265px;
+        height: 2px;
+    }
+
+    .top-right-grid label.color8, .top-right-grid label.color10 {
+        width: 360px;
+        height: 2px;
+    }
+
+    .middle-grid {
+        padding: 3em 0;
+    }
+
+    .middle-grid h3 {
+        margin-bottom: 1em;
+        font-size: 2em;
+    }
+
+    .event h4 {
+        font-size: 1.5em;
+    }
+
+    .event p {
+        font-size: 1.1em;
+        line-height: 1.6em;
+    }
+
+    .date h5 {
+        font-size: 1.3em;
+    }
+
+    .date p {
+        font-size: 1.2em;
+        margin: 0.2em 0;
+    }
+
+    .date {
+        padding: 1.2em 0;
+    }
+
+    label.span1 {
+        top: 84px;
+        left: 45px;
+    }
+
+    label.span2 {
+        top: 95px;
+        left: 45px;
+    }
+
+    label.span3 {
+        top: 85px;
+        left: 45px;
+    }
+
+    label.span4 {
+        top: 83px;
+        left: 45px;
+    }
+
+    .grids {
+        margin-top: 3em;
+    }
+
+    .user img {
+        width: 70%;
+    }
+
+    .social-icons i {
+        width: 30px;
+        height: 30px;
+        background: url('../images/img-sprite.png') no-repeat 0px 0px;
+        background-size: 260px;
+    }
+
+    .text p {
+        font-size: 1.35em;
+    }
+
+    i.facebook {
+        background-position: 0px 0px;
+    }
+
+    i.facebook:hover {
+        background-position: 0px -30px;
+    }
+
+    i.twitter {
+        background-position: -30px 0px;
+    }
+
+    i.twitter:hover {
+        background-position: -30px -30px;
+    }
+
+    i.linkedin {
+        background-position: -60px 0px;
+    }
+
+    i.linkedin:hover {
+        background-position: -60px -30px;
+    }
+
+    i.skype {
+        background-position: -90px 0px;
+    }
+
+    i.skype:hover {
+        background-position: -90px -30px;
+    }
+
+    i.dribble {
+        background-position: -120px 0px;
+    }
+
+    i.dribble:hover {
+        background-position: -120px -30px;
+    }
+
+    .about_user ul.status {
+        display: none;
+    }
+
+    .about_user ul.place {
+        width: 30%;
+    }
+
+    .about_user ul.message {
+        width: 40%;
+    }
+
+    .about_user ul.call {
+        width: 30%;
+    }
+
+    .about_user {
+        padding: 0.6em 0;
+        margin: 1.5em 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .social-icons i {
+        margin-right: 0px;
+    }
+
+    .user img {
+        width: 65%;
+    }
+
+    .social-icons {
+        margin-top: 1em;
+    }
+
+    .about_user ul.call {
+        display: none;
+    }
+
+    .about_user ul.place {
+        width: 33%;
+    }
+
+    .about_user ul.message {
+        width: 45%;
+    }
+
+    .about_user ul.status {
+        display: block;
+        width: 22%;
+    }
+
+    .about_user ul li {
+        font-size: 1em;
+    }
+
+    i.location {
+        width: 20px;
+        height: 20px;
+        background: url('../images/img-sprite.png') no-repeat -176px -2px;
+        margin-right: 0;
+        background-size: 300px;
+    }
+
+    i.love {
+        width: 20px;
+        height: 20px;
+        background: url('../images/img-sprite.png') no-repeat -199px -2px;
+        margin-right: 0px;
+        background-size: 300px;
+    }
+
+    i.msg {
+        width: 20px;
+        height: 20px;
+        background: url('../images/img-sprite.png') no-repeat -222px -2px;
+        margin-right: 0px;
+        background-size: 300px;
+    }
+
+    .text p {
+        font-size: 1.15em;
+    }
+
+    .top-grid h3 {
+        font-size: 1.6em;
+        margin-bottom: 0.3em;
+    }
+
+    .top-grid {
+        padding: 3em 0;
+    }
+
+    .top-grid p {
+        font-size: 1.35em;
+        padding: 0.8em 0;
+    }
+
+    .top-left-grid, .top-right-grid {
+        padding: 0;
+    }
+
+    .top-left-grid label.color1, .top-right-grid label.color6 {
+        width: 360px;
+    }
+
+    .top-left-grid label.color2 {
+        width: 375px;
+    }
+
+    .top-left-grid label.color3 {
+        width: 290px;
+    }
+
+    .top-left-grid label.color4 {
+        width: 200px;
+    }
+
+    .top-left-grid label.color5 {
+        width: 240px;
+    }
+
+    .top-right-grid label.color7, .top-right-grid label.color9 {
+        width: 220px;
+    }
+
+    .top-right-grid label.color8, .top-right-grid label.color10 {
+        width: 290px;
+    }
+
+    .top-right-grid {
+        margin-top: 3em;
+    }
+
+    .copyrights p {
+        font-size: 1em;
+        font-size: 1em;
+    }
+
+    .footer {
+        padding: 1.5em 0;
+    }
+
+    .year h5 {
+        font-size: 1.5em;
+    }
+
+    .qualification h4 {
+        font-size: 1.5em;
+    }
+
+    .qualification p {
+        font-size: 1.2em;
+    }
+
+    .grids {
+        margin-top: 2em;
+    }
+
+    .bottom-grid {
+        padding: 3em 0;
+    }
+
+    .year {
+        padding: 1.2em 0;
+    }
+
+    .date {
+        width: 18%;
+    }
+
+    .event {
+        width: 79%;
+        padding-bottom: 1.8em;
+    }
+
+    .date h5 {
+        font-size: 1.05em;
+    }
+
+    .date p {
+        font-size: 1em;
+        margin: 0.15em 0;
+    }
+
+    .event p {
+        font-size: 1em;
+        height: 68px;
+        overflow: hidden;
+    }
+
+    .middle-section-grid {
+        margin-top: 2.2em;
+    }
+
+    .middle-grid {
+        padding: 2.5em 0;
+    }
+
+    .event h4 {
+        font-size: 1.35em;
+    }
+
+    .bottom-grid-left, .bottom-grid-right {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .top-strip {
+        padding: 0.5em;
+    }
+
+    .qualification h4 {
+        font-size: 1.15em;
+    }
+
+    .year h5 {
+        font-size: 1.2em;
+    }
+
+    .year {
+        margin-right: 4%;
+        padding: 0.9em 0;
+    }
+
+    .qualification {
+        width: 78%;
+    }
+
+    .qualification p {
+        font-size: 1em;
+    }
+
+    .grids {
+        margin-top: 1.5em;
+    }
+
+    .bottom-grid h3 {
+        margin-bottom: 0.2em;
+        font-size: 2.1em;
+    }
+
+    .footer {
+        padding: 1.2em 0;
+    }
+
+    .bottom-grid {
+        padding: 2em 0;
+    }
+
+    .date {
+        width: 26%;
+        margin-right: 3%;
+        padding: 1em 0;
+    }
+
+    .event {
+        width: 71%;
+        padding-bottom: 1.5em;
+    }
+
+    .middle-grid h3 {
+        margin-bottom: 0em;
+        font-size: 1.6em;
+    }
+
+    .event h4 {
+        font-size: 1.2em;
+    }
+
+    .event p {
+        font-size: 0.95em;
+        height: 62px;
+    }
+
+    .date h5 {
+        font-size: 1em;
+    }
+
+    .event h4 span {
+        display: none;
+    }
+
+    label.span4 {
+        top: 78px;
+        left: 37px;
+        width: 3px;
+    }
+
+    label.span3 {
+        top: 77px;
+        left: 37px;
+        width: 3px;
+    }
+
+    label.span2 {
+        top: 75px;
+        left: 37px;
+        width: 3px;
+    }
+
+    label.span1 {
+        top: 78px;
+        left: 37px;
+        width: 3px;
+    }
+
+    .middle-section-grid {
+        margin-top: 2em;
+    }
+
+    .middle-grid {
+        padding: 2em 0;
+    }
+
+    .top-grid h3 {
+        font-size: 1.2em;
+        margin-bottom: 0.6em;
+    }
+
+    .top-grid p {
+        font-size: 1.15em;
+        padding: 0.7em 0;
+    }
+
+    .top-left-grid label.color1, .top-right-grid label.color6 {
+        width: 225px;
+    }
+
+    .top-left-grid label.color2 {
+        width: 240px;
+    }
+
+    .top-left-grid label.color3 {
+        width: 190px;
+    }
+
+    .top-left-grid label.color4 {
+        width: 120px;
+    }
+
+    .top-left-grid label.color5 {
+        width: 160px;
+    }
+
+    .top-right-grid label.color8, .top-right-grid label.color10 {
+        width: 190px;
+    }
+
+    .top-right-grid label.color7, .top-right-grid label.color9 {
+        width: 130px;
+    }
+
+    .about_user ul.message, .about_user ul.status, .about_user ul.place, .about_user ul.call, .about_user ul.wsbsite {
+        width: 100%;
+        display: block;
+        margin: 7px 0;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+
+    i.location {
+        margin-right: 5px;
+    }
+
+    i.love, i.msg {
+        margin-right: 4px;
+    }
+
+    i.phone {
+        width: 24px;
+        background: url('../images/img-sprite.png') no-repeat -320px -2px;
+    }
+
+    .user {
+        width: 50%;
+    }
+
+    .social-icons {
+        margin-top: 0.8em;
+    }
+
+    .user img {
+        width: 94%;
+    }
+
+    i.dribble, i.skype {
+        display: none;
+    }
+
+    .header {
+        padding: 1.8em 0 2em 0;
+    }
+
+    .about_user {
+        padding: 0.2em 0;
+        margin: 1.2em 0;
+    }
+}
+
