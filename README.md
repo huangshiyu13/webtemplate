@@ -1,2 +1,2 @@
 # webtemplete
-collect font page templetes
+Collect front page templates.
